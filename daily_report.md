@@ -45,8 +45,8 @@
     2. 자율주행
           - [outdoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#panther)
           - [indoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#orbslam2_bebop2_nano) by 드론
-          - Traffic cone 피해 주행하기
-            [1)](https://developer.nvidia.com/embedded/community/jetson-projects#jetbot_traffic_cones) : 딥러닝모델(AlexNet)에 cone을 인식하게 하여 cone으로 길이 막혔을때 피해서 주행하게 함
+          - Traffic cone 피해 주행하기  
+            [1)](https://developer.nvidia.com/embedded/community/jetson-projects#jetbot_traffic_cones) : 딥러닝모델(AlexNet)에 cone을 인식하게 하여 cone으로 길이 막혔을때 피해서 주행하게 함  
             [2)](https://developer.nvidia.com/embedded/community/jetson-projects#3d_traffic_cone_detection) :3D  
           - [Self driving truck](https://developer.nvidia.com/embedded/community/jetson-projects#induction_charger_autonomous_truck) : jetbot으로 자율주행 구현
           - [Self driving hoverboard](https://developer.nvidia.com/embedded/community/jetson-projects#robaka_2)
