@@ -20,7 +20,9 @@
 - AWS DeepRacer tutorial 공부 : 트랙을 벗어나지 않으면 reward를 주는 방식으로 강화학습
 - jetson community 프로젝트들을 살펴봄 - [link](https://developer.nvidia.com/embedded/community/jetson-projects)
     1. [open-source autocar](https://developer.nvidia.com/embedded/community/jetson-projects#autocar) : 컨트롤러로 jetbot이 움직일 때마다 화면, 이동 방향을 저장하여 학습
-    2. 물체 인식 - 얼굴, 관절, 과일 등등
+    2. 물체 인식 : 얼굴, 관절, 과일 등등
+    3. [ROS NAVIBOT](https://developer.nvidia.com/embedded/community/jetson-projects#ros_navbot) : indoor mapping
+    
 <br/>
 
 1/6 Wen.
