@@ -34,6 +34,9 @@
           - [pothole 인식](https://developer.nvidia.com/embedded/community/jetson-projects#ai_pothole_detector)
           - [TIPPER](https://developer.nvidia.com/embedded/community/jetson-projects#tipper) : CNN을 통해 공이 날라가는 초기 상태 캡쳐 사진들로 훈련시켜 (classification) 타자에게 공이 날라오기 전에 스트라이크 존에 공이 들어오는지 미리 알려줌
           - [Shoot your shot](https://developer.nvidia.com/embedded/community/jetson-projects#shoot_your_shot) : 다트를 던지는 사람의 관절 등의 자세에 따른 다트판의 점수? 위치? 예측
+          - [잡초 제거 로봇](https://developer.nvidia.com/embedded/community/jetson-projects#nindamani)
+          - [홈트레이닝 정확도](https://developer.nvidia.com/embedded/community/jetson-projects#mixpose)
+          - [Reading eye for blind](https://developer.nvidia.com/embedded/community/jetson-projects#reading_eye) : 500명의 손글씨 모아 손글씨와 프린트 글씨 모두 읽어줌
     2. 자율주행
           - [outdoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#panther)
           - [indoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#orbslam2_bebop2_nano) by 드론
