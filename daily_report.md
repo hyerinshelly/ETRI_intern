@@ -37,6 +37,8 @@
           - [잡초 제거 로봇](https://developer.nvidia.com/embedded/community/jetson-projects#nindamani)
           - [홈트레이닝 정확도](https://developer.nvidia.com/embedded/community/jetson-projects#mixpose)
           - [Reading eye for blind](https://developer.nvidia.com/embedded/community/jetson-projects#reading_eye) : 500명의 손글씨 모아 손글씨와 프린트 글씨 모두 읽어줌
+          - [Deepclean](https://developer.nvidia.com/embedded/community/jetson-projects#deepclean) : 손이 쓸고간 자리 기록 -> 이 담에 청소할 곳 (코로나 때문에 나온 듯!)
+          
     2. 자율주행
           - [outdoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#panther)
           - [indoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#orbslam2_bebop2_nano) by 드론
