@@ -40,6 +40,7 @@
           - [Reading eye for blind](https://developer.nvidia.com/embedded/community/jetson-projects#reading_eye) : 500명의 손글씨 모아 손글씨와 프린트 글씨 모두 읽어줌
           - [Deepclean](https://developer.nvidia.com/embedded/community/jetson-projects#deepclean) : 손이 쓸고간 자리 기록 -> 이 담에 청소할 곳 (코로나 때문에 나온 듯!)
           - [DBSE-monitor](https://developer.nvidia.com/embedded/community/jetson-projects#dbse_monitor) : 졸음운전과 스마트폰 사용 방지, 표정으로 감정 인식하여 노래 선곡, 사각지대 알림
+          - [앉은 자세 교정](https://developer.nvidia.com/embedded/community/jetson-projects#posture_corrector) : 앉은 자세 잘못되면 경고
           
     2. 자율주행
           - [outdoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#panther)
