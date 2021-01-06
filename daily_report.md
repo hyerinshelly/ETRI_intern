@@ -27,4 +27,9 @@
 
 1/6 Wen.
 - jetson community 프로젝트들을 이어서 살펴봄 - [link](https://developer.nvidia.com/embedded/community/jetson-projects)
-    1. 
+    1. 물체 인식
+          - [알파벳 sign language 인식](https://developer.nvidia.com/embedded/community/jetson-projects#sign_language_recognition)
+          - [자동차 번호판 인식](https://developer.nvidia.com/embedded/community/jetson-projects#license_plate_recog)
+    2. 자율주행
+          - [outdoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#panther)
+    
