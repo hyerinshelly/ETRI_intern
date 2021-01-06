@@ -31,7 +31,7 @@
           - [알파벳 sign language 인식](https://developer.nvidia.com/embedded/community/jetson-projects#sign_language_recognition)
           - [자동차 번호판 인식](https://developer.nvidia.com/embedded/community/jetson-projects#license_plate_recog)
           - [제스쳐 설명](https://developer.nvidia.com/embedded/community/jetson-projects#tsm_online) : 손을 인식해 취하고 있는 제스쳐에 대한 인식 및 설명
-          - [pthole 인식](https://developer.nvidia.com/embedded/community/jetson-projects#ai_pothole_detector)
+          - [pothole 인식](https://developer.nvidia.com/embedded/community/jetson-projects#ai_pothole_detector)
     2. 자율주행
           - [outdoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#panther)
           - [indoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#orbslam2_bebop2_nano) by 드론
