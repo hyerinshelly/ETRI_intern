@@ -54,4 +54,5 @@
         
     4. 기타
         - [Cheersbot](https://developer.nvidia.com/embedded/community/jetson-projects#cheersbot) : 가속도 인식?해 같이 짠해주고, 인공지능 스피커 탑재해 대화 가능
+        - [Rescue bot](https://developer.nvidia.com/embedded/community/jetson-projects#self_nav_search_rescue_bot) : 특정 위치로 이동해 물체 인식하면 잡아서 시작 위치로 돌아와 내려놓음 (구조 활동과 비슷)
     
