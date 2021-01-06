@@ -32,11 +32,13 @@
           - [자동차 번호판 인식](https://developer.nvidia.com/embedded/community/jetson-projects#license_plate_recog)
           - [제스쳐 설명](https://developer.nvidia.com/embedded/community/jetson-projects#tsm_online) : 손을 인식해 취하고 있는 제스쳐에 대한 인식 및 설명
           - [pothole 인식](https://developer.nvidia.com/embedded/community/jetson-projects#ai_pothole_detector)
+          - [TIPPER](https://developer.nvidia.com/embedded/community/jetson-projects#tipper) : CNN을 통해 공이 날라가는 초기 상태 캡쳐 사진들로 훈련시켜 (classification) 타자에게 공이 날라오기 전에 스트라이크 존에 공이 들어오는지 미리 알려줌
     2. 자율주행
           - [outdoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#panther)
           - [indoor mapping](https://developer.nvidia.com/embedded/community/jetson-projects#orbslam2_bebop2_nano) by 드론
           - [Traffic cone 피해 주행하기](https://developer.nvidia.com/embedded/community/jetson-projects#jetbot_traffic_cones) : 딥러닝모델(AlexNet)에 cone을 인식하게 하여 cone으로 길이 막혔을때 피해서 주행하게 함
           - [Self driving truck](https://developer.nvidia.com/embedded/community/jetson-projects#induction_charger_autonomous_truck) : jetbot으로 자율주행 구현
+          - [Self driving hoverboard](https://developer.nvidia.com/embedded/community/jetson-projects#robaka_2)
           
     3. IoT
         - [SHAIDES](https://developer.nvidia.com/embedded/community/jetson-projects#shaides) : AI와 IoT를 결합하여 앞에 보이는 전자기기를 컨트롤(on/off) 가능
