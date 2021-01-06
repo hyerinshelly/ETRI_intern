@@ -46,7 +46,11 @@
           - [Self driving truck](https://developer.nvidia.com/embedded/community/jetson-projects#induction_charger_autonomous_truck) : jetbot으로 자율주행 구현
           - [Self driving hoverboard](https://developer.nvidia.com/embedded/community/jetson-projects#robaka_2)
           - [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot)
+          - [platooning](https://developer.nvidia.com/embedded/community/jetson-projects#platooning_demonstrator) : Bounding box 크기에 따라 거리 및 속도 조절
           
     3. IoT
         - [SHAIDES](https://developer.nvidia.com/embedded/community/jetson-projects#shaides) : AI와 IoT를 결합하여 앞에 보이는 전자기기를 컨트롤(on/off) 가능
+        
+    4. 기타
+        - [Cheersbot](https://developer.nvidia.com/embedded/community/jetson-projects#cheersbot) : 가속도 인식?해 같이 짠해주고, 인공지능 스피커 탑재해 대화 가능
     
