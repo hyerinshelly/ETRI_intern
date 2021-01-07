@@ -69,7 +69,7 @@
 - [edwith MOVE37 강의](https://www.edwith.org/move37/joinLectures/25196) 강화학습 공부 진행 중  
     1. Ch.1 : 강화학습 개요 (용어, 행동-가치/상태-가치 함수), 벨만 방정식, 마르코프체인  
             - 벨만 방정식:  
-            <img src="https://user-images.githubusercontent.com/47997946/103871211-1e067b80-5110-11eb-8f05-77ffac9b832f.png" width="30%"></img>
+            <img src="https://user-images.githubusercontent.com/47997946/103871802-de8c5f00-5110-11eb-88ee-6e5fddb08bd0.png" width="50%"></img>
     2. Ch.2 : 동적계획법 (가치반복, 정책반복 알고리즘) -> 최적화  
             - 가치반복 알고리즘: 각 칸의 가치를 수렴할 때까지 계산하여 최적의 방법 찾음  
             - 정책반복 알고리즘: 임의의 정책의 리워드를 바탕으로 정책을 업데이트하며 최적의 정책 찾음  
