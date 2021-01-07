@@ -60,3 +60,8 @@
         - [Cheersbot](https://developer.nvidia.com/embedded/community/jetson-projects#cheersbot) : 가속도 인식해 같이 짠해주고, 인공지능 스피커 탑재해 대화 가능
         - [Rescue bot](https://developer.nvidia.com/embedded/community/jetson-projects#self_nav_search_rescue_bot) : 특정 위치로 이동해 물체 인식하면 잡아서 시작 위치로 돌아와 내려놓음 (구조 활동과 비슷)
     
+1/7 Thur.
+- 전날 살펴본 예시 중 [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot)의 설명을 더 살펴본 후 VAE와 SAC로 훈련시켰음을 확인함 -> 추후 더 알아봐야 할 것
+- 배터리에 jetson nano 보드와 모터를 동시에 연결했을 때 바로 꺼지는 것을 모터 usb를 보드에 연결하고 보드만 배터리에 연결하여 해결함
+- 그래서 basic 구동 성공 후 collision avoidance 실행 중 jupyter notebook이 갑자기 멈추는 현상 발생함 -> 부팅 새로 필요할 듯
+- [edwith MOVE37 강의](https://www.edwith.org/move37/joinLectures/25196) 강화학습 공부 진행 중
