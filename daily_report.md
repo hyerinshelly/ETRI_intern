@@ -25,7 +25,7 @@
     
 <br/>
 
-1/6 Wen.
+1/6 Wed.
 - jetson community 프로젝트들을 이어서 살펴봄 - [link](https://developer.nvidia.com/embedded/community/jetson-projects)
     1. 물체 인식
           - [알파벳 sign language 인식](https://developer.nvidia.com/embedded/community/jetson-projects#sign_language_recognition)
