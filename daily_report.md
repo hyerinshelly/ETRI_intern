@@ -73,3 +73,13 @@
     2. Ch.2 : 동적계획법 (가치반복, 정책반복 알고리즘) -> 최적화  
             - 가치반복 알고리즘: 각 칸의 가치를 수렴할 때까지 계산하여 최적의 방법 찾음  
             - 정책반복 알고리즘: 임의의 정책의 리워드를 바탕으로 정책을 업데이트하며 최적의 정책 찾음  
+            
+<br/>
+    
+1/11 Mon.
+- 연구주제 설정을 위한 아이디어 탐색 (마인드맵 - 구글 코글)
+    - [젯봇](https://coggle.it/diagram/X_ujT44ja19ZhWAI/t/%EC%A0%AF%EB%B4%87-image)
+    - [강화학습](https://coggle.it/diagram/X_ulwgfKJimvn5Cg/t/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5)
+- jetbot image를 다운받아 SD카드에 flash하여 부팅 다시 함 -> 데이터 훈련하고 그 훈련시킨 모델을 불러올 때 실행이 멈추는 현상 해결 -> 간단히 collision avoidance 잘 작동함 확인 완료
+- 
+
