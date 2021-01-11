@@ -1,4 +1,4 @@
-# 작업 일지
+# Daily Report
 
 1/4 Mon.
 - jetbot 초기 설정 및 부팅  
