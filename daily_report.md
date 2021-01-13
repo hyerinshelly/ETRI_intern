@@ -112,3 +112,8 @@
 - 강화학습 시뮬레이터 관련 네이버 DEVIEW2020 영상 시청 - [link](https://tv.naver.com/v/16969158?fbclid=IwAR3DicE9mzKe0BWB-Mw_dKKg0KGDoe3JRzWLkpIgm85Wq6FabgAlrKwK5cM)
 - 연구주제 설정을 위한 아이디어 탐색 (마인드맵 - 구글 코글) (이어서)
     - 아이디어: 강화학습을 활용하여 코로나 추이 예측 - state: 진행 현황, action: 예측, reward: 예측 정확도 - [데이터](https://bit.ly/2Uq634A)
+- [edwith MOVE37 강의](https://www.edwith.org/move37/joinLectures/25196) 강화학습 공부 진행 중  
+    - Ch.6 : 딥 Q러닝
+        - Q러닝의 Q[s][a] 테이블 대신 신경망을 이용함 ((s, a) 쌍이 너무 많을 경우 모두 저장 불가능)
+        - 현재 상태에서 액션을 통해 보상 등의 결과를 얻고, 손실 = {Q(s, a) - 보상}^2을 계산
+        - SGD로 손실을 최소화 하는 방식으로 신경망(Q의 가중치) 업데이트함 / 수렴할 때까지 반복
