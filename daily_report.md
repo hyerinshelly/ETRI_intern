@@ -104,3 +104,9 @@
         - 간접적, 불확실한 측정치로 시스템의 상태를 추정할 때 사용되는 최적의 추정 알고리즘
         - 이전 상태의 측정 값을 바탕으로 예측한 현재 상태 값과 현재 상태 측정 값을 종합하여 현재 상태를 추정함 (측정치가 센서의 불확실성으로 인해 항상 정확한 값을 준다고 보기 어렵기 때문)
         - 자율주행차의 경우, 여러 개의 센서의 정보를 종합해 현재 위치 도출해냄
+
+<br/>
+    
+1/12 Tue.
+- Robotics 강의 영상 사이트 찾음 [link](https://www.theconstructsim.com/)
+- 강화학습 시뮬레이터 관련 네이버 DEVIEW2020 영상 시청 - [link](https://tv.naver.com/v/16969158?fbclid=IwAR3DicE9mzKe0BWB-Mw_dKKg0KGDoe3JRzWLkpIgm85Wq6FabgAlrKwK5cM)
