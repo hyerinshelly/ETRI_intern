@@ -168,3 +168,9 @@
         - Continuous AC : action이 discrete하지 않고 continuous할 경우 (실제 상황에서는 continuous한 경우가 대다수) 3가지 부분을 바꿔주면 된다.
             - 우선 정책에서 각 행동을 취할 확률을 softmax 함수로 이산적으로 구하는 대신에 평균 mu와 표준편차 sigma 값을 구하도록하여 연속적인 행동을 취학 확률은 mu와 sigma의 정규 분포를 따르도록 한다. (sigma가 작아질수록 탐색을 더 적게 하는 것)
             - policy loss와 entropy bonus 부분도 정책이 연속적이므로 마찬가지로 정규분포를 따르도록 한다.
+        - Proximal Policy Optimization (PPO) : AC을 업그레이드 한 것으로 부드럽게 점진적인 경사도 업테이트를 갖도록 한 것
+            - AC의 문제점 : 하이퍼파라미터 조정에 학습이 매우 민감함, 과도한 정책 업데이트가 야기하는 아웃라이어 데이터가 학습 프로세스 전체를 망가뜨릴 수 있음
+            - PPO가 업그레이드한 것 : 
+                1. Generalized Advantage Estimation (GAE)으로 보상의 손실과 분산을 줄여 학습을 보다 부드럽고 안정적으로 진행
+                2. Surrogate Policy Loss 이용 (이전 확률과 새 확률의 비율을 활용해 policy loss 조절하는 느낌)
+                3. Mini-batch Updates
