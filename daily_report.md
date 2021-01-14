@@ -107,7 +107,7 @@
 
 <br/>
     
-1/12 Tue.
+1/13 Wed.
 - Robotics 강의 영상 사이트 찾음 [link](https://www.theconstructsim.com/)
 - 강화학습 시뮬레이터 관련 네이버 DEVIEW2020 영상 시청 - [link](https://tv.naver.com/v/16969158?fbclid=IwAR3DicE9mzKe0BWB-Mw_dKKg0KGDoe3JRzWLkpIgm85Wq6FabgAlrKwK5cM)
 - 연구주제 설정을 위한 아이디어 탐색 (마인드맵 - 구글 코글) (이어서)
@@ -139,3 +139,8 @@
                 * Q러닝은 행동 반복 알고리즘으로 Q[s][a] 테이블을 채움으로써 최고의 가치를 만드는 행동들을 취해 최종 정책 결정함 (off-policy)   
                 반면에, 정책 검색 알고리즘은 특정 정책으로부터 변화를 줌으로써 최종 정책 찾음 (on-policy)  
                 * 액터크리틱 기법 - 크리틱이 현재 정책의 가치를 추정(정책 평가)하고, 액터는 이 값을 이용해 정책 경사(정책 발전)를 적용함. 따라서 정책 검색 알고리즘(정책 경사 사용함)과 정책 반복 알고리즘(정책 평가 후 발전) 모두에 속함.  
+
+<br/>
+    
+1/14 Thur.
+- 
