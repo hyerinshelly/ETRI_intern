@@ -162,6 +162,7 @@
     - Ch.9
         : Actor Critic
         - 현재 환경에서 행동을 결정하는 actor 네트워크과 현재 상태의 가치를 계산하는 critic 네트워크로 나뉘어 최적화함
+        - DDPG (Deep Deterministic Policy Gradient) : Q러닝이 action이 연속적일 경우 사용 가능 / model-free & off-policy
         - A2C (Advantage Actor Critic) : policy loss와 value loss를 각각 actor와 critic가 줄여나가도록 함. 즉 actor critic 방법에 actor가 정책 경사를 따르도록 한 것. / 정책 경사의 단점 보완함
         - A3C (Asychronous A2C) : 한 정책마다 학습 데이터를 독립적이고 동일한 (i.i.d) 분포를 갖게 하기 위해 여러 환경에서 parallel하게 train시킴 (단 더 큰 버퍼 필요)
         - Continuous AC : action이 discrete하지 않고 continuous할 경우 (실제 상황에서는 continuous한 경우가 대다수) 3가지 부분을 바꿔주면 된다.
