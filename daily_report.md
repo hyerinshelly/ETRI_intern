@@ -111,7 +111,7 @@
 - Robotics 강의 영상 사이트 찾음 [link](https://www.theconstructsim.com/)
 - 강화학습 시뮬레이터 관련 네이버 DEVIEW2020 영상 시청 - [link](https://tv.naver.com/v/16969158?fbclid=IwAR3DicE9mzKe0BWB-Mw_dKKg0KGDoe3JRzWLkpIgm85Wq6FabgAlrKwK5cM)
 - 연구주제 설정을 위한 아이디어 탐색 (마인드맵 - 구글 코글) (이어서)
-    - 아이디어: 강화학습을 활용하여 코로나 추이 예측 - state: 진행 현황, action: 예측, reward: 예측 정확도 - [데이터](https://bit.ly/2Uq634A)
+    - 아이디어: 강화학습을 활용하여 코로나 추이 예측 - state: 진행 현황, action: 예측, reward: 예측 정확도 - [데이터](https://bit.ly/2Uq634A), [참고](https://paperswithcode.com/paper/curating-a-covid-19-data-repository-and)
 - [edwith MOVE37 강의](https://www.edwith.org/move37/joinLectures/25196) 강화학습 공부 진행 중  
     - Ch.6  
         : 딥 Q러닝  
