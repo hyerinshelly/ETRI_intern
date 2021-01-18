@@ -216,7 +216,12 @@
         - OpenAI Gym과 여러 라이브러리를 포함한 universe 환경 설치
         - 기본 시뮬레이션 동작
 - 『강화학습 입문 파이썬 예제와 함께하는』 공부
-    - 순서
+    - ch2
+        : Gym을 활용한 강화학습 순서
         - env 생성 -> episode마다 reset -> step마다 env render, action_space에서 행동 선택, 기록   
-    - env.step(action) -> observation: 환경의 관찰, reward: 이전 행동으로부터 얻은 보상, done: 에피소드 완료 여부, info: 디버깅에 유용한 정보
+        - env.step(action) -> observation: 환경의 관찰, reward: 이전 행동으로부터 얻은 보상, done: 에피소드 완료 여부, info: 디버깅에 유용한 정보
+        
+        : tensorflow 기초 지식
+        - 변수: 
+    
     
