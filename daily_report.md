@@ -206,8 +206,12 @@
         - 6주차 : 2번) 강화학습 & 문제점 파악 / 4번) 문제점 파악 및 분석 (* 설 연휴)
         - 이후, 개선 및 발표 준비
         
+                
+<br/>
+    
+1/18 Mon.
 - Ubuntu 환경 초기 설정  
+    - Anaconda 설치, Pycharm 설치, 한영 키 변환 등 초기 설정
     - 『강화학습 입문 파이썬 예제와 함께하는』의 내용에 따라 환경 구성 - [github 링크](https://github.com/PacktPublishing/Hands-On-Reinforcement-Learning-with-Python), [책 링크](http://www.yes24.com/Product/Goods/77254784)
         - OpenAI Gym과 여러 라이브러리를 포함한 universe 환경 설치
         - 기본 시뮬레이션 동작
-                
