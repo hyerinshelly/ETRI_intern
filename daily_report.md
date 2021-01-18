@@ -219,6 +219,7 @@
             > conda install pip six libgcc swig  
             > conda install opencv  
             > pip install gym==0.7.0  
+            > conda install -c conda-forge tensorflow  
 
         - 기본 시뮬레이션 동작
         
