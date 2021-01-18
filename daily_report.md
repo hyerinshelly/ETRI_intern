@@ -222,6 +222,10 @@
         - env.step(action) -> observation: 환경의 관찰, reward: 이전 행동으로부터 얻은 보상, done: 에피소드 완료 여부, info: 디버깅에 유용한 정보
         
         : tensorflow 기초 지식
-        - 변수: tf.variable 이후 tf.global_variables_initializer() 함수로 할당, 상수: tf.constant, 플레이스홀더: type와 shape를 정의하고 값은 할당 못 함, 계산 그래프(ex. tf.multiply) 이후 tf.session과 sess.run을 해야 실행, tensorboard로 확인
+        - 변수: tf.variable 이후 tf.global_variables_initializer() 함수로 할당
+        - 상수: tf.constant
+        - 플레이스홀더: type와 shape를 정의하고 값은 할당 못 함
+        - 계산 그래프(ex. tf.multiply) 이후 tf.session과 sess.run을 해야 실행 
+        - tensorboard로 확인
   
     - ch 10 A3C, ch 11 DDPG를 참고하여 코로나 추이 예측 모델 만들기
