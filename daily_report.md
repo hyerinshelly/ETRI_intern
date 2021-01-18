@@ -239,3 +239,11 @@
 - 주간 계획
     - 『강화학습 입문 파이썬 예제와 함께하는』 ch 10 A3C, ch 11 DDPG 공부
     - 『수학으로 풀어보는 강화학습 원리와 알고리즘』 5장 A3C, 6장 PPO, 7장 DDPG 
+    
+- Nvidia Isaac Sim 설치
+    1. Prepare local requirement : Nvidia driver 설치
+    2. Run Omniverse Isaac Sim container on Ubuntu
+        - Isaac Sim package 다운로드 후 실행
+        - Nucleus Server 설치 : [문제점] user name/pwd 설정 후 sudo docker run 실행되지 않음 
+        - add the Omniverse Isaac Sim assets to the Nucleus Server : [문제점] nucleus server 연결 후 Isaac Sim 실행하여 연결이 되는 것까지는 확인 완료. 그러나 수정이 안됨 (새 폴더 만들기 불가) // 위의 문제때문인지는 모르겠음
+        - (내일 이어서) Isaac Sim 첫 실행
