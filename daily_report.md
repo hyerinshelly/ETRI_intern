@@ -215,3 +215,8 @@
     - 『강화학습 입문 파이썬 예제와 함께하는』의 내용에 따라 환경 구성 - [github 링크](https://github.com/PacktPublishing/Hands-On-Reinforcement-Learning-with-Python), [책 링크](http://www.yes24.com/Product/Goods/77254784)
         - OpenAI Gym과 여러 라이브러리를 포함한 universe 환경 설치
         - 기본 시뮬레이션 동작
+- 『강화학습 입문 파이썬 예제와 함께하는』 공부
+    - 순서
+        - env 생성 -> episode마다 reset -> step마다 env render, action_space에서 행동 선택, 기록   
+    - env.step(action) -> observation: 환경의 관찰, reward: 이전 행동으로부터 얻은 보상, done: 에피소드 완료 여부, info: 디버깅에 유용한 정보
+    
