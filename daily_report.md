@@ -245,5 +245,5 @@
     2. Run Omniverse Isaac Sim container on Ubuntu
         - Isaac Sim package 다운로드 후 실행
         - Nucleus Server 설치 : [문제점] user name/pwd 설정 후 sudo docker run 실행되지 않음 
-        - add the Omniverse Isaac Sim assets to the Nucleus Server : [문제점] nucleus server 연결 후 Isaac Sim 실행하여 연결이 되는 것까지는 확인 완료. 그러나 수정이 안됨 (새 폴더 만들기 불가) // 위의 문제때문인지는 모르겠음
+        - add the Omniverse Isaac Sim assets to the Nucleus Server : [문제점] nucleus server 연결 후 Isaac Sim 실행하여 연결이 되는 것까지는 확인 완료. 그러나 수정이 안됨 (새 폴더 만들기 불가) // 위의 문제때문인지는 모르겠음 => [해결] mount를 이용하는 2번째 방법으로 하니 문제 없이 됨
         - (내일 이어서) Isaac Sim 첫 실행
