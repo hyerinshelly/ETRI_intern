@@ -196,7 +196,7 @@
         - 구현에 성공하면 택배 분류나 헌 옷 분류(의류 수거)에 활용할 수 있을 것 같음
 - 계획 : 위 아이디어 중 2, 4번 중심으로 병행 (1번의 경우는 직접 젯봇을 구동시켜보면서 환경이나 상황을 살펴볼 예정)
     - 아이디어별 계획
-        - 2번 : actor critic code 공부 및 주가 예측 등에서 어떻게 쓰이는지 확인 -> 환경 설정 (변수 설정 등) -> 데이터 정리 -> actor critic 개선 및 모델 확정 -> 예측
+        - 2번 : actor critic code 공부 및 주가 예측 등에서 어떻게 쓰이는지 확인 -> 환경 설정 (변수 설정 등) -> 데이터 정리 -> actor critic 개선 및 모델 확정 -> 예측 (역강화학습?)
         - 4번 : 시뮬레이터 사용법 공부 -> 젯봇에 맞게 환경 설정 -> 강화학습 -> 젯봇에 적용
     
     - 주차별 계획
@@ -266,6 +266,11 @@
     - corona board - [github](https://github.com/jooeungen/coronaboard_kr)
         >  kr_daily.csv - 한국의 코로나 현황 (사망자 수, 확진자 수)  
         >  kr_regional_daily.csv - 지역 별 현황  
+        
+ - State, Action, Reward 정리
+ State: kr_daily.csv(확진자 수), 
+ Action: 증가/감소 비율마다 나누기
+ Reward: 예측 성공 시 1, 실패 시 0
         
 - Nvidia Isaac Sim 설치 (이어서)
     < Local Workstation Deployment >
