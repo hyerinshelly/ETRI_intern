@@ -296,6 +296,6 @@
         - Check requirements 및 log-in to NGC 이미 완료
         - (yet) Run  
     4. Omniverse Kit Remote Client  
-        - Download Omniverse Kit Remote Client (Linux ver.)
+        - Download Omniverse Kit Remote Client (Linux ver.) 완료
         - Connect to Omniverse Issac Sim  
             [문제점] AWS ?
