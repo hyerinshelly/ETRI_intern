@@ -279,7 +279,8 @@
             [해결] mount를 이용하는 2번째 방법으로 하니 문제 없이 됨  
         - Isaac Sim 첫 실행 : Isaac Robotics의 Jetbot Sample 시뮬레이션 Play까지는 됨  
             [문제점] Play 후 키보드 w, a, s, d로 젯봇을 움직여야하는 데 움직이지 않음
-            [원인] 위에서 mount를 이용하여 data assets를 가져오는 대신 1번째 방법이었던 package를 이용해 가져와야 함 (mount에 있는 파일은 구 버전) // 하지만 docker 문제를 해결한 시점에서도 여전히 폴더를 만들 수 있는 권한이 없어 불가능
+            [원인] 위에서 mount를 이용하여 data assets를 가져오는 대신 1번째 방법이었던 package를 이용해 가져와야 함 (mount에 있는 파일은 구 버전) // 하지만 docker 문제를 해결한 시점에서도 여전히 폴더를 만들 수 있는 권한이 없어 불가능  
+            [대안] python code 실행 가능한지 확인
     3. Run Omniverse Isaac Sim container on local Ubuntu
         - log-in to NGC : API key 만들어 완료
         - (yet) enable xserver access
