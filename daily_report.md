@@ -251,3 +251,15 @@
 <br/>
     
 1/19 Tue.
+- 코로나 관련 데이터셋 목록
+    - KT빅데이터플랫폼
+        > fpopl.csv - 행정동별 유동인구 데이터  
+        > adstrd_master.csv - 8자리 행정동 코드 데이터  
+        > card.csv - 업종 별 결재금액 데이터  
+        > delivery.csv - 배달 호출 정보 데이터  
+        > index.csv - 품목 별 소비지수 데이터  
+        
+    - Data Science for COVID-19 (DS4C) - [description](https://github.com/jihoo-kim/Data-Science-for-COVID-19)
+        > COVID_19 - 코로나 확진자 데이터
+    
+    - 
