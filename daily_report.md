@@ -260,6 +260,7 @@
         > index.csv - 품목 별 소비지수 데이터  
         
     - Data Science for COVID-19 (DS4C) - [description](https://github.com/jihoo-kim/Data-Science-for-COVID-19)
-        > COVID_19 - 코로나 확진자 데이터 - [github](https://github.com/jooeungen/coronaboard_kr)
+        > 코로나 확진자 데이터
     
-    - 
+    - corona board
+        > 코로나 현황 - [github](https://github.com/jooeungen/coronaboard_kr)
