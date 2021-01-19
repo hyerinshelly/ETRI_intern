@@ -262,5 +262,6 @@
     - Data Science for COVID-19 (DS4C) - [description](https://github.com/jihoo-kim/Data-Science-for-COVID-19)
         > 코로나 확진자 데이터
     
-    - corona board
-        > 코로나 현황 - [github](https://github.com/jooeungen/coronaboard_kr)
+    - corona board - [github](https://github.com/jooeungen/coronaboard_kr)
+        >  kr_daily.csv - 한국의 코로나 현황 (사망자 수, 확진자 수)
+        >  kr_regional_daily.csv - 지역 별 현황
