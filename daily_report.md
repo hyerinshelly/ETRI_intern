@@ -265,3 +265,17 @@
     - corona board - [github](https://github.com/jooeungen/coronaboard_kr)
         >  kr_daily.csv - 한국의 코로나 현황 (사망자 수, 확진자 수)  
         >  kr_regional_daily.csv - 지역 별 현황  
+        
+- Nvidia Isaac Sim 설치 (이어서)
+    1. Prepare local requirement : Nvidia driver 설치 (어제 완료)
+    2. Run Omniverse Isaac Sim container on Ubuntu
+        - Isaac Sim package 다운로드 후 실행
+        - Nucleus Server 설치 :  
+            [문제점] user name/pwd 설정 후 sudo docker run 실행되지 않음  
+            [해결] docker container toolkit 설치하여 해결 (-> 그런데 실행은 되긴 되는데 제대로 연결되는지 여부 확인 필요)
+        - add the Omniverse Isaac Sim assets to the Nucleus Server :  
+            [문제점] nucleus server 연결 후 Isaac Sim 실행하여 연결이 되는 것까지는 확인 완료. 그러나 수정이 안됨 (새 폴더 만들기 불가) // 위의 문제때문인지는 모르겠음  
+            [해결] mount를 이용하는 2번째 방법으로 하니 문제 없이 됨  
+        - Isaac Sim 첫 실행 : Isaac Robotics의 Jetbot Sample 시뮬레이션 Play까지는 됨  
+            [문제점] Play 후 키보드 w, a, s, d로 젯봇을 움직여야하는 데 움직이지 않음
+            [원인] 위에서 mount를 이용하여 data assets를 가져오는 대신 1번째 방법이었던 package를 이용해 가져와야 함 (mount에 있는 파일은 구 버전) // 하지만 docker 문제를 해결한 시점에서도 여전히 폴더를 만들 수 있는 권한이 없어 불가능
