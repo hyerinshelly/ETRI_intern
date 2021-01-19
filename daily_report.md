@@ -239,7 +239,7 @@
 - 주간 계획
     - 『강화학습 입문 파이썬 예제와 함께하는』 ch 10 A3C, ch 11 DDPG 공부
     - 『수학으로 풀어보는 강화학습 원리와 알고리즘』 4장 A2C, 5장 A3C, 6장 PPO, 7장 DDPG 공부
-    - 간단하게 state, action, reward를 갖는 강화학습 모델 완성
+    - 간단하게 state, action, reward를 갖는 강화학습 모델 완성 (move37의 dynamic_programming 참고, 유일하게 gym을 사용 X)
     
 - Nvidia Isaac Sim 설치
     1. Prepare local requirement : Nvidia driver 설치
