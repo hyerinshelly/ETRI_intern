@@ -237,8 +237,8 @@
         - tensorboard로 확인
   
 - 주간 계획
-    - 『강화학습 입문 파이썬 예제와 함께하는』 ch 10 A3C, ch 11 DDPG 공부
-    - 『수학으로 풀어보는 강화학습 원리와 알고리즘』 5장 A3C, 6장 PPO, 7장 DDPG 
+    - 『강화학습 입문 파이썬 예제와 함께하는』 ch 9 A2C, ch 10 A3C, ch 11 DDPG 공부
+    - 『수학으로 풀어보는 강화학습 원리와 알고리즘』 4장 A2C, 5장 A3C, 6장 PPO, 7장 DDPG 
     
 - Nvidia Isaac Sim 설치
     1. Prepare local requirement : Nvidia driver 설치
