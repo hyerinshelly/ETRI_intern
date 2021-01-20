@@ -315,3 +315,4 @@
         - localhost의 사용 권한이 없어 파일을 추가할 수 없고, 그로 인해 예제와 python 코드 모두 동작하지 않는다.
 - custom data로 gym 환경 구성 - [참고 링크](https://www.kaggle.com/hwsiew/custom-gym-environment-for-reinforcement-learning)
     - 코로나 추이 예측에 앞서, 간단한 list data로 env를 구성하고 test해보고 있다.
+    - gym environment 구성 방법에 대해 공부하고 있다. - [링크](https://gym.openai.com/envs/#classic_control)
