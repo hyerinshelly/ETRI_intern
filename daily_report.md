@@ -313,6 +313,8 @@
 - Nvidia Isaac Sim 다시 설치
     - 컴퓨터에서 local로 서버를 만들어 사용하는 방법은 실행 시 에러가 발생하여 AWS 서버를 사용하는 방법으로 변경하기로 하였다.
         - localhost의 사용 권한이 없어 파일을 추가할 수 없고, 그로 인해 예제와 python 코드 모두 동작하지 않는다.
+        - AWS 서버 생성하였으나 Nucleus 서버 연결되지 않음.
+        - Isaac Sim 구동은 어려워 보임.  
 - custom data로 gym 환경 구성 - [참고 링크](https://www.kaggle.com/hwsiew/custom-gym-environment-for-reinforcement-learning)
     - 코로나 추이 예측에 앞서, 간단한 list data로 env를 구성하고 test해보고 있다.
     - gym environment 구성 방법에 대해 공부하고 있다. - [링크](https://gym.openai.com/envs/#classic_control)
