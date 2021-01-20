@@ -272,7 +272,7 @@
  Action: 증가/감소 비율마다 나누기
  Reward: 예측 성공 시 1, 실패 시 0
         
-- Nvidia Isaac Sim 설치 (이어서)
+- Nvidia Isaac Sim 설치 (이어서)  
     < Local Workstation Deployment >
     1. Prepare local requirement : Nvidia driver 설치 (어제 완료)
     2. Run Omniverse Isaac Sim container natively on Ubuntu
@@ -306,3 +306,8 @@
         - Download Omniverse Kit Remote Client (Linux ver.) 완료
         - Connect to Omniverse Issac Sim  
             [문제점] AWS ?
+
+<br/>
+    
+1/20 Wed.
+- Nvidia Driver 다시 설치
