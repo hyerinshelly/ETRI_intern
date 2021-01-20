@@ -239,7 +239,7 @@
 - 주간 계획
     - 『강화학습 입문 파이썬 예제와 함께하는』 ch 10 A3C, ch 11 DDPG 공부
     - 『수학으로 풀어보는 강화학습 원리와 알고리즘』 4장 A2C, 5장 A3C, 6장 PPO, 7장 DDPG 공부
-    - 간단하게 state, action, reward를 갖는 강화학습 모델 완성 (move37의 dynamic_programming 참고, 유일하게 gym을 사용 X)
+    - 간단하게 state, action, reward를 갖는 강화학습 모델 완성 (custom data로 gym 환경 구성)
     
 - Nvidia Isaac Sim 설치
     1. Prepare local requirement : Nvidia driver 설치
@@ -269,7 +269,7 @@
             
  - State, Action, Reward 정리
  State: kr_daily.csv(확진자 수), fpopl.csv(행정동별 유동인구 데이터)
- Action: 증가/감소 비율마다 나누기
+ Action: 증가/감소 (비율마다 나누기)
  Reward: 예측 성공 시 1, 실패 시 0
         
 - Nvidia Isaac Sim 설치 (이어서)  
@@ -310,4 +310,8 @@
 <br/>
     
 1/20 Wed.
-- Nvidia Driver 다시 설치
+- Nvidia Isaac Sim 다시 설치
+    - 컴퓨터에서 local로 서버를 만들어 사용하는 방법은 실행 시 에러가 발생하여 AWS 서버를 사용하는 방법으로 변경하기로 하였다.
+        - localhost의 사용 권한이 없어 파일을 추가할 수 없고, 그로 인해 예제와 python 코드 모두 동작하지 않는다.
+- custom data로 gym 환경 구성 - [참고 링크](https://www.kaggle.com/hwsiew/custom-gym-environment-for-reinforcement-learning)
+    - 코로나 추이 예측에 앞서, 간단한 list data로 env를 구성하고 test해보고 있다.
