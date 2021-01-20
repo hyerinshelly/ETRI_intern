@@ -316,3 +316,10 @@
 - custom data로 gym 환경 구성 - [참고 링크](https://www.kaggle.com/hwsiew/custom-gym-environment-for-reinforcement-learning)
     - 코로나 추이 예측에 앞서, 간단한 list data로 env를 구성하고 test해보고 있다.
     - gym environment 구성 방법에 대해 공부하고 있다. - [링크](https://gym.openai.com/envs/#classic_control)
+        - 함수
+            > __init__ : state, action, observation space 정의
+            > step : 한 단계 동안의 과정 (한 action을 선택하였을 때의 결과, reward return)
+            > render : 환경의 동작 과정 표시
+        - 변수
+            > spaces.Discrete : 이산적 변수
+            > spaces.Box : 연속 변수
