@@ -320,6 +320,7 @@
     - gym environment 구성 방법에 대해 공부하고 있다. - [링크](https://gym.openai.com/envs/#classic_control)
         - 함수
             > init : state, action, observation space 정의  
+            <img src="https://user-images.githubusercontent.com/59794238/105142921-7ee57900-5b3e-11eb-8f53-cb2fb4b96b95.png" width="30%"></img>  
             > step : 한 단계 동안의 과정 (한 action을 선택하였을 때의 결과, reward return)  
             > render : 환경의 동작 과정 표시  
         - 변수
