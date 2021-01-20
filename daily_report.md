@@ -315,6 +315,7 @@
         - localhost의 사용 권한이 없어 파일을 추가할 수 없고, 그로 인해 예제와 python 코드 모두 동작하지 않는다.
         - AWS 서버 생성하였으나 Nucleus 서버 연결되지 않음.
         - Isaac Sim 구동은 어려워 보임.  
+        
 - custom data로 gym 환경 구성 - [참고 링크](https://www.kaggle.com/hwsiew/custom-gym-environment-for-reinforcement-learning)
     - 코로나 추이 예측에 앞서, 간단한 list data로 env를 구성하고 test해보고 있다.
     - gym environment 구성 방법에 대해 공부하고 있다. - [링크](https://gym.openai.com/envs/#classic_control)
@@ -329,3 +330,6 @@
     - 역강화학습으로 가치 함수를 알아낸 후, 이 함수를 토대로 예측하는 것이 필요해보인다.
     
  - ROS를 사용하여 jetbot simulation 하는 방법 - [link](https://www.google.com/search?channel=fs&client=ubuntu&q=jetbot+ros+reinforcement+learning)
+ 
+ - Isaac Sim 대신 [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot)라도 구동해보기로 함
+    - jetbot(192.168.0.22)에 [github](https://github.com/masato-ka/airc-rl-agent)의 installation 진행 중
