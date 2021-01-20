@@ -326,3 +326,5 @@
             > spaces.Discrete : 이산적 변수  
             > spaces.Box : 연속 변수  
     - 역강화학습으로 가치 함수를 알아낸 후, 이 함수를 토대로 예측하는 것이 필요해보인다.
+    
+ - ROS를 사용하여 jetbot simulation 하는 방법 - [link](https://www.google.com/search?channel=fs&client=ubuntu&q=jetbot+ros+reinforcement+learning)
