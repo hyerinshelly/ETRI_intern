@@ -333,3 +333,10 @@
  
  - Isaac Sim 대신 [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot)라도 구동해보기로 함
     - jetbot(192.168.0.22)에 [github](https://github.com/masato-ka/airc-rl-agent)의 installation 진행 중
+
+<br/>
+    
+1/21 Thur.
+- [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot) 구동  
+    [에러] 어제 설치 중 AttributeError: module 'enum' has no attribute 'IntFlag' 에러 발생 하여 설치 실패  
+    [해결] sudo pip uninstall -y enum34 통해 해결 후 설치 재시도 중  
