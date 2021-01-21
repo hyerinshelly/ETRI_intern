@@ -348,9 +348,9 @@
     : 주식 시장 특성을 Deep nueral network로 파악하고 순환 신경망에 의해 강화 학습 방법을 구현해 거래 결정을 내리는 여러 기법을 혼합한 예측 모델을 사용한다.
 
     3. Reinforcement Learning via RecurrentConvolutional Neural Networks - [link](https://paperswithcode.com/paper/reinforcement-learning-via-recurrent)  
-    : 강화학습에 RNN을 적용하여 MDP model을 효과적으로 학습한다.
+    : 강화학습에 RNN을 적용하여 MDP model을 효과적으로 학습한다. (좀 더 공부하기)
 
-    4. Using Reinforcement Learning in the Algorithmic Trading Problem  
+    4. Using Reinforcement Learning in the Algorithmic Trading Problem - [link](https://paperswithcode.com/paper/using-reinforcement-learning-in-the)  
     : 1번의 논문과 유사한 내용. 정해진 데이터에 대해 여러 강화학습 모델을 사용하여 그들 중 가장 높은 수익률을 얻는 모델을 발견하였다. (주가와 같은 robust data를 다룰 때 LSTM, dropout layer를 추가하거나 cost function을 찾기 위해 NN을 사용하는 것은 성능 향상에 도움이 되지만 보상 함수를 바꾸거나 뉴런 수를 증가시키거나 데이터를 합치는 것은 도움이 되지 않는다.)
 
     5. Inverse Reinforcement Learning 관련 논문 - [이해에 도움이 된 코드](https://github.com/eliemichel/IRL/blob/master/notebooks/IRL.ipynb)  
