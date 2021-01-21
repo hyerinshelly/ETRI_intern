@@ -196,7 +196,7 @@
         - 구현에 성공하면 택배 분류나 헌 옷 분류(의류 수거)에 활용할 수 있을 것 같음
 - 계획 : 위 아이디어 중 2, 4번 중심으로 병행 (1번의 경우는 직접 젯봇을 구동시켜보면서 환경이나 상황을 살펴볼 예정)
     - 아이디어별 계획
-        - 2번 : actor critic code 공부 및 주가 예측 등에서 어떻게 쓰이는지 확인 -> 환경 설정 (변수 설정 등) -> 데이터 정리 -> actor critic 개선 및 모델 확정 -> 예측 (역강화학습?)
+        - 2번 : actor critic code 공부 및 주가 예측 등에서 어떻게 쓰이는지 확인 -> 환경 설정 (변수 설정 등) -> 데이터 정리 -> actor critic 개선 및 모델 확정 -> 예측
         - 4번 : 시뮬레이터 사용법 공부 -> 젯봇에 맞게 환경 설정 -> 강화학습 -> 젯봇에 적용
     
     - 주차별 계획
@@ -327,7 +327,7 @@
         - 변수
             > spaces.Discrete : 이산적 변수  
             > spaces.Box : 연속 변수  
-    - 역강화학습으로 가치 함수를 알아낸 후, 이 함수를 토대로 예측하는 것이 필요해보인다. - [link](https://paperswithcode.com/paper/connections-between-relational-event-model#code)
+    - 역강화학습 혹은 recurrent reinforcement learning으로 가치 함수를 알아낸 후, 이 함수를 토대로 예측하는 것이 필요해보인다.
     
  - ROS를 사용하여 jetbot simulation 하는 방법 - [link](https://www.google.com/search?channel=fs&client=ubuntu&q=jetbot+ros+reinforcement+learning)
  
