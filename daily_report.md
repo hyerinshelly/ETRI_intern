@@ -327,7 +327,6 @@
         - 변수
             > spaces.Discrete : 이산적 변수  
             > spaces.Box : 연속 변수  
-    - 역강화학습 혹은 recurrent reinforcement learning으로 예측하는 것이 필요해보인다.
     
  - ROS를 사용하여 jetbot simulation 하는 방법 - [link](https://www.google.com/search?channel=fs&client=ubuntu&q=jetbot+ros+reinforcement+learning)
  
@@ -340,3 +339,21 @@
 - [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot) 구동  
     [에러] 어제 설치 중 AttributeError: module 'enum' has no attribute 'IntFlag' 에러 발생 하여 설치 실패  
     [해결] sudo pip uninstall -y enum34 통해 해결 후 설치 재시도 중  
+    
+- 강화학습을 이용한 예측 관련 논문 공부
+1. 강화학습을 이용한 주가 예측 - [link](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=227431a61bc0493effe0bdc3ef48d419&outLink=K)  
+: 주가 데이터에 강화학습을 적용하여 장기 보유, 단기 보유 중 장기 보유가 수익이 높다는 것을 알아냈다. 하지만 정해진 데이터 안에서만 동작하고, 이후 데이터를 예측하지는 못한다. 관련 연구로 재귀 강화학습, 심층 강화학습을 활용하여 주가를 예측하는 논문을 소개하여 찾아보았다.
+
+2. A Multi-objective Deep Reinforcement Learning Approach for Stock Index Future’s Intraday Trading - [link](https://ieeexplore.ieee.org/abstract/document/8283307)  
+: 주식 시장 특성을 Deep nueral network로 파악하고 순환 신경망에 의해 강화 학습 방법을 구현해 거래 결정을 내리는 여러 기법을 혼합한 예측 모델을 사용한다.
+
+3. Reinforcement Learning via RecurrentConvolutional Neural Networks - [link](https://paperswithcode.com/paper/reinforcement-learning-via-recurrent)  
+: 강화학습에 RNN을 적용하여 MDP model을 효과적으로 학습한다.
+
+4. Using Reinforcement Learning in the Algorithmic Trading Problem  
+: 1번의 논문과 유사한 내용. 정해진 데이터에 대해 여러 강화학습 모델을 사용하여 그들 중 가장 높은 수익률을 얻는 모델을 발견하였다. (주가와 같은 robust data를 다룰 때 LSTM, dropout layer를 추가하거나 cost function을 찾기 위해 NN을 사용하는 것은 성능 향상에 도움이 되지만 보상 함수를 바꾸거나 뉴런 수를 증가시키거나 데이터를 합치는 것은 도움이 되지 않는다.)
+
+5. Inverse Reinforcement Learning 관련 논문 - [이해에 도움이 된 코드](https://github.com/eliemichel/IRL/blob/master/notebooks/IRL.ipynb)  
+: IRL은 학습 후 그 데이터의 가치 함수를 찾는 것. 데이터의 특징을 알아보는 것으로, 내가 원하는 예측과는 다르다.
+
+- 코로나 추이 예측(배팅)에 필요한 환경 구성을 완료하였고 baseline 라이브러리의 ACKTR을 사용해 학습해보았다. 라이브러리의 모델로는 학습에 사용한 데이터 이외에는 예측이 불가능하여, 『강화학습 입문 파이썬 예제와 함께하는』, 『수학으로 풀어보는 강화학습 원리와 알고리즘』책을 참고하여 환경에 맞게 모델을 만들고 학습시켜 봐야겠다.
