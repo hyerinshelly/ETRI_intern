@@ -339,6 +339,7 @@
 - [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot) 구동  
     [에러] 어제 설치 중 AttributeError: module 'enum' has no attribute 'IntFlag' 에러 발생 하여 설치 실패  
     [해결] sudo pip uninstall -y enum34 통해 해결 후 설치 재시도 중  
+    [문제] 여전히 에러 발생.  설치 완료 실패
     
 - 강화학습을 이용한 예측 관련 논문 공부
     1. 강화학습을 이용한 주가 예측 - [link](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=227431a61bc0493effe0bdc3ef48d419&outLink=K)  
