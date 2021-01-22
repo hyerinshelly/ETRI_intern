@@ -366,3 +366,10 @@
         1. LSTM과 같이 데이터의 연관성을 저장하는 Recurrent RL로 예측 모델을 만든다.
         2. 코로나 관련 지수를 변수로 갖는 함수를 만들고, 최적의 상수를 찾는 강화학습 방법을 구현하여 결과로 나온 함수로 추이를 예측한다.
     - 2번째 해결 방법을 채택하여 구현해보기로 하였다.
+
+
+<br/>
+    
+1/22 Fri.
+- [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot)의 racer 설치 결국 실패
+- 대신, Jetbot ROS로 그냥 실행해보기로 함 - [설치 link](https://github.com/dusty-nv/jetbot_ros)
