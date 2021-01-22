@@ -367,7 +367,8 @@
     <img src="https://user-images.githubusercontent.com/59794238/105461235-4aa1c200-5cd0-11eb-820f-8fdf52e6ba2c.png" width="100%"></img>
     
 - [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot)의 racer 설치 결국 실패
-- 대신, Jetbot ROS로 그냥 실행해보기로 함 - [설치 link](https://github.com/dusty-nv/jetbot_ros)
+
+- 대신, Jetbot ROS로 그냥 실행해보기로 함 - [설치 link](https://github.com/dusty-nv/jetbot_ros) : 설치 및 모터 & 카메라 테스트 완료
     1) ROS 시작 : terminal 열어서 
         > $ roscore  
         
@@ -383,4 +384,14 @@
             
     3) 카메라 사용
         - start the jetbot_camera node : 새 terminal 열어서  
-            > $ rosrun jetbot_ros jetbot_camera
+            > $ rosrun jetbot_ros jetbot_camera  
+            (이러면 카메라로 들어오는 비디오 프레임은 /jetbot_camera/raw 토픽으로 발행됨. 이때 타입은 sensor_msgs::Image이며 BGR8 형식으로 인코딩된 이미지임.)
+        - rqt_image_view 도구를 이용하여 이미지 보기  
+            > rqt_image_view
+            > #rqt_image_view 실행 후 뜬 창에서 왼쪽 위에 빈 상자 클릭해 /jetbot_camera/raw 구독(선택)
+            
+- Isaac Sim 대신 Gazebo(오픈 소스 3D 로봇 시뮬레이터) 설치 완료 및 실행 성공  
+    - 버전: gazebo11
+    - 실행 방법:
+        > cd workspace/catkin_ws/src/jetbot_ros/gazebo  
+        > gazebo  
