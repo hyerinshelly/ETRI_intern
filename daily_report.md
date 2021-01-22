@@ -357,15 +357,15 @@
     5. Inverse Reinforcement Learning 관련 논문 - [이해에 도움이 된 코드](https://github.com/eliemichel/IRL/blob/master/notebooks/IRL.ipynb)  
     : IRL은 학습 후 그 데이터의 가치 함수를 찾는 것. 데이터의 특징을 알아보는 것으로, 내가 원하는 예측과는 다르다.
 
-- 코로나 추이 예측 환경 구성
-    - up, down 중 어느 것인지 배팅하는 환경 구성을 완료하였고 baseline 라이브러리의 ACKTR을 사용해 학습해보았다. 
-    - 결과
-    
-
 
 <br/>
     
 1/22 Fri.
+- 코로나 추이 예측 환경 구성
+    - up, down 중 어느 것인지 배팅하는 환경 구성을 완료하였고 baseline 라이브러리의 ACKTR을 사용해 학습해보았다. 
+    - 결과 (data = [0,9,7,4,3,5])  
+    <img src="https://user-images.githubusercontent.com/59794238/105461235-4aa1c200-5cd0-11eb-820f-8fdf52e6ba2c.png" width="30%"></img>
+    
 - [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot)의 racer 설치 결국 실패
 - 대신, Jetbot ROS로 그냥 실행해보기로 함 - [설치 link](https://github.com/dusty-nv/jetbot_ros)
     1) ROS 시작 : terminal 열어서 
