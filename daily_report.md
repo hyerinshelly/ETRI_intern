@@ -375,11 +375,11 @@
     2) 모터 움직이기 
         - start jetbot_motors node : 새 terminal 열어서  
             > $ rosrun jetbot_ros jetbot_motors.py  
-        - test motorcommands : 또 새 terminal 열어서
-            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "forward"
-            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "backward"
-            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "left"
-            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "right"
+        - test motorcommands : 또 새 terminal 열어서  
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "forward"  
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "backward"  
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "left"  
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "right"  
             > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "stop"  
             
     3) 카메라 사용
