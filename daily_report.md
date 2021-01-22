@@ -369,3 +369,19 @@
 1/22 Fri.
 - [jetbot 실제 환경 강화학습](https://developer.nvidia.com/embedded/community/jetson-projects#reinforcement_jetbot)의 racer 설치 결국 실패
 - 대신, Jetbot ROS로 그냥 실행해보기로 함 - [설치 link](https://github.com/dusty-nv/jetbot_ros)
+    1) ROS 시작 : terminal 열어서 
+        > $ roscore  
+        
+    2) 모터 움직이기 
+        - start jetbot_motors node : 새 terminal 열어서  
+            > $ rosrun jetbot_ros jetbot_motors.py  
+        - test motorcommands : 또 새 terminal 열어서
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "forward"
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "backward"
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "left"
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "right"
+            > $ rostopic pub /jetbot_motors/cmd_str std_msgs/String --once "stop"  
+            
+    3) 카메라 사용
+        - start the jetbot_camera node : 새 terminal 열어서  
+            > $ rosrun jetbot_ros jetbot_camera
