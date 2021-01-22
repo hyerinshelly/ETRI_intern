@@ -387,11 +387,13 @@
             > $ rosrun jetbot_ros jetbot_camera  
             (이러면 카메라로 들어오는 비디오 프레임은 /jetbot_camera/raw 토픽으로 발행됨. 이때 타입은 sensor_msgs::Image이며 BGR8 형식으로 인코딩된 이미지임.)
         - rqt_image_view 도구를 이용하여 이미지 보기  
-            > rqt_image_view
-            > #rqt_image_view 실행 후 뜬 창에서 왼쪽 위에 빈 상자 클릭해 /jetbot_camera/raw 구독(선택)
+            > rqt_image_view  
+            > # rqt_image_view 실행 후 뜬 창에서 왼쪽 위에 빈 상자 클릭해 /jetbot_camera/raw 구독(선택)
+            > <img src="https://user-images.githubusercontent.com/47997946/105465315-1af5b880-5cd6-11eb-9d47-bfa098392ac9.png" width="30%"></img>
             
 - Isaac Sim 대신 Gazebo(오픈 소스 3D 로봇 시뮬레이터) 설치 완료 및 실행 성공  
     - 버전: gazebo11
     - 실행 방법:
         > cd workspace/catkin_ws/src/jetbot_ros/gazebo  
         > gazebo  
+    - 계획: gazebo를 통해 전에 찾았던 [예시들](https://www.google.com/search?channel=fs&client=ubuntu&q=jetbot+ros+reinforcement+learning) (ROS로 Jetbot simulation) 해보기   
