@@ -238,7 +238,7 @@
   
 - 주간 계획
     - 『강화학습 입문 파이썬 예제와 함께하는』 ch 10 A3C, ch 11 DDPG 공부
-    - 『수학으로 풀어보는 강화학습 원리와 알고리즘』 4장 A2C, 5장 A3C, 6장 PPO, 7장 DDPG 공부 - [github 링크](https://github.com/kjwoo31/Reinforcement-Learning-Book)
+    - 『수학으로 풀어보는 강화학습 원리와 알고리즘』 4장 A2C, 5장 A3C, 6장 PPO, 7장 DDPG 공부 - [github 링크](https://github.com/pasus/Reinforcement-Learning-Book)
     - 간단하게 state, action, reward를 갖는 강화학습 모델 완성 (custom data로 gym 환경 구성)
     
 - Nvidia Isaac Sim 설치
