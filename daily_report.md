@@ -416,5 +416,6 @@
         3. Reinforcement learning for Covid- 19: Simulation and Optimal Policy - [link](https://towardsdatascience.com/reinforcement-learning-for-covid-19-simulation-and-optimal-policy-b90719820a7f)  
         : 기존의 전염병 수학적 모델(compartment model)은 강화학습을 적용시키기 어려운 부분이 있어 (action을 취했을 때의 환경의 reaction을 확인할 수 없음 등) 새롭게 강화학습 모델 디자인을 하여 시뮬레이션을 해봄 
         
-
+        4. MONTREAL.AI JOINT TASK FORCE ON PANDEMIC COVID-19 - [link](https://montrealartificialintelligence.com/covid19/)  
+        : Covid-19와 관련된 다양한 open code 등 있음  
 
