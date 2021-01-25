@@ -398,6 +398,7 @@
         > $ gazebo  
     - 계획: gazebo를 통해 전에 찾았던 [예시들](https://www.google.com/search?channel=fs&client=ubuntu&q=jetbot+ros+reinforcement+learning) (ROS로 Jetbot simulation) 해보기   
 
+<br/>
 
 1/25 Mon.
 - Multi-Agent Reinforcement Learning / Reinforcement learning for Covid-19 자료 정리
@@ -415,7 +416,11 @@
         (Example: SEIRAH 모델에서 health & economy cost를 고려하여 COVID-19에 대비할 lockdown 정책 최적화 with DQN)
         3. Reinforcement learning for Covid- 19: Simulation and Optimal Policy - [link](https://towardsdatascience.com/reinforcement-learning-for-covid-19-simulation-and-optimal-policy-b90719820a7f)  
         : 기존의 전염병 수학적 모델(compartment model)은 강화학습을 적용시키기 어려운 부분이 있어 (action을 취했을 때의 환경의 reaction을 확인할 수 없음 등) 새롭게 강화학습 모델 디자인을 하여 시뮬레이션을 해봄 
-        
         4. MONTREAL.AI JOINT TASK FORCE ON PANDEMIC COVID-19 - [link](https://montrealartificialintelligence.com/covid19/)  
         : Covid-19와 관련된 다양한 open code 등 있음  
+        
+<br/>
+
+1/26 Tue.
+- Shared Experience Actor-Critic(SEAC) 실행 및 특징 파악 - [코드 link](https://github.com/uoe-agents) 
 
