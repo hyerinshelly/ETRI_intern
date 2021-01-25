@@ -407,13 +407,14 @@
         : Level-Based Foraging, Multi-Robot Warehouse 환경과 그 환경에 대한 SEAC 적용 방법이 있는 코드 공유 - [코드 link](https://github.com/uoe-agents)  
         : local gradient를 공유하고 동시에 비슷한 policy를 학습하여 기존 RL 알고리즘(IAC, SNAC)보다 학습 속도가 빠르고 최대 보상값이 큼  
     - Reinforcement learning for Covid-19
-        1. Optimal policy learning for COVID-19 prevention using reinforcement learning - [link](https://journals.sagepub.com/doi/full/10.1177/0165551520959798)
-        
+        1. Optimal policy learning for COVID-19 prevention using reinforcement learning - [link](https://journals.sagepub.com/doi/full/10.1177/0165551520959798)  
+        : 매 월(state) 코로나에 대비한 정책을 행하였을 때(action) 그 정책에 따른 reward를 반환하는 가상 환경을 만들어 가장 효율적인 정책을 찾음  
+        : 정책은 testing, sanitization, lock down의 3가지로, 정책을 시행할 때 큰 비용이 들기 때문에 좀 더 효율적으로 코로나 대응을 할 수 있는 방법을 찾아봄  
+        : 가상 환경에서 DQN, DDPG가 Q-Learning, SARSA보다 성능이 좋음을 확인함  
         2. EPIDEMIOPTIM: A TOOLBOX FOR THE OPTIMIZATION OF CONTROL POLICIES IN EPIDEMIOLOGICAL MODELS - [link](https://arxiv.org/pdf/2010.04452.pdf)  
-        : 전염병의 모델 (ex. SEIR 모델), cost function, 사용할 최적화 알고리즘 종류, 시행할 방역 대책을 선택하였을 때 강화학습을 통해 최적의 정책을 찾아주는 시뮬레이터 같은 프로그램 제공  
-        (Example: SEIRAH 모델에서 health & economy cost를 고려하여 COVID-19에 대비할 lockdown 정책 최적화 with DQN)
+        : 
         3. Reinforcement learning for Covid- 19: Simulation and Optimal Policy - [link](https://towardsdatascience.com/reinforcement-learning-for-covid-19-simulation-and-optimal-policy-b90719820a7f)  
-        : 기존의 전염병 수학적 모델(compartment model)은 강화학습을 적용시키기 어려운 부분이 있어 (action을 취했을 때의 환경의 reaction을 확인할 수 없음 등) 새롭게 강화학습 모델 디자인을 하여 시뮬레이션을 해봄 
+        : 
         
 
 
