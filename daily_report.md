@@ -403,9 +403,9 @@
 - Multi-Agent Reinforcement Learning / Reinforcement learning for Covid-19 자료 정리
     - Multi-Agent Reinforcement Learning
         1. Shared Experience Actor-Critic for Multi-Agent Reinforcement Learning - [link](https://arxiv.org/abs/2006.07169)  
-        : 서로 다른 policy의 결과를 모아 학습하는 Shared Experience Actor-Critic(SEAC)를 활용하여 Multi-Agent RL 문제를 해결하는 내용
-        : Level-Based Foraging, Multi-Robot Warehouse 환경과 그 환경에 대한 SEAC 적용 방법이 있는 코드를 공유하였다. - [코드 link](https://github.com/uoe-agents)
-        : local gradient를 공유하고 동시에 비슷한 policy를 학습하여 기존 RL 알고리즘(IAC, SNAC)보다 학습 속도가 빠르고 최대 보상값이 크다.
+        : 서로 다른 policy의 결과를 모아 학습하는 Shared Experience Actor-Critic(SEAC)를 활용하여 Multi-Agent RL 문제를 해결  
+        : Level-Based Foraging, Multi-Robot Warehouse 환경과 그 환경에 대한 SEAC 적용 방법이 있는 코드 공유 - [코드 link](https://github.com/uoe-agents)  
+        : local gradient를 공유하고 동시에 비슷한 policy를 학습하여 기존 RL 알고리즘(IAC, SNAC)보다 학습 속도가 빠르고 최대 보상값이 큼  
     - Reinforcement learning for Covid-19
         1. Optimal policy learning for COVID-19 prevention using reinforcement learning - [link](https://journals.sagepub.com/doi/full/10.1177/0165551520959798)
         
