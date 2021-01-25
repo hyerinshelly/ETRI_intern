@@ -407,9 +407,10 @@
     - Reinforcement learning for Covid-19
         1. Optimal policy learning for COVID-19 prevention using reinforcement learning - [link](https://journals.sagepub.com/doi/full/10.1177/0165551520959798)
         
-        2. EPIDEMIOPTIM: A TOOLBOX FOR THE OPTIMIZATION OF CONTROL POLICIES IN EPIDEMIOLOGICAL MODELS - [link](https://arxiv.org/pdf/2010.04452.pdf)
-        
-        3. Reinforcement learning for Covid- 19: Simulation and Optimal Policy - [link](https://towardsdatascience.com/reinforcement-learning-for-covid-19-simulation-and-optimal-policy-b90719820a7f)
+        2. EPIDEMIOPTIM: A TOOLBOX FOR THE OPTIMIZATION OF CONTROL POLICIES IN EPIDEMIOLOGICAL MODELS - [link](https://arxiv.org/pdf/2010.04452.pdf)  
+        : 
+        3. Reinforcement learning for Covid- 19: Simulation and Optimal Policy - [link](https://towardsdatascience.com/reinforcement-learning-for-covid-19-simulation-and-optimal-policy-b90719820a7f)  
+        : 
         
 
 
