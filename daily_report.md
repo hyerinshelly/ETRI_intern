@@ -397,3 +397,11 @@
         > $ cd workspace/catkin_ws/src/jetbot_ros/gazebo  
         > $ gazebo  
     - 계획: gazebo를 통해 전에 찾았던 [예시들](https://www.google.com/search?channel=fs&client=ubuntu&q=jetbot+ros+reinforcement+learning) (ROS로 Jetbot simulation) 해보기   
+
+
+1/25 Mon.
+- Multi-Agent Reinforcement Learning, Reinforcement learning for Covid-19 자료 정리
+    1. Shared Experience Actor-Critic for Multi-Agent Reinforcement Learning - [link](https://arxiv.org/abs/2006.07169)
+    
+    2. Optimal policy learning for COVID-19 prevention using reinforcement learning - [link](https://journals.sagepub.com/doi/full/10.1177/0165551520959798)
+
