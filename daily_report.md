@@ -438,6 +438,6 @@
         > python train.py --config goal_dqn --expe-name goal_dqn_study --trial_id 0  
         - Base condition: SEIRAH model (for the epodemiological model (transition function)),  
                           health cost function based on death toll,  
-                          economy cost function based on GDP loss,
+                          economy cost function based on GDP loss,  
                           1e6 training steps
         - Experiment condition: goal-dqn (for learning algorithm)  
