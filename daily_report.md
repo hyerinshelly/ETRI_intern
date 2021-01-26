@@ -436,6 +436,10 @@
 : robotic_warehouse/robotic_warehouse/에서 python3 warehouse.py로 학습 과정 확인  
 : robotic_warehouse/tests/의 test_movement.py로 이동 시 거리, 초기값 등 확인  
 
+- DeepSoccer - [github link](https://github.com/kimbring2/DeepSoccer)  
+    - Gazebo error (no dev)
+        > sudo apt-get install libgazebo11-dev ([link](http://gazebosim.org/tutorials?tut=install_ubuntu))
+
 - EPIDEMIOPTIM([github](https://github.com/flowersteam/EpidemiOptim)) 실행 및 코드 확인
     1. 설치: EpidemiOptim/requirements.txt대로 미설치되어있던 torch와 gym, pymoo 추가로 설치
     2. 실행: EpidemiOptim/readme.md의 예시 실행
