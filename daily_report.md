@@ -439,7 +439,8 @@
 - DeepSoccer - [github link](https://github.com/kimbring2/DeepSoccer)  
 : 강화학습을 할 수 있는 가상 환경 참고  
     - Gazebo error  
-        > error가 발생하는 solenoid_electromagnet_joint_spring_plugin를 제외함.  
+        > dusty-nv 레퍼지토리 맨 아래 해보기 
+    - 12: build jetson-inference git clone 뒤부터, deepsoccer git clone 한 후 catkin_make, source하기
 
 - EPIDEMIOPTIM([github](https://github.com/flowersteam/EpidemiOptim)) 실행 및 코드 확인
     1. 설치: EpidemiOptim/requirements.txt대로 미설치되어있던 torch와 gym, pymoo 추가로 설치
