@@ -427,6 +427,8 @@
  1. 하나의 agent에 대해 알고리즘 방식과 강화학습 방식을 실행해보고 비교
  2. SEAC에 curriculum learning, Hierarchical Deep Reinforcement Learning 등 다른 방법을 적용하여 단계적으로 학습하게 함
  3. jetbot을 활용해 충돌하지 않고 짐 옮기는 과정 실행 (가상 환경, 실제 환경) - 위아래양옆뿐만 아니라 다양한 방향으로 이동?
+    > 목표 1) jetbot simulation 환경에서 RMFS 환경 구성 후 배포  
+    > 목표 2) SEAC 논문 코드를 보고, 학습 과정을 이해하고 학습 이후 동작 모습을 rendering  
  
 - Shared Experience Actor-Critic for Multi-Agent Reinforcement Learning - [코드 link](https://github.com/uoe-agents)  
 : robotic_warehouse/robotic_warehouse/에서 python3 warehouse.py로 학습 과정 확인  
