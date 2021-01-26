@@ -444,22 +444,24 @@
 - EPIDEMIOPTIM([github](https://github.com/flowersteam/EpidemiOptim)) 실행 및 코드 확인
     1. 설치: EpidemiOptim/requirements.txt대로 미설치되어있던 torch와 gym, pymoo 추가로 설치
     2. 실행: EpidemiOptim/readme.md의 예시 실행  
-        - Base condition: SEIRAH model (for the epodemiological model (transition function)) - in EpidemiOptim/epidemioptim/environments/gym_envs/epidemic_discrete.py,  
+    - Base condition: SEIRAH model (for the epodemiological model (transition function)) - in EpidemiOptim/epidemioptim/environments/gym_envs/epidemic_discrete.py,  
                           health cost function based on death toll,  
                           economy cost function based on GDP loss,  
                           1e6 training steps,  
                           optimize for Pareto front  
-        * 1st experiment
+    * 1st experiment
         > python train.py --config goal_dqn --expe-name goal_dqn_study --trial_id 0  
         - Experiment condition: goal-dqn (for learning algorithm)  
         
-        * 2nd experiment
+    * 2nd experiment
         > python train.py --config dqn --expe-name dqn_study --trial_id 0  
         - Experiment condition: goal-dqn (for learning algorithm)  
+            
     3. 결과 확인: 각각 1st, 2nd experiment 결과  
     - Jupyter Notebook으로 epidemioptim/analysis/Visualization EpidemiOptim.ipynb를 통해 visualization 확인 가능
     <img src="https://user-images.githubusercontent.com/47997946/105819271-50164980-5ffb-11eb-84bf-f5ece6977ad3.png" width="45%"></img> <img src="https://user-images.githubusercontent.com/47997946/105819450-8eac0400-5ffb-11eb-8903-0d15ec78b746.png" width="45%"></img>  
-    - 결과 해석을 논문 조사 좀 더 필요
+    - 결과 해석을 논문 조사 좀 더 필요  
+    
     4. 코드 구조 확인
     
 - RL for COVID-19 : EPIDEMIOPTIM의 어느 부분을 바꿀지 고민 필요
