@@ -407,6 +407,7 @@
         : 서로 다른 policy의 결과를 모아 학습하는 Shared Experience Actor-Critic(SEAC)를 활용하여 Multi-Agent RL 문제를 해결  
         : Level-Based Foraging, Multi-Robot Warehouse 환경과 그 환경에 대한 SEAC 적용 방법이 있는 코드 공유 - [코드 link](https://github.com/uoe-agents)  
         : local gradient를 공유하고 동시에 비슷한 policy를 학습하여 기존 RL 알고리즘(IAC, SNAC)보다 학습 속도가 빠르고 최대 보상값이 큼  
+        : 기존에는 하나의 기기에 대해서만, 혹은 알고리즘을 활용하여 Robotic mobile fullfillment system(RMFS)를 해결하였는데 이를 multi-agent에 대해 해결함    
     - Reinforcement learning for Covid-19
         1. Optimal policy learning for COVID-19 prevention using reinforcement learning - [link](https://journals.sagepub.com/doi/full/10.1177/0165551520959798)  
         : 매 월 코로나에 대비한 정책을 행하였을 때, 그 정책에 따른 reward를 반환하는 가상 환경을 만들어 효율적인 정책을 찾음  
@@ -422,5 +423,7 @@
 <br/>
 
 1/26 Tue.
-- Shared Experience Actor-Critic(SEAC) 실행 및 특징 파악 - [코드 link](https://github.com/uoe-agents) 
-
+- 다뤄볼만한 RMFS 문제
+ 1. 하나의 agent에 대해 알고리즘 방식과 강화학습 방식을 실행해보고 비교
+ 2. SEAC에 curriculum learning, 
+ 3. jetbot을 활용해 충돌하지 않고 짐 옮기는 과정 실행 (가상 환경, 실제 환경)
