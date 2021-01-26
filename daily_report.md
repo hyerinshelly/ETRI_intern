@@ -433,7 +433,7 @@
 : robotic_warehouse/tests/의 test_movement.py로 이동 시 거리, 초기값 등 확인  
 
 - EPIDEMIOPTIM([github](https://github.com/flowersteam/EpidemiOptim)) 실행 및 코드 확인
-    1. 설치: EpidemiOptim/requirements.txt대로 미설치되어있던 torch와 pymoo 추가로 설치
+    1. 설치: EpidemiOptim/requirements.txt대로 미설치되어있던 torch와 gym, pymoo 추가로 설치
     2. 실행: EpidemiOptim/readme.md의 예시 실행
         > python train.py --config goal_dqn --expe-name goal_dqn_study --trial_id 0  
         - Base condition: SEIRAH model (for the epodemiological model (transition function)),  
