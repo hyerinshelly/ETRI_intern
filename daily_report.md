@@ -477,5 +477,8 @@
         - Jetbot model 불러오기 (dusty-nv repository)
         > mkdir .gazebo/models , gazebo model editor에서 링크 추가하여 해결
         - Deepsoccer CMake error
-        > gazebo-ros 관련 문제가 있어 issue를 올려두었다. [issue](https://github.com/kimbring2/DeepSoccer/issues/9)
-        
+        > gazebo-ros 관련 문제가 있어 [issue](https://github.com/kimbring2/DeepSoccer/issues/9)를 올려두었다.
+ 
+ - Isaac Sim
+    - 권한 설정 문제 해결
+        : 이전에 파일이 만들어지지 않는 문제가 발생하였는데, Devtalk Community에 같은 문제에 대한 [해결방법](https://forums.developer.nvidia.com/t/cannot-create-folder-in-localhost-create-a-folder-and-nothing-happen/160694/6)이 나와 있어 참고하여 해결하였다.
