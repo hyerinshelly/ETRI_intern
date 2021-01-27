@@ -491,7 +491,14 @@
     1. 재설치: 컴퓨터를 옮김에 따라 역시나 미설치되어있던 torch와 gym, pymoo 추가로 설치  
     2. 재실행: 각 알고리즘(learing algorithm) 별로 'first_algorithm_name'의 experiment로 저장  
     3. 알고리즘 분석  
-    - DQN:  
-    - Goal-DQN:  
-    - Goal-DQN-Constraint:  
-    - NSGA-2:
+    - DQN: health cost와 economy cost의 비율(1-β:β)을 나타내기 위한 변수 β 값이 주어지면 그에 맞는 손실 값을 최소화하는 솔루션을 찾음 by Actor Critic with deep Q러닝  
+    - Goal-DQN: DQN이 β값이 주어졌을 때의 하나로 정해지는 cost function에 최적화한 정책 Π(s)을 찾는 반면, 두 개의 Q-network를 이용하여 β에 따라서도 최적화되는 정책 Π(s, β) 찾음   
+    - Goal-DQN-Constraint: Goal-DQN에 각 손실값의 최대값(M_eco, M_health)이라는 constraint를 주어 손실 값이 그 주어진 최대값을 넘으면 -1의 reward 값을 주는 방식으로 솔루션 찾음  
+    - NSGA-2: 경제 분야에서 많이 쓰이는 최적화 방법인 Pareto front 방식 사용. multi-objective algorithm(이라는데 이게 뭔지 잘 모르겠음).  
+    - 각 알고리즘의 결과 해석하는 법 알아내 논문의 결과들 모두 확인함.  
+    
+- RL for COVID-19 : 바꿔볼 옵션들 생각
+    1. data를 우선 우리나라 데이터로
+    2. lockdown을 우리나라는 시행한 적이 없음. 대신 사회적 거리두기 단계 조정. -> lockdown on/off 대신에 다양한 action 추가  
+    3. action 다양화에 따른 epidemiological model 수정 필요 -> 후보 - SQEIR
+    +) 가능하다면, probabilistic programming과의 결합도 해보면 좋을 듯.
