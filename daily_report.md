@@ -466,7 +466,8 @@
     4. 코드 구조 확인
     
 - RL for COVID-19 : EPIDEMIOPTIM의 어느 부분을 바꿀지 고민 필요
-    - learning model: 현재는 DQN 뿐. -> Actor Critic으로?
+    - Agent - Learning model: 현재는 DQN 뿐. -> Actor Critic으로?
+    - Agent - Action: 현재는 lockdown on/off 뿐 -> 사회적 거리두기 단계 조절, 유흥업소 폐쇄 등 추가?
     - Environment - Epidemiological model: SEIRAH 모델 -> 다른 모델? / Probabilistic Programming 도입?
     - Environment - Cost function: health(death toll) & economy(GDP loss) cost -> simplify?
   
