@@ -484,6 +484,8 @@
  - Isaac Sim
     - 권한 설정 문제 해결
         : 이전에 파일이 만들어지지 않는 문제가 발생하였는데, Devtalk Community에 같은 문제에 대한 [해결방법](https://forums.developer.nvidia.com/t/cannot-create-folder-in-localhost-create-a-folder-and-nothing-happen/160694/6)이 나와 있어 참고하여 해결하였다.
+    - 아래 사진과 같이 강화 학습 예제가 잘 동작함을 확인하였다. 내일은 코드를 구체적으로 살펴보고 RMFS 가상 환경을 구현할 방법을 구체화할 예정이다.
+        <img src="https://user-images.githubusercontent.com/59794238/105962401-1c9ef200-60c3-11eb-80aa-4ed54ea0f2a6.png" width="45%"></img>
         
 - EPIDEMIOPTIM([github](https://github.com/flowersteam/EpidemiOptim)) 재실행 및 알고리즘 확인
     1. 재설치: 컴퓨터를 옮김에 따라 역시나 미설치되어있던 torch와 gym, pymoo 추가로 설치  
