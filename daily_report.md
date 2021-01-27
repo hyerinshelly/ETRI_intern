@@ -474,6 +474,8 @@
 1/27 Wen.
 - DeepSoccer
     - Gazebo error
-        - Jetbot model 불러오기
+        - Jetbot model 불러오기 (dusty-nv repository)
         > mkdir .gazebo/models , gazebo model editor에서 링크 추가하여 해결
+        - Deepsoccer CMake error
+        > gazebo-ros 관련 문제가 있어 issue를 올려두었다. [issue](https://github.com/kimbring2/DeepSoccer/issues/9)
         
