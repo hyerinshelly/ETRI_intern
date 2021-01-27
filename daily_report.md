@@ -471,3 +471,9 @@
     - Environment - Epidemiological model: SEIRAH 모델 -> 다른 모델? / Probabilistic Programming 도입?
     - Environment - Cost function: health(death toll) & economy(GDP loss) cost -> simplify?
   
+1/27 Wen.
+- DeepSoccer
+    - Gazebo error
+        - Jetbot model 불러오기
+        > mkdir .gazebo/models , gazebo model editor에서 링크 추가하여 해결
+        
