@@ -471,7 +471,9 @@
     - Environment - Epidemiological model: SEIRAH 모델 -> 다른 모델? / Probabilistic Programming 도입?
     - Environment - Cost function: health(death toll) & economy(GDP loss) cost -> simplify?
   
-1/27 Wen.
+<br/>
+
+1/27 Wed.
 - DeepSoccer
     - Gazebo error
         - Jetbot model 불러오기 (dusty-nv repository)
@@ -482,3 +484,12 @@
  - Isaac Sim
     - 권한 설정 문제 해결
         : 이전에 파일이 만들어지지 않는 문제가 발생하였는데, Devtalk Community에 같은 문제에 대한 [해결방법](https://forums.developer.nvidia.com/t/cannot-create-folder-in-localhost-create-a-folder-and-nothing-happen/160694/6)이 나와 있어 참고하여 해결하였다.
+        
+- EPIDEMIOPTIM([github](https://github.com/flowersteam/EpidemiOptim)) 재실행 및 알고리즘 확인
+    1. 재설치: 컴퓨터를 옮김에 따라 역시나 미설치되어있던 torch와 gym, pymoo 추가로 설치  
+    2. 재실행: 각 알고리즘(learing algorithm) 별로 'first_algorithm_name'의 experiment로 저장  
+    3. 알고리즘 분석  
+    - DQN:  
+    - Goal-DQN:  
+    - Goal-DQN-Constraint:  
+    - NSGA-2:
