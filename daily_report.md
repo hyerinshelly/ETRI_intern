@@ -518,3 +518,10 @@
         >   File "../epidemioptim/optimization/nsga/nsga.py", line 205, in evaluate  
         >     for w in self.res.X:  
         > AttributeError: 'NoneType' object has no attribute 'X'  
+    
+- RL for COVID-19 : 바꿔볼 옵션들 생각
+    1. data를 우선 우리나라 데이터로
+    2. lockdown을 우리나라는 시행한 적이 없음. 대신 사회적 거리두기 단계 조정. -> lockdown on/off 대신에 다양한 action 추가  
+    3. action 다양화에 따른 epidemiological model 수정 필요 -> 후보 - SQEIR  
+    4. (추가) learning algorithm DDPG 추가 (*DDPG가 DQN보다 continuous space에서 더 효과적인 것으로 알려져 있음)  
+    +) 가능하다면, probabilistic programming과의 결합도 해보면 좋을 듯.
