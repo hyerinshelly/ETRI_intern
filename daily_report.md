@@ -508,13 +508,13 @@
 1/28 Thur.
 - EPIDEMIOPTIM([github](https://github.com/flowersteam/EpidemiOptim)) 분석
     * 문제 발생: 어제 돌려놓은 4개의 알고리즘 중 NSGA-ii에서 에러 발생  
-        > Traceback (most recent call last):
-        >   File "train.py", line 77, in <module>
-        >     train(**kwargs)
-        >   File "train.py", line 66, in train
-        >     algorithm.learn(num_train_steps=params['num_train_steps'])
-        >   File "../epidemioptim/optimization/nsga/nsga.py", line 191, in learn
-        >     self.res_eval = self.evaluate(n=self.n_evals_if_stochastic if self.stochastic else 1, all=True)
-        >   File "../epidemioptim/optimization/nsga/nsga.py", line 205, in evaluate
-        >     for w in self.res.X:
-        > AttributeError: 'NoneType' object has no attribute 'X'
+        > Traceback (most recent call last):  
+        >   File "train.py", line 77, in <module>  
+        >     train(**kwargs)  
+        >   File "train.py", line 66, in train  
+        >     algorithm.learn(num_train_steps=params['num_train_steps'])  
+        >   File "../epidemioptim/optimization/nsga/nsga.py", line 191, in learn  
+        >     self.res_eval = self.evaluate(n=self.n_evals_if_stochastic if self.stochastic else 1, all=True)  
+        >   File "../epidemioptim/optimization/nsga/nsga.py", line 205, in evaluate  
+        >     for w in self.res.X:  
+        > AttributeError: 'NoneType' object has no attribute 'X'  
