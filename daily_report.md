@@ -518,6 +518,7 @@
         >   File "../epidemioptim/optimization/nsga/nsga.py", line 205, in evaluate  
         >     for w in self.res.X:  
         > AttributeError: 'NoneType' object has no attribute 'X'  
+    -> 해당 NSGA-ii 알고리즘이 경제하겡서의 최적화 방법을 활용한 알고리즘이므로 향후 연구에 쓰일 일이 없을 것 같아 해결하지 않음. (파라미터 설정이 더 필요한 것 같은데 해당 알고리즘에 대해 잘 모르겠어서 왜 에러가 발생하는지 못 앟아채는 것 같음)  
     
 - RL for COVID-19 : 바꿔볼 옵션들 생각
     1. data를 우선 우리나라 데이터로
@@ -525,3 +526,7 @@
     3. action 다양화에 따른 epidemiological model 수정 필요 -> 후보 - SQEIR  
     4. (추가) learning algorithm DDPG 추가 (*DDPG가 DQN보다 continuous space에서 더 효과적인 것으로 알려져 있음)  
     +) 가능하다면, probabilistic programming과의 결합도 해보면 좋을 듯.
+    
+- RL algorithm 및 Pytorch 공부
+
+- 중간 보고 자료 제작 중 (앞으로의 연구 주제 및 방향 확정)
