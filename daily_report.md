@@ -527,6 +527,16 @@
     4. (추가) learning algorithm DDPG 추가 (*DDPG가 DQN보다 continuous space에서 더 효과적인 것으로 알려져 있음)  
     +) 가능하다면, probabilistic programming과의 결합도 해보면 좋을 듯.
     
+- Optimal policy learning for COVID-19 prevention using reinforcement learning - [link](https://journals.sagepub.com/doi/full/10.1177/0165551520959798) 분석
+    - base로 사용한 데이터 없음. (그냥 보상 값으로 알고리즘별 결과 비교)
+    - 바이러스 확산 모델 사용 안함 (epidemiological model 사용 X)
+    - 대신 다양한 알고리즘 비교: Q-러닝, SARSA, DQN, DDPG
+
 - RL algorithm 및 Pytorch 공부
 
 - 중간 보고 자료 제작 중 (앞으로의 연구 주제 및 방향 확정)
+
+
+<br/>
+
+1/29 Fri.
