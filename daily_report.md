@@ -555,7 +555,6 @@
 - Sample Applications
     - CAD에서 Sample을 불러오고 stage, layer를 활용해 센서 부착, 물리 효과 추가 등을 하는 방법
     - STR 로봇 (Simple Robot Navigation)  
-    <img src="https://user-images.githubusercontent.com/59794238/106408461-dca08c00-6481-11eb-88f4-8590603ac644.png" width="45%"></img>  
 - Rigging a Robot
 - Camera Sensors
 - Assets
