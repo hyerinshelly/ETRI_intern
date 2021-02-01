@@ -542,3 +542,13 @@
 1/29 Fri.
 - 연구 진행 상황 중간 보고 자료 제출
 
+
+
+<br/>
+
+2/1 Mon.
+- Isaac Sim 공부
+1. youtube
+    - [Isaac Sim 2020: Deep Dive](https://www.youtube.com/watch?v=KGtGe87lY60) : AWS로 Isaac Sim을 실행하는 방법과 외부 로봇을 import, 조작할 수 있는 방법 소개
+    - [Isaac Sim 2020.2 Omniverse Robotics App](https://www.youtube.com/watch?v=BM9q8vnjU6w) : Isaac Sim tutorial 내용 소개
+2. 공식 tutorial - [link](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html)
