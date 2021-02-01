@@ -554,9 +554,10 @@
 2. 공식 tutorial - [link](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html)
 - Sample Applications
     - CAD에서 Sample을 불러오고 stage, layer를 활용해 센서 부착, 물리 효과 추가 등을 하는 방법
-    - Simple Robot Navigation  
-- Rigging a Robot
-- Camera Sensors
+    - Simple Robot Navigation   
+        > setup: _create_robot()으로 환경 구성, _on_setup_fn()으로 로봇 컨트롤러 구성  
+        > update: 명령에 따라 목적지로 이동  
+- Rigging a Robot : CAD에서 부품을 불러온 후 결합하는 방법  
 - Assets
     - warehouse sample 환경  
     <img src="https://user-images.githubusercontent.com/59794238/106408143-2b015b00-6481-11eb-96e2-5c393449da22.png" width="45%"></img>
@@ -564,7 +565,10 @@
     /Isaac/Robots/STR  
     <img src="https://user-images.githubusercontent.com/59794238/106408461-dca08c00-6481-11eb-88f4-8590603ac644.png" width="45%"></img>  
 - Python Samples
-    - Basic Time Stepping
+    - Basic Time Stepping : CONFIG로 env 불러오기 → kit.play (simulation 시작) → callback 정의 → kit.update
     - Synthetic Data Generation
-    - Isaac SDK (Pose Estimation)
+        - 임의로 box 만들고 이미지 처리를 하여 보여줌  
+        <img src="https://user-images.githubusercontent.com/59794238/106423921-ae807380-64a4-11eb-9499-b69f5473a24a.png" width="45%"></img>  
+        - 이미지 학습도 가능  
+        <img src="https://docs.omniverse.nvidia.com/app_isaacsim/_images/isaac_synth-data_train.gif" width="45%"></img>   
     - Reinforcement Training
