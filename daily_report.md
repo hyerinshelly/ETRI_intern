@@ -582,6 +582,6 @@
         - Add Korea ver. cost in RL_COVID-19_Korea/epidemiOptim/environment/cost_functions/costs
             - korea_death_toll_cost.py
             - korea_gdp_recess_cost.py : epidemiological model 수정 후 compute_current_infected & compute_cost 함수 식 수정 필요
-    - RL_COVID-19_Korea/epidemiOptim/environment/models에 SQEIR 모델 추가 : sqeir_model.py
+    - RL_COVID-19_Korea/epidemiOptim/environment/models에 파일 for SQEIR 모델 추가 : sqeir_model.py
     
     
