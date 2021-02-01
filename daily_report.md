@@ -552,7 +552,7 @@
     - [Isaac Sim 2020: Deep Dive](https://www.youtube.com/watch?v=KGtGe87lY60) : AWS로 Isaac Sim을 실행하는 방법과 외부 로봇을 import, 조작할 수 있는 방법 소개
     - [Isaac Sim 2020.2 Omniverse Robotics App](https://www.youtube.com/watch?v=BM9q8vnjU6w) : Isaac Sim tutorial 내용 소개
 2. 공식 tutorial - [link](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html)
-    - warehouse sample 환경
+    - warehouse sample 환경  
     <img src="https://user-images.githubusercontent.com/59794238/106408143-2b015b00-6481-11eb-96e2-5c393449da22.png" width="45%"></img>  
-    - STR 로봇 (Simple Robot Navigation)
+    - STR 로봇 (Simple Robot Navigation)  
     <img src="https://user-images.githubusercontent.com/59794238/106408461-dca08c00-6481-11eb-88f4-8590603ac644.png" width="45%"></img>  
