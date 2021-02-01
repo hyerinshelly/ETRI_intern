@@ -554,7 +554,7 @@
 2. 공식 tutorial - [link](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html)
 - Sample Applications
     - CAD에서 Sample을 불러오고 stage, layer를 활용해 센서 부착, 물리 효과 추가 등을 하는 방법
-    - STR 로봇 (Simple Robot Navigation)  
+    - Simple Robot Navigation  
 - Rigging a Robot
 - Camera Sensors
 - Assets
