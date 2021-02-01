@@ -575,3 +575,13 @@
         - 기존의 gym과 비슷하게 동작한다. 하지만 기존 언어와 명령어가 다른 점이 많아 각각 어떤 내용인지 확인해야겠다.
         - jetbot_train.py, jetracer_train.py의 학습 과정 이해하기
  
+ - RL for COVID-19: git remote repository from EpidemiOptim - [github](https://github.com/hyerinshelly/RL_COVID-19_Korea)
+    - RL_COVID-19_Korea/epidemiOptim/environment/cost_functions 내 파일 추가 (변경 전 파일 이름 앞아 모두 'korea_' 붙임)
+        - Add korea_multi_cost_death_gdp_controllable.py
+            - 기존 파일에서 사망률 0.02로 변경
+        - Add Korea ver. cost in RL_COVID-19_Korea/epidemiOptim/environment/cost_functions/costs
+            - korea_death_toll_cost.py
+            - korea_gdp_recess_cost.py : epidemiological model 수정 후 compute_current_infected & compute_cost 함수 식 수정 필요
+    - RL_COVID-19_Korea/epidemiOptim/environment/models에 SQEIR 모델 추가 : sqeir_model.py
+    
+    
