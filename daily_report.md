@@ -553,8 +553,19 @@
     - [Isaac Sim 2020.2 Omniverse Robotics App](https://www.youtube.com/watch?v=BM9q8vnjU6w) : Isaac Sim tutorial 내용 소개
 2. 공식 tutorial - [link](https://docs.omniverse.nvidia.com/app_isaacsim/app_isaacsim/overview.html)
 - Sample Applications
-    - Sample을 불러오고 stage, layer를 활용해 센서 부착, 물리 효과 추가 등을 하는 방법
-    - warehouse sample 환경  
-    <img src="https://user-images.githubusercontent.com/59794238/106408143-2b015b00-6481-11eb-96e2-5c393449da22.png" width="45%"></img>  
+    - CAD에서 Sample을 불러오고 stage, layer를 활용해 센서 부착, 물리 효과 추가 등을 하는 방법
     - STR 로봇 (Simple Robot Navigation)  
     <img src="https://user-images.githubusercontent.com/59794238/106408461-dca08c00-6481-11eb-88f4-8590603ac644.png" width="45%"></img>  
+- Rigging a Robot
+- Camera Sensors
+- Assets
+    - warehouse sample 환경  
+    <img src="https://user-images.githubusercontent.com/59794238/106408143-2b015b00-6481-11eb-96e2-5c393449da22.png" width="45%"></img>
+    - STR 로봇  
+    /Isaac/Robots/STR  
+    <img src="https://user-images.githubusercontent.com/59794238/106408461-dca08c00-6481-11eb-88f4-8590603ac644.png" width="45%"></img>  
+- Python Samples
+    - Basic Time Stepping
+    - Synthetic Data Generation
+    - Isaac SDK (Pose Estimation)
+    - Reinforcement Training
