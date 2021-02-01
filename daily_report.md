@@ -572,3 +572,6 @@
         - 이미지 학습도 가능  
         <img src="https://docs.omniverse.nvidia.com/app_isaacsim/_images/isaac_synth-data_train.gif" width="45%"></img>   
     - Reinforcement Training
+        - 기존의 gym과 비슷하게 동작한다. 하지만 기존 언어와 명령어가 다른 점이 많아 각각 어떤 내용인지 확인해야겠다.
+        - jetbot_train.py, jetracer_train.py의 학습 과정 이해하기
+ 
