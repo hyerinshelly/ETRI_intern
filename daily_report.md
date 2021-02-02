@@ -595,7 +595,7 @@
 
 - RL for COVID-19: epidemiological model & action 부분 스케치
     - 우리나라에 맞는 action 계획 세우기
-        - 우리나라 거리두기 방침 확인 - 출처: 질병관리청[link](http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&brdGubun=64&dataGubun=641)
+        - 우리나라 거리두기 방침 확인 - 출처: 질병관리청 ([link](http://ncov.mohw.go.kr/socdisBoardList.do?brdId=6&brdGubun=64&dataGubun=641))
         - 1, 1.5, 2, 2.5, 3단계에 따른 1인당 평균 접촉자수 c_0 조절 계획 (3단계일 경우 c_0 ~= 0, 1단계일 경우 값 정해야함 -> 통계치 찾아보기)
             * EpimediOptim에서는 lockdown on/off에 따라 전염률 b 계산함. (역시나 최소는 0) 그러나 여기서는 전염 정도를 '전염률(바이러스의 특정, 고정값, 베타) * 1인당 접촉자수(action에 따라 변하는 값, c_0)'로 계산할 계획.
             
