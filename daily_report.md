@@ -604,7 +604,7 @@
             
     - SQEIR model 스케치:  
     <img src="https://user-images.githubusercontent.com/47997946/106572180-75ff9900-657b-11eb-91ab-8cab5fcc8823.png" width="50%"></img> <img src="https://user-images.githubusercontent.com/47997946/106572351-a9422800-657b-11eb-8ed7-a996d57b3609.png" width="40%"></img>  
-    * q : 확진자와 접촉 후 감염된 사람 중 격리될 비율(확률)  
+        * q : 확진자와 접촉 후 감염된 사람 중 격리될 비율(확률)  
     
     - 정해야 하는 파라미터들: (통계 더 찾아봐야 할 듯)  
         D_e : 확진자와 접촉 후 증상이 발현되는데 걸리는 평균 일 수  
