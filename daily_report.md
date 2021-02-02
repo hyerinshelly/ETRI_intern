@@ -592,6 +592,9 @@
         <img src="https://user-images.githubusercontent.com/59794238/106545400-b267d080-654c-11eb-9d6d-bda5629ac81b.png" width="30%"></img>  
     - Simple Navigation RL: RFMS 환경을 만들기에 앞서, 예제에 있는 Simple Navigation을 강화학습 형태로 구현해보려고 한다.
         - 예제 코드 주소 : isaac-sim-2020.2.2007-linux-x86_64-release/_build/linux-x86_64/release/exts/omni.isaac.samples/omni/isaac/samples
+    - warehouse.py, jetbot_train.py, jetracer_train.py의 코드를 보고 각각 함수 내용을 정리하였다.  
+        <img src="https://user-images.githubusercontent.com/59794238/106567805-bcea9000-6575-11eb-8a44-23bccf9de932.jpg" width="30%"></img>
+        <img src="https://user-images.githubusercontent.com/59794238/106567809-bf4cea00-6575-11eb-8113-0d17fd20414b.jpg" width="30%"></img>  
 
 - RL for COVID-19: epidemiological model & action 부분 스케치
     - 우리나라에 맞는 action 계획 세우기
