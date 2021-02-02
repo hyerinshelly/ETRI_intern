@@ -536,13 +536,10 @@
 
 - 중간 보고 자료 제작 중 (앞으로의 연구 주제 및 방향 확정)
 
-
 <br/>
 
 1/29 Fri.
 - 연구 진행 상황 중간 보고 자료 제출
-
-
 
 <br/>
 
@@ -584,4 +581,14 @@
             - korea_gdp_recess_cost.py : epidemiological model 수정 후 compute_current_infected & compute_cost 함수 식 수정 필요
     - RL_COVID-19_Korea/epidemiOptim/environment/models에 파일 for SQEIR 모델 추가 : sqeir_model.py
     
-    
+<br/>
+
+2/2 Tue.
+- Isaac Sim 공부
+    - Reinforcement Training
+        - jetbot_train.py : 흰색 벽과의 거리가 0이 되도록 강화 학습  
+        <img src="https://user-images.githubusercontent.com/59794238/106545047-fb6b5500-654b-11eb-874b-f0ffeb67c360.png" width="30%"></img>  
+        - jetracer_train.py : 주어진 선에서 벗어나지 않고 트랙을 돌도록 강화 학습  
+        <img src="https://user-images.githubusercontent.com/59794238/106545400-b267d080-654c-11eb-9d6d-bda5629ac81b.png" width="30%"></img>  
+    - Simple Navigation RL: RFMS 환경을 만들기에 앞서, 예제에 있는 Simple Navigation을 강화학습 형태로 구현해보려고 한다.
+        - 예제 코드 주소 : isaac-sim-2020.2.2007-linux-x86_64-release/_build/linux-x86_64/release/exts/omni.isaac.samples/omni/isaac/samples
