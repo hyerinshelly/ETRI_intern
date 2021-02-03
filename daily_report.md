@@ -615,16 +615,19 @@
 
 2/3 Wed.
 - RL for COVID-19:
-    - SQEIR model 파라미터 값 확정:
+    - SQEIR model 파라미터 값 확정: (+ SQEIR model diagram 수정)  
+    <img src="https://user-images.githubusercontent.com/47997946/106719919-318cff80-6646-11eb-884f-82c325e04da1.png" width="50%"></img> <img src="https://user-images.githubusercontent.com/47997946/106720041-56817280-6646-11eb-8d13-10ae11f0607e.png" width="45%"></img>  
     
-        * Reference
-            - 인구수: [행정안전부](https://jumin.mois.go.kr/) (*2020.1.20. 첫 확진자 발생 -> 2020.2. 인구수로 가져옴)
-            - 각 compartment 별 초기값: [질병관리청 감염병포털](http://www.kdca.go.kr/npt/biz/npp/portal/nppIssueIcdView.do?issueIcdSn=176)
-            - 베타(transmision rate): coronaboard_kr/kr_daily.csv (첫 발생 이후 2달 후인 2020.3.20.을 기준으로 확진자수/검사수로 계산함. 그 이후는 증상이 없어도 검사를 받은 경우가 많거나 사회적 거리두기로 인한 수치 감소의 영향이 있을 것으로 판단되었기 때문
-            - c_0(1인 일 평균 접촉자 수): 기준값 2개(양 극단)를 잡고 균일하게 나눔 -> (거리두기 0, 1, 1.5, 2, 2.5, 3단계) = (40, 25, 20, 15, 10, 5) 
-                - 거리두기를 하지 않을 때 40명 - [source](https://www.aimspress.com/article/10.3934/mbe.2020153)
-                - 거리두기 3단계 (10인 이상 집합 금지)에서 5명으로 설정
-            - q: 정리된 수치를 찾지는 못했지만 한 해동안 감염경로 불명 비율이 20%를 웃도는 것 같음
-            - D_e: [coronaqna.com의 '잠복기' 관련 글](https://www.coronaqna.com/incubation-period-of-covid-19)의 출처 [[5](https://www.nejm.org/doi/full/10.1056/NEJMoa2001316)]
-            - D_I: [경북대의대 연구 결과](https://m.health.chosun.com/svc/news_view.html?contid=2020062902672)
-            - D_T: 계산된 수치는 없지만, 확진자 동선을 보면 주로 증상이 발현되고 병원에 가 검사를 받고 확진이 되기까지 2~3일 걸린 것을 바탕으로 함. 
+        * Reference  
+            - 인구수: [행정안전부](https://jumin.mois.go.kr/) (*2020.1.20. 첫 확진자 발생 -> 2020.2. 인구수로 가져옴)  
+            - 각 compartment 별 초기값: [질병관리청 감염병포털](http://www.kdca.go.kr/npt/biz/npp/portal/nppIssueIcdView.do?issueIcdSn=176)  
+            - 베타(transmision rate): coronaboard_kr/kr_daily.csv (첫 발생 이후 2달 후인 2020.3.20.을 기준으로 확진자수/검사수로 계산함. 그 이후는 증상이 없어도 검사를 받은 경우가 많거나 사회적 거리두기로 인한 수치 감소의 영향이 있을 것으로 판단되었기 때문  
+            - c_0(1인 일 평균 접촉자 수): 기준값 2개(양 극단)를 잡고 균일하게 나눔 -> (거리두기 0, 1, 1.5, 2, 2.5, 3단계) = (40, 25, 20, 15, 10, 5)   
+                - 거리두기를 하지 않을 때 40명 - [source](https://www.aimspress.com/article/10.3934/mbe.2020153)  
+                - 거리두기 3단계 (10인 이상 집합 금지)에서 5명으로 설정  
+            - q: 정리된 수치를 찾지는 못했지만 한 해동안 감염경로 불명 비율이 20%를 웃도는 것 같음  
+            - D_e: [coronaqna.com의 '잠복기' 관련 글](https://www.coronaqna.com/incubation-period-of-covid-19)의 출처 [[5](https://www.nejm.org/doi/full/10.1056/NEJMoa2001316)]  
+            - D_I: [경북대의대 연구 결과](https://m.health.chosun.com/svc/news_view.html?contid=2020062902672)  
+            - D_T: 계산된 수치는 없지만, 확진자 동선을 보면 주로 증상이 발현되고 병원에 가 검사를 받고 확진이 되기까지 2~3일 걸린 것을 바탕으로 함.  
+
+    - SQEIR diagram과 파라미터 설정에 맞춰 RL_COVID-19_Korea/epidemiOptim/environment/models/sqeir_model.py 코드 수정 중  
