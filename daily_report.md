@@ -611,3 +611,12 @@
         D_I : 증상 발현 후 회복되기까지 걸리는 평균 일 수  
         델타 : 격리되어 있지 않던 사람이 증상 발현 후 격리될 비율 (90퍼는 넘게 해야하지 않을까?)  
         
+<br/>
+
+2/3 Wed.
+- RL for COVID-19:
+    - SQEIR model 파라미터 값 확정:
+    
+        * 출처
+            - 인구수: [행정안전부](https://jumin.mois.go.kr/) (*2020.1.20. 첫 확진자 발생 -> 2020.2. 인구수로 가져옴)
+            - 각 compartment 별 초기값: [질병관리청 감염병포털](http://www.kdca.go.kr/npt/biz/npp/portal/nppIssueIcdView.do?issueIcdSn=176)
