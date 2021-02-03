@@ -620,3 +620,5 @@
         * 출처
             - 인구수: [행정안전부](https://jumin.mois.go.kr/) (*2020.1.20. 첫 확진자 발생 -> 2020.2. 인구수로 가져옴)
             - 각 compartment 별 초기값: [질병관리청 감염병포털](http://www.kdca.go.kr/npt/biz/npp/portal/nppIssueIcdView.do?issueIcdSn=176)
+            - 베타(transmision rate): coronaboard_kr/kr_daily.csv (첫 발생 이후 2달 후인 2020.3.20.을 기준으로 확진자수/검사수로 계산함. 그 이후는 증상이 없어도 검사를 받은 경우가 많거나 사회적 거리두기로 인한 수치 감소의 영향이 있을 것으로 판단되었기 때문
+            - D_I: [경북대의대 연구 결과](https://m.health.chosun.com/svc/news_view.html?contid=2020062902672)
