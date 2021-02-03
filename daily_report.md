@@ -624,5 +624,7 @@
             - c_0(1인 일 평균 접촉자 수): 기준값 2개(양 극단)를 잡고 균일하게 나눔 -> (거리두기 0, 1, 1.5, 2, 2.5, 3단계) = (40, 25, 20, 15, 10, 5) 
                 - 거리두기를 하지 않을 때 40명 - [source](https://www.aimspress.com/article/10.3934/mbe.2020153)
                 - 거리두기 3단계 (10인 이상 집합 금지)에서 5명으로 설정
+            - q: 정리된 수치를 찾지는 못했지만 한 해동안 감염경로 불명 비율이 20%를 웃도는 것 같음
             - D_e: [coronaqna.com의 '잠복기' 관련 글](https://www.coronaqna.com/incubation-period-of-covid-19)의 출처 [[5](https://www.nejm.org/doi/full/10.1056/NEJMoa2001316)]
             - D_I: [경북대의대 연구 결과](https://m.health.chosun.com/svc/news_view.html?contid=2020062902672)
+            - D_T: 계산된 수치는 없지만, 확진자 동선을 보면 주로 증상이 발현되고 병원에 가 검사를 받고 확진이 되기까지 2~3일 걸린 것을 바탕으로 함. 
