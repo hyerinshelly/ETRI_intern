@@ -642,3 +642,18 @@
             - D_T: 계산된 수치는 없지만, 확진자 동선을 보면 주로 증상이 발현되고 병원에 가 검사를 받고 확진이 되기까지 2~3일 걸린 것을 바탕으로 함.  
 
     - SQEIR diagram과 파라미터 설정에 맞춰 RL_COVID-19_Korea/epidemiOptim/environment/models/sqeir_model.py 코드 수정 중  
+
+<br/>
+
+2/4 Thu. 
+- 공항 등에서 활용되는 로봇 주차에 대해 조사
+RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 수 있겠다는 생각이 들었다. Ray, stan이라는 공항 주차 로봇이 이미 있다고 한다. - [link](https://blog.naver.com/tech-plus/221608574562)  
+<img src="https://user-images.githubusercontent.com/59794238/106863766-52b82380-670c-11eb-9b01-9ef9b9844b0c.png" width="50%"></img>  
+
+- openai ROS 공부  
+    - [DeepSoccer](https://github.com/kimbring2/DeepSoccer)에서 사용한 openai ROS에 대해 찾아보고 tutorial을 해보았다. - [tutorial](http://wiki.ros.org/openai_ros/TurtleBot2%20with%20openai_ros)
+    - training script와 env script가 서로 독립적(학습 방식, 학습 환경 따로)으로 되어있고 training script는 python으로 되어 있어 GPU를 사용한 강화학습이 가능하다.
+    - 아래 사진과 같이 벽 앞에서 부딪히지 않고 회피하는 예제를 해보고 있는데 에러가 발생하여 동작하지 않는 중이다.  
+    <img src="https://user-images.githubusercontent.com/59794238/106863601-197fb380-670c-11eb-9acf-90857418c716.png" width="50%"></img>
+
+    
