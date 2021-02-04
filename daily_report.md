@@ -614,6 +614,17 @@
 <br/>
 
 2/3 Wed.
+- Isaac Sim으로 간단한 프로그램 만들기  
+    : STR 로봇이 A 지점에서 B 지점으로 이동하면 보상을 주는 간단한 강화학습 프로그램을 만들어보았다.  
+    - Isaac Sim에서 데이터를 가져오는 방법  
+        <img src="https://user-images.githubusercontent.com/59794238/106861912-c3aa0c00-6709-11eb-9083-0d405e025f18.png" width="50%"></img>
+        <img src="https://user-images.githubusercontent.com/59794238/106861941-c9075680-6709-11eb-9742-fb5c69525be7.png" width="40%"></img>  
+         위와 같은 방식으로 Pose, linear_velocity, local_linear_velocity, angular_velocity를 얻는다. Pose의 p는 position, r는 rotation을 의미한다.
+    - 간단한 강화학습 프로그램 제작  
+    : jetbot, jetracer 예제를 바탕으로 코드 내용을 이해하고 바꾸어 아래와 같이 STR을 warehouse env에서 사용하는 프로그램을 제작하였다.  
+        <img src="https://user-images.githubusercontent.com/59794238/106862278-429f4480-670a-11eb-8174-5dda60680f2b.png" width="60%"></img>  
+         그런데 python에서 새로운 물체(warehouse의 짐)를 추가한다거나 옮길 수 있는 방법을 모르겠어서 현실적으로 RMFS를 구현하기는 어려워보인다. (Isaac Sim에서 사용할 수 있는 함수에 대한 설명이 부족하다.) Isaac Sim 대신 ROS를 활용하거나 jetbot에서 직접 사용하는 방법으로 바꿔야 할 것 같다.  
+
 - RL for COVID-19:
     - SQEIR model 파라미터 값 확정: (+ SQEIR model diagram 수정)  
     <img src="https://user-images.githubusercontent.com/47997946/106719919-318cff80-6646-11eb-884f-82c325e04da1.png" width="50%"></img> <img src="https://user-images.githubusercontent.com/47997946/106720041-56817280-6646-11eb-8d13-10ae11f0607e.png" width="45%"></img>  
