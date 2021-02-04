@@ -659,3 +659,6 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 - RL for COVID-19:
     - SQEIR modeling 완료: RL_COVID-19_Korea/epidemiOptim/environment/models/sqeir_model.py 코드 작성 완료
     - Plan: epidemiological model 완성 후 cost function 수정하면 될 것이라고 생각했는데, 단순 사망자수로 계산되는 health cost와 달리 현재 방역 정책이 몇단계인가에 따라 결정되는 economy cost의 경우 state에 'previous_lockdown_state, current_lockdown_state'가 포함되어 있는 것을 확인함. 이 부분 수정을 위해서는 gym_env에 또 korea ver.을 추가해야함. 따라서 state 설정을 먼저 마무리한 후 economy cost의 수식만 바꿔주면 될 듯.
+    - gym env. 파일 수정 중
+        - RL_COVID-19_Korea/epidemiOptim/environment/gym_env/get_env.py line 51(env 초기 설정)까지 수정 완료
+        - Next to do: RL_COVID-19_Korea/epidemiOptim/environment/gym_env/epidemic_discrete.py 수정 후 get_env.py 마저 완성하기
