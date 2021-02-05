@@ -681,8 +681,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     1. AI RL script : 학습 방법
         - yaml config file에 task_and_robot_environment_name, ros_ws_abspath 입력
         - AI RL script에 아래와 같이 입력  
-            >from openai_ros.openai_ros_common import StartOpenAI_ROS_Environment  
-            # Init OpenAI_ROS ENV task_and_robot_environment_name = rospy.get_param('/turtlebot2/task_and_robot_environment_name')  
+            >from openai_ros.openai_ros_common import StartOpenAI_ROS_Environment # Init OpenAI_ROS ENV task_and_robot_environment_name = rospy.get_param('/turtlebot2/task_and_robot_environment_name')  
             >env = StartOpenAI_ROS_Environment(task_and_robot_environment_name)  
     2. Task environment : 전체 학습 환경
         - task_envs에 mkdir [환경 이름]/config/, parameter 내용이 저장된 yaml 파일을 config에 놓기
