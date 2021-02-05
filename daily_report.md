@@ -680,6 +680,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         결과: EP: 500 - [alpha: 0.1 - gamma: 0.7 - epsilon: 0.55] - Reward: -127     Time: 1:22:42   
         
     - 다른 tutorial 환경  
+        - [예제](https://bitbucket.org/theconstructcore/openai_examples_projects/src/master/)에서 제공하는 환경들이 python 2에서 만들어져 대부분 에러가 발생한다.
         - 아래와 같은 에러 메시지가 발생하였다. Task Environment 파일의 timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
             > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
         - 아래 에러를 해결하기 위해 config 파일에서 경로를 지정해주었다.
