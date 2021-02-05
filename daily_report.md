@@ -669,6 +669,8 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 - openai ROS 공부  
     - tutorial
         TurtleBot2Maze-v0 환경에서 로봇이 미로를 탈출하는 tutorial을 구현하였다. 환경을 불러오지 못하는 문제가 있었는데, 아래와 같이 코드를 작성해 환경 정보가 담긴 turtlebot_maze.py에 추가하여 해결하였다.  
+        > gym.error.UnregisteredEnv: No registered env with id: TurtleBot2Maze-v0  
+        
         > register(  
         > id='TurtleBot2Maze-v0',  
         > entry_point='openai_ros.task_envs.turtlebot2.turtlebot2_maze:TurtleBot2MazeEnv',  
