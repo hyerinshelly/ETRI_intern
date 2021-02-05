@@ -690,5 +690,10 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     3. Robot Environment : 로봇
         - 다른 코드를 참고하여 robot_envs 폴더에 YOUR_ROBOT.py 파일을 만들고 ROSLauncher로 spawn robot
         - Task environment registration과 같이 openai_ros_common.py 변경
+        
+    - 다른 tutorial 환경에 대해서도 train해보았다.  
+    아래와 같은 에러 메시지가 흔하게 발생하였다. timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
+    > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
+   
 
 
