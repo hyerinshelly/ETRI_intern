@@ -703,8 +703,8 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         - 다른 코드를 참고하여 robot_envs 폴더에 YOUR_ROBOT.py 파일을 만들고 ROSLauncher로 spawn robot
         - Task environment registration과 같이 openai_ros_common.py 변경
         
-    - jetbot 로봇 설치
-        [jetbot_ros](https://github.com/dusty-nv/jetbot_ros)를 참고하여 로봇 환경을 설치하려 하였는데, jetson NvInfer.h를 찾지 못한다는 에러와 catkin_make가 되지 않는 에러가 발생하였다. TensorRT가 필요해보이는데, jetbot에서는 잘 동작하고 있기 때문에 데스크탑에서 설치하는 것은 포기하였다. jetbot 로봇 대신 임시적으로 turtlebot을 활용해 환경을 구현해야겠다.  
+- jetbot 환경 설치  
+    [jetbot_ros](https://github.com/dusty-nv/jetbot_ros)를 참고하여 로봇 환경을 설치하려 하였는데, jetson NvInfer.h를 찾지 못한다는 에러와 catkin_make가 되지 않는 에러가 발생하였다. TensorRT가 필요해보이는데, jetbot에서는 잘 동작하고 있기 때문에 데스크탑에서 설치하는 것은 포기하였다. jetbot 로봇 대신 임시적으로 turtlebot을 활용해 환경을 구현해야겠다.  
    
 
 
