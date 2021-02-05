@@ -678,8 +678,13 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         결과: EP: 500 - [alpha: 0.1 - gamma: 0.7 - epsilon: 0.55] - Reward: -127     Time: 1:22:42   
         
     - 다른 tutorial 환경  
-    아래와 같은 에러 메시지가 발생하였다. timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
-        > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
+        - 아래와 같은 에러 메시지가 발생하였다. Task Environment 파일의 timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
+            > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
+        - 아래 에러를 해결하기 위해 config 파일에서 경로를 지정해주었다.
+            > TypeError: __init__() missing 1 required positional argument: 'ros_ws_abspath'  
+            
+            > task_and_robot_environment_name: 'TurtleBot2Maze-v0'  
+            > ros_ws_abspath: "/home/jwk/catkin_ws"  
         
     - 새로운 환경 만드는 방법
     1. AI RL script : 학습 방법
