@@ -675,7 +675,11 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         >  )  
         
         <img src="https://user-images.githubusercontent.com/59794238/106981490-6f546a00-67a5-11eb-9301-892e460fac4e.png" width="50%"></img>  
-        결과: EP: 500 - [alpha: 0.1 - gamma: 0.7 - epsilon: 0.55] - Reward: -127     Time: 1:22:42  
+        결과: EP: 500 - [alpha: 0.1 - gamma: 0.7 - epsilon: 0.55] - Reward: -127     Time: 1:22:42   
+        
+    - 다른 tutorial 환경  
+    아래와 같은 에러 메시지가 발생하였다. timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
+    > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
         
     - 새로운 환경 만드는 방법
     1. AI RL script : 학습 방법
@@ -691,9 +695,6 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         - 다른 코드를 참고하여 robot_envs 폴더에 YOUR_ROBOT.py 파일을 만들고 ROSLauncher로 spawn robot
         - Task environment registration과 같이 openai_ros_common.py 변경
         
-    - 다른 tutorial 환경에 대해서도 train해보았다.  
-    아래와 같은 에러 메시지가 흔하게 발생하였다. timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
-    > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
    
 
 
