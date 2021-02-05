@@ -654,8 +654,8 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - [DeepSoccer](https://github.com/kimbring2/DeepSoccer)에서 사용한 openai ROS에 대해 찾아보고 tutorial을 해보았다. - [tutorial](http://wiki.ros.org/openai_ros/TurtleBot2%20with%20openai_ros)
     - training script와 env script가 서로 독립적(학습 방식, 학습 환경 따로)으로 되어있고 training script는 python으로 되어 있어 GPU를 사용한 강화학습이 가능하다.
     - 아래 사진과 같이 벽 앞에서 부딪히지 않고 회피하는 예제를 해보고 있는데 에러가 발생하여 동작하지 않는 중이다.  
-    <img src="https://user-images.githubusercontent.com/59794238/106863601-197fb380-670c-11eb-9acf-90857418c716.png" width="50%"></img>
-
+    <img src="https://user-images.githubusercontent.com/59794238/106863601-197fb380-670c-11eb-9acf-90857418c716.png" width="50%"></img>  
+   
 - RL for COVID-19:
     - SQEIR modeling 완료: RL_COVID-19_Korea/epidemiOptim/environment/models/sqeir_model.py 코드 작성 완료
     - Plan: epidemiological model 완성 후 cost function 수정하면 될 것이라고 생각했는데, 단순 사망자수로 계산되는 health cost와 달리 현재 방역 정책이 몇단계인가에 따라 결정되는 economy cost의 경우 state에 'previous_lockdown_state, current_lockdown_state'가 포함되어 있는 것을 확인함. 이 부분 수정을 위해서는 gym_env에 또 korea ver.을 추가해야함. 따라서 state 설정을 먼저 마무리한 후 economy cost의 수식만 바꿔주면 될 듯.
@@ -703,6 +703,8 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         - 다른 코드를 참고하여 robot_envs 폴더에 YOUR_ROBOT.py 파일을 만들고 ROSLauncher로 spawn robot
         - Task environment registration과 같이 openai_ros_common.py 변경
         
+    - jetbot 로봇 설치
+        [jetbot_ros](https://github.com/dusty-nv/jetbot_ros)를 참고하여 로봇 환경을 설치하려 하였는데, jetson NvInfer.h를 찾지 못한다는 에러와 catkin_make가 되지 않는 에러가 발생하였다. TensorRT가 필요해보이는데, jetbot에서는 잘 동작하고 있기 때문에 데스크탑에서 설치하는 것은 포기하였다. jetbot 로봇 대신 임시적으로 turtlebot을 활용해 환경을 구현해야겠다.  
    
 
 
