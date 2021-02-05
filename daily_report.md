@@ -674,5 +674,22 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         > entry_point='openai_ros.task_envs.turtlebot2.turtlebot2_maze:TurtleBot2MazeEnv',  
         >  )  
         
-        <img src="https://user-images.githubusercontent.com/59794238/106981490-6f546a00-67a5-11eb-9301-892e460fac4e.png" width="50%"></img>
+        <img src="https://user-images.githubusercontent.com/59794238/106981490-6f546a00-67a5-11eb-9301-892e460fac4e.png" width="50%"></img>  
+        결과: EP: 500 - [alpha: 0.1 - gamma: 0.7 - epsilon: 0.55] - Reward: -127     Time: 1:22:42  
+        
+    - 새로운 환경 만드는 방법
+    1. AI RL script : 학습 방법
+        - yaml config file에 task_and_robot_environment_name, ros_ws_abspath 입력
+        - AI RL script에 아래와 같이 입력  
+            >from openai_ros.openai_ros_common import StartOpenAI_ROS_Environment  
+            # Init OpenAI_ROS ENV task_and_robot_environment_name = rospy.get_param('/turtlebot2/task_and_robot_environment_name')  
+            >env = StartOpenAI_ROS_Environment(task_and_robot_environment_name)  
+    2. Task environment : 전체 학습 환경
+        - task_envs에 mkdir [환경 이름]/config/, parameter 내용이 저장된 yaml 파일을 config에 놓기
+        - World launch : 'task_env/your_task/your_task.py'를 생성하여 robot을 제외한 env을 불러온다. init에서 yaml의 params load, launch script
+        - Task environment registration : openai_ros_common.py에서 사용할 시뮬레이션 환경을 ‘git embedded files’로 입력, task_envs_list.py에서 환경 register
+    3. Robot Environment : 로봇
+        - 다른 코드를 참고하여 robot_envs 폴더에 YOUR_ROBOT.py 파일을 만들고 ROSLauncher로 spawn robot
+        - Task environment registration과 같이 openai_ros_common.py 변경
+
 
