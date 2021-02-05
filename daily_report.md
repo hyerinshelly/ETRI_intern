@@ -679,7 +679,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         
     - 다른 tutorial 환경  
     아래와 같은 에러 메시지가 발생하였다. timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
-    > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
+        > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
         
     - 새로운 환경 만드는 방법
     1. AI RL script : 학습 방법
