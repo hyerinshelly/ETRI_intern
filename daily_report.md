@@ -662,3 +662,17 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - gym env. 파일 수정 중
         - RL_COVID-19_Korea/epidemiOptim/environment/gym_env/get_env.py line 51(env 초기 설정)까지 수정 완료
         - Next to do: RL_COVID-19_Korea/epidemiOptim/environment/gym_env/epidemic_discrete.py 수정 후 get_env.py 마저 완성하기
+
+<br/>
+
+2/5 Fri. 
+- openai ROS 공부  
+    - tutorial
+        TurtleBot2Maze-v0 환경에서 로봇이 미로를 탈출하는 tutorial을 구현하였다. 환경을 불러오지 못하는 문제가 있었는데, 아래와 같이 코드를 작성해 환경 정보가 담긴 turtlebot_maze.py에 추가하여 해결하였다.  
+        > register(  
+        > id='TurtleBot2Maze-v0',  
+        > entry_point='openai_ros.task_envs.turtlebot2.turtlebot2_maze:TurtleBot2MazeEnv',  
+        >  )  
+        
+        <img src="https://user-images.githubusercontent.com/59794238/106981490-6f546a00-67a5-11eb-9301-892e460fac4e.png" width="50%"></img>
+
