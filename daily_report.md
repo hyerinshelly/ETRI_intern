@@ -688,9 +688,10 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         - 아래 에러를 해결하기 위해 config 파일에서 경로를 지정해주었다.
             > AssertionError: You forgot to set ros_ws_abspath in your yaml file of your main RL script. Set ros_ws_abspath: 'YOUR/SIM_WS/PATH'
   
-            
-            > task_and_robot_environment_name: 'TurtleBot2Maze-v0'  
-            > ros_ws_abspath: "/home/jwk/catkin_ws"  
+            ```
+            task_and_robot_environment_name: 'TurtleBot2Maze-v0'  
+            ros_ws_abspath: "/home/jwk/catkin_ws"  
+            ```
         
     - 새로운 환경 만드는 방법
     1. AI RL script : 학습 방법
