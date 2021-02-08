@@ -743,4 +743,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             <img src="https://user-images.githubusercontent.com/59794238/107185542-02033c00-6a26-11eb-88f1-8a2ab57661c3.png" width="50%"></img>  
         - 학습 과정 (start_training.py)  
             <img src="https://user-images.githubusercontent.com/59794238/107185203-56f28280-6a25-11eb-964e-610b7de848f4.png" width="50%"></img>  
-
+        - 직접 만든 gazebo 환경을 my_turtlebot2_training에 적용  
+            <img src="https://user-images.githubusercontent.com/59794238/107187456-61168000-6a29-11eb-8cfc-a5bbad49e0a5.png" width="50%"></img>  
+            1. 환경 : gazebo 실행 후 제작, worlds 파일에 .world로 저장
+            2. 경로 지정 : turtlebot2_maze.py에서 roslaunch되는 start_world_maze_loop_brick.launch -> world_file 경로 수정
