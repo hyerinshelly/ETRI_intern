@@ -680,19 +680,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         
         <img src="https://user-images.githubusercontent.com/59794238/106981490-6f546a00-67a5-11eb-9301-892e460fac4e.png" width="50%"></img>  
         결과: EP: 500 - [alpha: 0.1 - gamma: 0.7 - epsilon: 0.55] - Reward: -127     Time: 1:22:42   
-        
-    - 다른 tutorial 환경  
-        - [예제](https://bitbucket.org/theconstructcore/openai_examples_projects/src/master/)에서 제공하는 환경들이 python 2에서 만들어져 대부분 에러가 발생한다.
-        - 아래와 같은 에러 메시지가 발생하였다. Task Environment 파일의 timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
-            > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
-        - 아래 에러를 해결하기 위해 config 파일에서 경로를 지정해주었다.
-            > AssertionError: You forgot to set ros_ws_abspath in your yaml file of your main RL script. Set ros_ws_abspath: 'YOUR/SIM_WS/PATH'
-  
-            ```
-            task_and_robot_environment_name: 'TurtleBot2Maze-v0'  
-            ros_ws_abspath: "/home/jwk/catkin_ws"  
-            ```
-        
+                
     - 새로운 환경 만드는 방법
     1. AI RL script : 학습 방법
         - yaml config file에 task_and_robot_environment_name, ros_ws_abspath 입력
@@ -718,8 +706,20 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 2/8 Mon.  
 - openai ROS 다른 환경 test 및 공부
     - turtlebot3, 
-        이전에는 turtlebot2가 벽을 회피하는 문제에 대한 예제만 구현하였었는데, 다른 tutorial 환경도 구현해보았다.
+        이전에는 turtlebot2가 벽을 회피하는 문제에 대한 예제만 구현하였었는데, [다른 tutorial 환경](https://bitbucket.org/theconstructcore/openai_examples_projects/src/master/)도 구현해보았다.
         - error
+            - 예제에서 제공하는 환경들이 python 2에서 만들어져 대부분 에러가 발생한다.
+            > ImportError: dynamic module does not define module export function (PyInit__tf2)  
+            - 아래 에러는 Task Environment 파일의 timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
+            > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
+            - 아래 에러를 해결하기 위해 config 파일에서 경로를 지정해주었다.
+            > AssertionError: You forgot to set ros_ws_abspath in your yaml file of your main RL script. Set ros_ws_abspath: 'YOUR/SIM_WS/PATH'
+  
+            ```
+            task_and_robot_environment_name: 'TurtleBot2Maze-v0'  
+            ros_ws_abspath: "/home/jwk/catkin_ws"  
+            ```
+            
             - re-register 문제: task_env안의 파일의 register 위에 코드 추가
             > gym.error.Error: Cannot re-register id: TurtleBot3World-v0  
             
