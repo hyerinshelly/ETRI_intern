@@ -710,7 +710,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             <img src="https://user-images.githubusercontent.com/59794238/107170220-2568bf80-6a03-11eb-9d5a-f7d4ac9b9e36.png" width="50%"></img>  
 
         - error
-            - 예제에서 제공하는 환경들이 python 2에서 만들어져 대부분 에러가 발생한다.
+            - 예제에서 제공하는 환경들이 python 2에서 만들어져 대부분 에러가 발생한다. (turtlebot3만 python3로 실행 가능)
             > ImportError: dynamic module does not define module export function (PyInit__tf2)  
             - 아래 에러는 Task Environment 파일의 timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
             > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
