@@ -756,6 +756,6 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - [jetbot line tracing](https://developer.nvidia.com/blog/training-your-jetbot-in-isaac-sim/)  
     isaac sim 안에서는 jetbot의 카메라 정보를 바탕으로 학습하고 모델을 저장한다. 이 모델을 사용하여 실제 세상에서도 카메라로 본 정보를 바탕으로 예측, 이동한다.  
     카메라 정보, 실제 세상 간에 카메라로 보이는 모습의 차이가 있기 때문에 [VAE를 활용](https://github.com/masato-ka/airc-rl-agent)해 차이를 줄인다.  
-    - [Deepsoccer](https://kimbring2.github.io/2020/10/08/deepsoccer.html): Lidar sensor 정보 이용  
+    - [Deepsoccer](https://kimbring2.github.io/2020/10/08/deepsoccer.html): Lidar sensor 정보 이용, 원리는 같다.  
 
 
