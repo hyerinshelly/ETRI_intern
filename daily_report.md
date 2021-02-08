@@ -751,3 +751,11 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     1. gazebo 환경 제작 방법 공부 - [tutorial](http://gazebosim.org/tutorials)
     2. 박스가 놓아져 있을 때 로봇이 빈 장소를 찾아 짐을 놓고 돌아오는 프로그램 제작 (가장 간단한 방법)
     3. (추가) 로봇 수 늘리기, 빈 자리 늘리기, 실제 로봇에 적용
+
+- 시뮬레이터에서 학습한 모델을 실제 세상에서 활용하는 방법  
+    - [jetbot line tracing](https://developer.nvidia.com/blog/training-your-jetbot-in-isaac-sim/)  
+    isaac sim 안에서는 jetbot의 카메라 정보를 바탕으로 학습하고 모델을 저장한다. 이 모델을 사용하여 실제 세상에서도 카메라로 본 정보를 바탕으로 예측, 이동한다.  
+    카메라 정보, 실제 세상 간에 카메라로 보이는 모습의 차이가 있기 때문에 [VAE를 활용](https://github.com/masato-ka/airc-rl-agent)해 차이를 줄인다.  
+    - [Deepsoccer](https://kimbring2.github.io/2020/10/08/deepsoccer.html): Lidar sensor 정보 이용  
+
+
