@@ -671,10 +671,12 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         TurtleBot2Maze-v0 환경에서 로봇이 미로를 탈출하는 tutorial을 구현하였다. 환경을 불러오지 못하는 문제가 있었는데, 아래와 같이 코드를 작성해 환경 정보가 담긴 turtlebot_maze.py에 추가하여 해결하였다.  
         > gym.error.UnregisteredEnv: No registered env with id: TurtleBot2Maze-v0  
         
-        > register(  
-        > id='TurtleBot2Maze-v0',  
-        > entry_point='openai_ros.task_envs.turtlebot2.turtlebot2_maze:TurtleBot2MazeEnv',  
-        >  )  
+        ```
+        register(  
+        id='TurtleBot2Maze-v0',  
+        entry_point='openai_ros.task_envs.turtlebot2.turtlebot2_maze:TurtleBot2MazeEnv',  
+         )  
+        ```
         
         <img src="https://user-images.githubusercontent.com/59794238/106981490-6f546a00-67a5-11eb-9301-892e460fac4e.png" width="50%"></img>  
         결과: EP: 500 - [alpha: 0.1 - gamma: 0.7 - epsilon: 0.55] - Reward: -127     Time: 1:22:42   
@@ -694,8 +696,11 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     1. AI RL script : 학습 방법
         - yaml config file에 task_and_robot_environment_name, ros_ws_abspath 입력
         - AI RL script에 아래와 같이 입력  
-            >from openai_ros.openai_ros_common import StartOpenAI_ROS_Environment # Init OpenAI_ROS ENV task_and_robot_environment_name = rospy.get_param('/turtlebot2/task_and_robot_environment_name')  
-            >env = StartOpenAI_ROS_Environment(task_and_robot_environment_name)  
+            ```
+            from openai_ros.openai_ros_common import StartOpenAI_ROS_Environment # Init OpenAI_ROS ENV task_and_robot_environment_name = rospy.get_param('/turtlebot2/task_and_robot_environment_name')  
+            env = StartOpenAI_ROS_Environment(task_and_robot_environment_name)  
+            ```
+            
     2. Task environment : 전체 학습 환경
         - task_envs에 mkdir [환경 이름]/config/, parameter 내용이 저장된 yaml 파일을 config에 놓기
         - World launch : 'task_env/your_task/your_task.py'를 생성하여 robot을 제외한 env을 불러온다. init에서 yaml의 params load, launch script
@@ -707,5 +712,23 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 - jetbot 환경 설치  
     [jetbot_ros](https://github.com/dusty-nv/jetbot_ros)를 참고하여 로봇 환경을 설치하려 하였는데, jetson NvInfer.h를 찾지 못한다는 에러와 catkin_make가 되지 않는 에러가 발생하였다. TensorRT가 필요해보이는데, jetbot에서는 잘 동작하고 있기 때문에 데스크탑에서 설치하는 것은 포기하였다. jetbot 로봇 대신 임시적으로 turtlebot을 활용해 환경을 구현해야겠다.  
    
+<br/>
 
-
+2/8 Mon.  
+- openai ROS 다른 환경 test 및 공부
+    - turtlebot3, 
+        이전에는 turtlebot2가 벽을 회피하는 문제에 대한 예제만 구현하였었는데, 다른 tutorial 환경도 구현해보았다.
+        - error
+            - re-register 문제: task_env안의 파일의 register 위에 코드 추가
+            > gym.error.Error: Cannot re-register id: TurtleBot3World-v0  
+            
+            ```
+            env_dict = gym.envs.registration.registry.env_specs.copy()  
+            for env in env_dict:  
+                if 'TurtleBot3World-v0' in env:  
+                    print("Remove {} from registry".format(env))  
+                    del gym.envs.registration.registry.env_specs[env]  
+            ```
+            
+            - 강제종료 후에도 gazebo가 실행되는 문제
+            > alias killgazebo="killall -9 gazebo & killall -9 gzserver  & killall -9 gzclient"
