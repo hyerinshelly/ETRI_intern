@@ -724,6 +724,8 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             > gym.error.Error: Cannot re-register id: TurtleBot3World-v0  
             
             ```
+            import gym
+            
             env_dict = gym.envs.registration.registry.env_specs.copy()  
             for env in env_dict:  
                 if 'TurtleBot3World-v0' in env:  
