@@ -747,3 +747,4 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             <img src="https://user-images.githubusercontent.com/59794238/107187456-61168000-6a29-11eb-8cfc-a5bbad49e0a5.png" width="50%"></img>  
             1. 환경 : gazebo 실행 후 제작, worlds 파일에 .world로 저장
             2. 경로 지정 : turtlebot2_maze.py에서 roslaunch되는 start_world_maze_loop_brick.launch -> world_file 경로 수정
+- 계획: 박스가 놓아져 있을 때 로봇이 빈 장소를 찾아 짐을 놓고 돌아오는 프로그램 제작 (가장 간단한 방법) -> 로봇 수 늘리기, 빈 자리 늘리기, 실제 로봇에 적용
