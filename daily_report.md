@@ -705,8 +705,10 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 
 2/8 Mon.  
 - openai ROS 다른 환경 test 및 공부
-    - turtlebot3, 
-        이전에는 turtlebot2가 벽을 회피하는 문제에 대한 예제만 구현하였었는데, [다른 tutorial 환경](https://bitbucket.org/theconstructcore/openai_examples_projects/src/master/)도 구현해보았다.
+    - [다른 tutorial 환경](https://bitbucket.org/theconstructcore/openai_examples_projects/src/master/) 실행
+        - Turtlebot3  
+            <img src="https://user-images.githubusercontent.com/59794238/107170220-2568bf80-6a03-11eb-9d5a-f7d4ac9b9e36.png" width="50%"></img>  
+
         - error
             - 예제에서 제공하는 환경들이 python 2에서 만들어져 대부분 에러가 발생한다.
             > ImportError: dynamic module does not define module export function (PyInit__tf2)  
