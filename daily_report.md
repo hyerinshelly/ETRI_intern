@@ -740,7 +740,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             
     - turtlebot2, turtlebot3의 환경과 학습 과정 공부
         - 환경 정보 (turtlebot2_maze.py)  
-            <img src="https://user-images.githubusercontent.com/59794238/107185051-109d2380-6a25-11eb-92a5-b0ab2c383c24.png" width="50%"></img>  
+            <img src="https://user-images.githubusercontent.com/59794238/107185542-02033c00-6a26-11eb-88f1-8a2ab57661c3.png" width="50%"></img>  
         - 학습 과정 (start_training.py)  
             <img src="https://user-images.githubusercontent.com/59794238/107185203-56f28280-6a25-11eb-964e-610b7de848f4.png" width="50%"></img>  
 
