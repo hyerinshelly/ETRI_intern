@@ -684,7 +684,8 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         - 아래와 같은 에러 메시지가 발생하였다. Task Environment 파일의 timestep_limit을 max_episode_steps로 바꾸어 해결하였다.  
             > TypeError: __init__() got an unexpected keyword argument 'timestep_limit'  
         - 아래 에러를 해결하기 위해 config 파일에서 경로를 지정해주었다.
-            > TypeError: __init__() missing 1 required positional argument: 'ros_ws_abspath'  
+            > AssertionError: You forgot to set ros_ws_abspath in your yaml file of your main RL script. Set ros_ws_abspath: 'YOUR/SIM_WS/PATH'
+  
             
             > task_and_robot_environment_name: 'TurtleBot2Maze-v0'  
             > ros_ws_abspath: "/home/jwk/catkin_ws"  
