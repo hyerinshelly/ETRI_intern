@@ -737,3 +737,5 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             
             - 강제종료 후에도 gazebo가 실행되는 문제
             > alias killgazebo="killall -9 gazebo & killall -9 gzserver  & killall -9 gzclient"
+            
+    - turtlebot2, turtlebot3 환경, 학습 과정 공부
