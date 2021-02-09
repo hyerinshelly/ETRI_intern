@@ -783,16 +783,31 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 
 2/9 Tue.  
 - [Gazebo tutorial](https://youtube.com/playlist?list=PLK0b4e05LnzbHiGDGTgE_FIWpOCvndtYx) 내용
-1. Worlds 파일 만들기 → my_world.launch, empty_world.world 생성
-2. [gazebo_models](https://github.com/osrf/gazebo_models)에서 공개된 모델 open source들을 이용할 수 있음, url 부분을 변경하여 추가 (include)
-    - <static>: 고정, false면 play했을 때 중력 영향
-    - <size>로 크기 변경
-    - model 폴더에 meshes/something.stl 추가 → <mesh>를 추가하면 물체의 근처에만 box가 생기게 됨
-    - texture 추가: materials 추가, 그 안에 scripts, textures 폴더 추가하고 scripts에 .material, textures에 .png 추가하면 모델에 색이 칠해짐.
-3. robot 정보 : urdf 파일, .xacro에 로봇 정보
-    - .urdf → robot name 지정 → link, joint로 구성
-    - .launch에서 초기 위치 지정, node 불러옴
-    - rviz에서 확인 가능, rviz 변경 사항을 save as config로 저장하고 경로 지정하면 반영됨
-    - child link로 물체 연결, node 안에서 use_gui를 true로 설정 → joint 위치 변경 가능
-4. sdf는 특정 모델의 내용을 담음 (ex. chair의 각 요소들) .world에서 sdf 파일을 가져와 실행 가능
+    1. Worlds 파일 만들기 → my_world.launch, empty_world.world 생성
+    2. [gazebo_models](https://github.com/osrf/gazebo_models)에서 공개된 모델 open source들을 이용할 수 있음, url 부분을 변경하여 추가 (include)
+        - <static>: 고정, false면 play했을 때 중력 영향
+        - <size>로 크기 변경
+        - model 폴더에 meshes/something.stl 추가 → <mesh>를 추가하면 물체의 근처에만 box가 생기게 됨
+        - texture 추가: materials 추가, 그 안에 scripts, textures 폴더 추가하고 scripts에 .material, textures에 .png 추가하면 모델에 색이 칠해짐.
+    3. robot 정보 : urdf 파일, .xacro에 로봇 정보
+        - .urdf → robot name 지정 → link, joint로 구성
+        - .launch에서 초기 위치 지정, node 불러옴
+        - rviz에서 확인 가능, rviz 변경 사항을 save as config로 저장하고 경로 지정하면 반영됨
+        - child link로 물체 연결, node 안에서 use_gui를 true로 설정 → joint 위치 변경 가능
+    4. sdf는 특정 모델의 내용을 담음 (ex. chair의 각 요소들) .world에서 sdf 파일을 가져와 실행 가능
     
+
+- RL for COVID-19: 코드 마무리
+    - RL_COVID-19_Korea/epidemiOptim/environment/gym_env/korea_epidemic_discrete.py data plotting 부분 완성
+        - Changed plotting function in RL_COVID-19_Korea/epidemioptim/utils.py
+    - RL_COVID-19_Korea/epidemiOptim/environment/gym_env/get.env.py 맞춰 완성
+    - RL_COVID-19_Korea/epidemiOptim/environment/gym_env/run_distrib_env.py 맞춰 완성
+    - RL_COVID-19_Korea/epidemioptim/environments/cost_functions/costs/korea_economy_cost.py 복잡한 GDP 손실 계산 대신 총 격리된 사람의 수(number of people in S_q, E_q, I_q and in death)에 economy cost 비례하도록 함
+    - cost function 수정에 따라 RL_COVID-19_Korea/epidemioptim/environments/cost_functions/get_cost_function.py & korea_multi_cost_death_economy_controllable.py 완성
+    - 최종 RL_COVID-19_Korea/epidemioptim/train.py 파라미터 맞춤 및 완성
+        - 새로 만든 gym env, epidemiological model, cost function을 반영하도록 새로운 파라미터 담은 파일 만듦. (RL_COVID-19_Korea/epidemiOptim/configs/korea_dqn.py)
+            - 역시나 해당 korea_dqn.py 파라미터 불러오도록 RL_COVID-19_Korea/epidemiOptim/configs/get_params.py 수정
+        - train.py 실행 시 '--config korea_dqn'
+            > python train.py --config korea_dqn --expe-name korea_dqn_study --trial_id 0
+        
+
