@@ -807,7 +807,8 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - 최종 RL_COVID-19_Korea/epidemioptim/train.py 파라미터 맞춤 및 완성
         - 새로 만든 gym env, epidemiological model, cost function을 반영하도록 새로운 파라미터 담은 파일 만듦. (RL_COVID-19_Korea/epidemiOptim/configs/korea_dqn.py)
             - 역시나 해당 korea_dqn.py 파라미터 불러오도록 RL_COVID-19_Korea/epidemiOptim/configs/get_params.py 수정
-        - train.py 실행 시 '--config korea_dqn'
+        - train.py 실행 시 '--config korea_dqn'으로 하면 됨
             > python train.py --config korea_dqn --expe-name korea_dqn_study --trial_id 0
-        
+    
+    - Next To Do: train.py 실행해보기!!!
 
