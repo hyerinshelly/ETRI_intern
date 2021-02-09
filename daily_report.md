@@ -785,9 +785,9 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 - [Gazebo tutorial](https://youtube.com/playlist?list=PLK0b4e05LnzbHiGDGTgE_FIWpOCvndtYx) 내용
     1. Worlds 파일 만들기 → my_world.launch, empty_world.world 생성
     2. [gazebo_models](https://github.com/osrf/gazebo_models)에서 공개된 모델 open source들을 이용할 수 있음, url 부분을 변경하여 추가 (include)
-        - <static>: 고정, false면 play했을 때 중력 영향
-        - <size>로 크기 변경
-        - model 폴더에 meshes/something.stl 추가 → <mesh>를 추가하면 물체의 근처에만 box가 생기게 됨
+        - static: 고정, false면 play했을 때 중력 영향
+        - size로 크기 변경
+        - model 폴더에 meshes/something.stl 추가 → mesh를 추가하면 물체의 근처에만 box가 생기게 됨
         - texture 추가: materials 추가, 그 안에 scripts, textures 폴더 추가하고 scripts에 .material, textures에 .png 추가하면 모델에 색이 칠해짐.
     3. robot 정보 : urdf 파일, .xacro에 로봇 정보
         - .urdf → robot name 지정 → link, joint로 구성
