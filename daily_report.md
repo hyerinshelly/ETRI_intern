@@ -758,4 +758,28 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     카메라 정보, 실제 세상 간에 카메라로 보이는 모습의 차이가 있기 때문에 [VAE를 활용](https://github.com/masato-ka/airc-rl-agent)해 차이를 줄인다.  
     - [Deepsoccer](https://kimbring2.github.io/2020/10/08/deepsoccer.html): Lidar sensor 정보 이용, 원리는 같다.  
 
+- RL for COVID-19: gym env. 파일 수정 중
+    - 기존 gym env를 수정한 버전인 RL_COVID-19_Korea/epidemiOptim/environment/gym_env/korea_epidemic_discrete.py를 만들고 plotting data 전까지의 함수들 짬.
+        - State 설정 : SQEIR model의 compartment + [previous_distancing_level, current_distancing_level] + [culmulative_cost_{}.format(0, 1)]
+        - Action 수 : dim_action = 6 (0~5) <- 각각 차례로 사회적거리두기 0, 1, 1.5, 2, 2.5, 3단계 의미함
+        - _compute_c(times_since_start) : 주어진 시간부터 현재까지의 사회적거리두기 단계에 따른 일 평균 접촉수(c) 일 수대로 리스트에 담아 리턴함
+        - _update
+        - reset()
+            * 의문점: reset()에서 env_state를 return할 때 normalization_factor을 이용해 normalize하는 것을 확인하였으나 왜 하는 것이며 그 factor 설정을 어떻게 하는 것인지 모르겠음.
+                > self.normalization_factors = [self.model.current_internal_params['N']] * len(self.model.internal_states_labels) + \
+                >                              [1, 1, self.model.current_internal_params['N'], 150, 1]  # not sure also. 150?
+        - update_with_action(action)
+        - step(action)
+        
+        * data plotting을 위한 함수만 남겨둠  
+        * 중간중간 확실하지 않은 부분에는 '# not sure'이라는 주석 달아놓음 -> 나중에 필요 시 확인  
+        
+    - 다음 plan:
+        - 남은 plotting 부분 완성
+        - RL_COVID-19_Korea/epidemiOptim/environment/gym_env/get_env.py 마저 완성하기
+        - cost function 마무리
+         
+<br/>
 
+2/9 Tue.  
+- 
