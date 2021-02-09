@@ -814,7 +814,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 
 <br/>
 
-2/10 Wen.
+2/10 Wed.
 - [gazebo_models](https://github.com/osrf/gazebo_models)의 공개된 모델 중 사용할만한 모델 추리기
     - warehouse robot  
     <img src="https://user-images.githubusercontent.com/59794238/107336872-fcc4f080-6afc-11eb-9bd3-8787ad2785f5.png" width="20%"></img>  
