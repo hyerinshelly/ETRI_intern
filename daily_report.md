@@ -827,4 +827,6 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - ware  
     cardboard_box: <img src="https://user-images.githubusercontent.com/59794238/107894657-a2e87e80-6f73-11eb-890b-0ed75d1a85a0.png" width="20%"></img>, 
     euro_pallet: <img src="https://user-images.githubusercontent.com/59794238/107894576-6452c400-6f73-11eb-8e74-63fcebed84f8.png" width="20%"></img>  
+    - warehouse  
+    [warehouse_world](https://github.com/aws-robotics/aws-robomaker-small-warehouse-world): <img src="https://user-images.githubusercontent.com/59794238/107896966-38d3d780-6f7b-11eb-9051-3ee4f32f776c.png" width="40%"></img>  
     
