@@ -827,6 +827,14 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - ware  
     cardboard_box: <img src="https://user-images.githubusercontent.com/59794238/107894657-a2e87e80-6f73-11eb-890b-0ed75d1a85a0.png" width="20%"></img>, 
     euro_pallet: <img src="https://user-images.githubusercontent.com/59794238/107894576-6452c400-6f73-11eb-8e74-63fcebed84f8.png" width="20%"></img>  
+    
 - [warehouse_world](https://github.com/aws-robotics/aws-robomaker-small-warehouse-world)  
     <img src="https://user-images.githubusercontent.com/59794238/107896966-38d3d780-6f7b-11eb-9051-3ee4f32f776c.png" width="40%"></img>  
+    
+- 아래 사진과 같은 warehouse world 환경을 만들었다.  
+<img src="https://user-images.githubusercontent.com/59794238/107916839-50768480-6faa-11eb-8af1-f9ffddfe1a38.png" width="40%"></img>
+    - 물품을 놓는 부분을 box로 표시하였고 필요에 따라 붉은색, 초록색으로 변경할 수 있다.
+    - 물품이 쌓여 있는 앞 부분이 station으로, 로봇이 근처에 도달하면 보상을 주는 방식으로 만들 계획이다.
+    - 아래 사진과 같이 물품을 운반하는 로봇과 물품이 필요하다. 직접 만들어보고 안 될 경우 turtlebot을 사용할 것이다.  
+    <img src="https://www.roboticsbusinessreview.com/wp-content/uploads/2018/05/FetchWarehouse.jpg" width="40%"></img>
     
