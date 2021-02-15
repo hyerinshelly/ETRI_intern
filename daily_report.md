@@ -817,7 +817,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 2/15 Mon.
 - [gazebo_models](https://github.com/osrf/gazebo_models)의 공개된 모델 중 사용할만한 모델 추리기
     - robot  
-    warehouse robot: <img src="https://user-images.githubusercontent.com/59794238/107336872-fcc4f080-6afc-11eb-9bd3-8787ad2785f5.png" width="20%"></img>, 
+    warehouse robot: <img src="https://user-images.githubusercontent.com/59794238/107336872-fcc4f080-6afc-11eb-9bd3-8787ad2785f5.png" width="15%"></img>, 
     cart_front_steer: <img src="https://user-images.githubusercontent.com/59794238/107894559-59982f00-6f73-11eb-86c4-bf1240fe8cc4.png" width="20%"></img>  
     - parking  
     parking_garage: <img src="https://user-images.githubusercontent.com/59794238/107894602-7cc2de80-6f73-11eb-9d3b-78a777d7e2c6.png" width="20%"></img>, 
