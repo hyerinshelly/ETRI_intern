@@ -821,7 +821,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     cart_front_steer: <img src="https://user-images.githubusercontent.com/59794238/107894559-59982f00-6f73-11eb-86c4-bf1240fe8cc4.png" width="20%"></img>  
     - parking  
     parking_garage: <img src="https://user-images.githubusercontent.com/59794238/107894602-7cc2de80-6f73-11eb-9d3b-78a777d7e2c6.png" width="20%"></img>, 
-    prius_hybrid: <img src="https://user-images.githubusercontent.com/59794238/107894624-8a786400-6f73-11eb-8c0a-b944df33b5d6.png" width="20%"></img>,
+    prius_hybrid: <img src="https://user-images.githubusercontent.com/59794238/107894624-8a786400-6f73-11eb-8c0a-b944df33b5d6.png" width="20%"></img>,  
     hatchback: <img src="https://user-images.githubusercontent.com/59794238/107894589-6fa5ef80-6f73-11eb-98a6-66984c885c60.png" width="20%"></img>,
     suv: <img src="https://user-images.githubusercontent.com/59794238/107894637-96fcbc80-6f73-11eb-827f-7f6c815ea536.png" width="20%"></img>  
     - ware  
