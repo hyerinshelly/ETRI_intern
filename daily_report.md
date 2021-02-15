@@ -836,5 +836,6 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - 물품을 놓는 부분을 box로 표시하였고 필요에 따라 붉은색, 초록색으로 변경할 수 있다.
     - 물품이 쌓여 있는 앞 부분이 station으로, 로봇이 근처에 도달하면 보상을 주는 방식으로 만들 계획이다.
     - 아래 사진과 같이 물품을 운반하는 로봇과 물품이 필요하다. 직접 만들어보고 안 될 경우 turtlebot을 사용할 것이다.  
-    <img src="https://www.roboticsbusinessreview.com/wp-content/uploads/2018/05/FetchWarehouse.jpg" width="40%"></img>
+    <img src="https://www.roboticsbusinessreview.com/wp-content/uploads/2018/05/FetchWarehouse.jpg" width="40%"></img>  
+    - 그 전에 먼저 [RWARE 환경](https://github.com/uoe-agents/robotic-warehouse)에서 어떻게 필요한 물품을 선택, 결정하여 운반하고 보상을 부여하는지 공부해야 한다.
     
