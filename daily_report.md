@@ -839,3 +839,9 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     <img src="https://www.roboticsbusinessreview.com/wp-content/uploads/2018/05/FetchWarehouse.jpg" width="40%"></img>  
     - 그 전에 먼저 [RWARE 환경](https://github.com/uoe-agents/robotic-warehouse)에서 어떻게 필요한 물품을 선택, 결정하여 운반하고 보상을 부여하는지 공부해야 한다.
     
+<br/>
+
+2/16 Tue.
+- [RWARE 환경](https://github.com/uoe-agents/robotic-warehouse)의 action, reward 이해
+    - Direction, Action(앞,옆,이동x,연결)으로 구성되어 있다.
+    - 특정 지점에 가면 자동으로 물품과 연결되는 것이 아니라, action 중에 TOGGLE_LOAD라는 연결/해제하는 행동이 있다.
