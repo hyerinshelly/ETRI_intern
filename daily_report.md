@@ -845,3 +845,11 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 - [RWARE 환경](https://github.com/uoe-agents/robotic-warehouse)의 action, reward 이해
     - Direction, Action(앞,옆,이동x,연결)으로 구성되어 있다.
     - 특정 지점에 가면 자동으로 물품과 연결되는 것이 아니라, action 중에 TOGGLE_LOAD라는 연결/해제하는 행동이 있다.
+    
+- warehouse world 환경에서 로봇 동작시키기
+    - 기존 turtlebot2_training의 world를 warehouse world 환경으로 변경하였다.
+        - catkin_ws/src/turtlebot/turtlebot_gazebo에서 start_world_maze_loop_brick.launch파일의 world 지정 위치을 worlds의 maze_loop_brick에서 no_roof_small_warehouse로 바꿈
+        - no_roof_small_warehouse.world에 maze_loop_brick의 지면을 추가
+    
+    - 아래 사진과 같이 warehouse world 환경에서 로봇이 동작하는 것을 확인하였다.  
+    <img src="https://user-images.githubusercontent.com/59794238/108032104-4a010f00-7075-11eb-9077-f3ce35321113.png" width="40%"></img>  
