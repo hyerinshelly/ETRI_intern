@@ -814,6 +814,11 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 
 <br/>
 
+2/10 Wed. 
+- RL for COVID-19: dqn 알고리즘 부분 코드 훑어봄
+
+<br/>
+
 2/15 Mon.
 - [gazebo_models](https://github.com/osrf/gazebo_models)의 공개된 모델 중 사용할만한 모델 추리기
     - robot  
@@ -854,3 +859,40 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - 아래 사진과 같이 warehouse world 환경에서 로봇이 동작하는 것을 확인하였다.  
     <img src="https://user-images.githubusercontent.com/59794238/108032104-4a010f00-7075-11eb-9077-f3ce35321113.png" width="40%"></img>  
     - 로봇이 타일 위에 올라갔을 때 색을 바꿀 수 있게 하는 기능이 필요하고, 물품을 운반하는 로봇과 물품을 만들지는 못할 것 같다.
+    
+- RL for COVID-19: train.py 실행 시도
+    > python train.py --config korea_dqn --expe-name korea_dqn_study --trial_id 0
+
+    - costs의 __init__.py 파일에서 economy cost의 클래스명을 바꾼 것이 수정되지 않아 수정함
+    - sqeir_model.py에서 run_n_step함수 내의 미분방정식을 계산해주는 odeint 함수 실행 시 타입 에러 발생
+        > z = odeint(self.internal_model, current_state, np.linspace(0, n, n + 1), args=self._get_model_params())
+        ```
+          File "../epidemioptim/environments/models/sqeir_model.py", line 225, in run_n_steps
+            z = odeint(self.internal_model, current_state, np.linspace(0, n, n + 1), args=self._get_model_params())
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/scipy/integrate/odepack.py", line 241, in odeint
+            output = _odepack.odeint(func, y0, t, args, Dfun, col_deriv, ml, mu,
+        TypeError: Cannot cast array data from dtype('O') to dtype('float64') according to the rule 'safe'
+        ```
+        (원인) 확인해보니 기존 epidemiOptim과는 달리 odeint의 parameter 값으로 들어가는 current_state의 타입이 float64가 아닌 object였음.
+        그래서 타입 확인을 넘어 current_state 자체를 출력하도록 했더니 다음과 같은 에러 발생함.  
+        ```
+        Traceback (most recent call last):
+          File "train.py", line 78, in <module>
+            train(**kwargs)
+          File "train.py", line 51, in train
+            env = get_env(env_id=params['env_id'],
+          File "../epidemioptim/environments/gym_envs/get_env.py", line 16, in get_env
+            env = gym.make(env_id, **kwargs)
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/gym/envs/registration.py", line 145, in make
+            return registry.make(id, **kwargs)
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/gym/envs/registration.py", line 90, in make
+            env = spec.make(**kwargs)
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/gym/envs/registration.py", line 60, in make
+            env = cls(**_kwargs)
+          File "../epidemioptim/environments/gym_envs/epidemic_discrete.py", line 48, in __init__
+            self.normalization_factors = [self.model.current_internal_params['N_av']] * len(self.model.internal_states_labels) + \
+        KeyError: 'N_av'
+        ```
+        (분석) 보면 불러야하는 korea_epidemic_discrete.py가 아닌 기존 것을 불러옴. gym_env가 잘못 불러지므로 current_state가 이상할 수 밖에 없음.  
+        (해결 방법) 다만 어떻게 원하는 env를 불러오는지를 잘 모르겠음.  
+        
