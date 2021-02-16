@@ -862,7 +862,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - 로봇이 타일 위에 올라갔을 때 색을 바꿀 수 있게 하는 기능이 필요하고, 물품을 운반하는 로봇과 물품을 만들지는 못할 것 같다.
     - gazebo service를 활용하여 모델의 특징을 변경하는 방법을 찾았는데, ROS에 대한 이해가 부족하여 남은 기간 동안 하지 못할 것 같다.
         - gazebo service로 모델의 특징을 변경하는 방법에 대한 내용([tutorial](http://gazebosim.org/tutorials/?tut=ros_comm), [youtube](https://www.youtube.com/watch?v=ZSvM7dEilhk))
-    - 일단 간단한 형태로 물품이 쌓여있을 때 로봇을 출발 지점에서 32개의 지점 중 하나의 빈 지점으로 이동시키는 환경을 구축해야겠다.
+    - 일단 간단한 형태로 물품이 쌓여있을 때 로봇을 출발 지점에서 32개의 지점 중 하나의 빈 지점으로 이동시키는 환경을 제작하고 학습시켜 보아야겠다.
     
 - RL for COVID-19: train.py 실행 시도
     > $ python train.py --config korea_dqn --expe-name korea_dqn_study --trial_id 0
