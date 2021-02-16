@@ -900,7 +900,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         KeyError: 'N_av'
         ```
         (분석) 보면 불러야하는 korea_epidemic_discrete.py가 아닌 기존 것을 불러옴. gym_env가 잘못 불러지므로 current_state가 이상할 수 밖에 없음.  
-        (해결 방법) get_env.py의 main 부분에서 env_id를 바꿔주지 않은 것을 발견함. 따라서 아래와 같이 바꿔주니 current_state가 7개의 숫자를 갖는 배열임을 확인함
-            > env = get_env(env_id='KoreaEpidemicDiscrete-v0', params=dict(cost_function=cost_function, model=model, simulation_horizon=simulation_horizon))
-        (문제) 하지만 여전히 타입에러  
+        (해결 방법) get_env.py의 main 부분에서 env_id를 바꿔주지 않은 것을 발견함. 따라서 아래와 같이 바꿔주니 current_state가 7개의 숫자를 갖는 배열임을 확인함.  
+            > env = get_env(env_id='KoreaEpidemicDiscrete-v0', params=dict(cost_function=cost_function, model=model, simulation_horizon=simulation_horizon))  
+        (문제) 하지만 여전히 타입에러 발생함. 즉 여전히 current_state의 타입은 object. 
         
