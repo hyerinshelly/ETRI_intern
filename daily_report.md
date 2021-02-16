@@ -80,6 +80,7 @@
 - 연구주제 설정을 위한 아이디어 탐색 (마인드맵 - 구글 코글)
     - [젯봇](https://coggle.it/diagram/X_ujT44ja19ZhWAI/t/%EC%A0%AF%EB%B4%87-image)
     - [강화학습](https://coggle.it/diagram/X_ulwgfKJimvn5Cg/t/%EA%B0%95%ED%99%94%ED%95%99%EC%8A%B5)
+
 - jetbot image를 다운받아 SD카드에 flash하여 부팅 다시 함 -> 데이터 훈련하고 그 훈련시킨 모델을 불러올 때 실행이 멈추는 현상 해결 -> 간단히 collision avoidance 잘 작동함 확인 완료
 - [edwith MOVE37 강의](https://www.edwith.org/move37/joinLectures/25196) 강화학습 공부 진행 중  
     - Ch.3 : 모델프리 강화학습 (환경을 알지 못해도 최적의 정책 찾기)  
@@ -861,7 +862,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - 로봇이 타일 위에 올라갔을 때 색을 바꿀 수 있게 하는 기능이 필요하고, 물품을 운반하는 로봇과 물품을 만들지는 못할 것 같다.
     
 - RL for COVID-19: train.py 실행 시도
-    > python train.py --config korea_dqn --expe-name korea_dqn_study --trial_id 0
+    > $ python train.py --config korea_dqn --expe-name korea_dqn_study --trial_id 0
 
     - costs의 __init__.py 파일에서 economy cost의 클래스명을 바꾼 것이 수정되지 않아 수정함
     - sqeir_model.py에서 run_n_step함수 내의 미분방정식을 계산해주는 odeint 함수 실행 시 타입 에러 발생
@@ -894,5 +895,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         KeyError: 'N_av'
         ```
         (분석) 보면 불러야하는 korea_epidemic_discrete.py가 아닌 기존 것을 불러옴. gym_env가 잘못 불러지므로 current_state가 이상할 수 밖에 없음.  
-        (해결 방법) 다만 어떻게 원하는 env를 불러오는지를 잘 모르겠음.  
+        (해결 방법) get_env.py의 main 부분에서 env_id를 바꿔주지 않은 것을 발견함. 따라서 아래와 같이 바꿔주니 current_state가 7개의 숫자를 갖는 배열임을 확인함
+        > env = get_env(env_id='KoreaEpidemicDiscrete-v0', params=dict(cost_function=cost_function, model=model, simulation_horizon=simulation_horizon))
+        (문제) 하지만 여전히 타입에러 
         
