@@ -853,3 +853,4 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     
     - 아래 사진과 같이 warehouse world 환경에서 로봇이 동작하는 것을 확인하였다.  
     <img src="https://user-images.githubusercontent.com/59794238/108032104-4a010f00-7075-11eb-9077-f3ce35321113.png" width="40%"></img>  
+    - 물품을 운반하는 로봇과 물품을 만들지는 못할 것 같고, 로봇이 타일 위에 올라갔을 때 색을 바꿀 수 있게 하는 기능이 필요하다.
