@@ -904,3 +904,9 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             > env = get_env(env_id='KoreaEpidemicDiscrete-v0', params=dict(cost_function=cost_function, model=model, simulation_horizon=simulation_horizon))  
         (문제) 하지만 여전히 타입에러 발생함. 즉 여전히 current_state의 타입은 object. 
         
+<br/>
+
+2/17 Wen.
+- 간단한 warehouse 환경 완성
+    - 물품의 크기를 1,1,3으로 하고 light blue 색을 칠하였다. 빈 공간은 1,1,0.03의 크기로 하고 red 색을 칠하였다.
+    - /home/jwk/catkin_ws/src/turtlebot/turtlebot_gazebo/launch의 put_robot_in_world.launch 파일에서 로봇의 초기 위치 변경함.
