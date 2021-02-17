@@ -303,7 +303,7 @@
         
     - 학습이 돌아가는 듯 보였지만, 계속해서 값(r1인 듯?)이 illegal하다는 warning 메세지가 계속 뜨고 convergence fail 메세지도 뜨는 듯 하더니 결국 숫자 타입이 맞지 않아 cost를 계산할 수 없다는 메세지의 에러 발생함. (자동 종료됨)
         ```
-        ...
+        ... # 생략
         
          intdy--  t (=r1) illegal      
               in above message,  r1 =  0.1000000000000D+01
