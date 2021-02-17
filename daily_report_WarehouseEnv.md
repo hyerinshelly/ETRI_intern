@@ -322,3 +322,10 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             elif y_loc <= 0 and x_loc <= -3.5:
                 reward = -math.log(distance_to_goal)
             ```
+
+<br/>
+
+2/18 Thu.
+- 총 step 수 늘리기
+
+- training result 확인 방법
