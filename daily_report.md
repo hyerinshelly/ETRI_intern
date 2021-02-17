@@ -917,13 +917,13 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         (어제 문제 해결) 타입 설정이 어디서 잘못되나를 파악해보려 했으나 실패. 그냥 아래와 같이 panda의 to_numeric 함수를 이용해 강제로 타입 설정해줌.
         > current_state = pd.to_numeric(current_state)
         
-    - 그런데 어제 gym env 불러오는 것을 수정해줬음에도 여전히 이전의 env에 접근하며 어제와 같은 에러 발생함.
-        (원인) gym env가 __init__.py에 register 되지 않음 + korea_dqn에 담긴 env id가 수정 필요.
-        (해결) 아래와 같이 만든 gym register 해줌
+    - 그런데 어제 gym env 불러오는 것을 수정해줬음에도 여전히 이전의 env에 접근하며 어제와 같은 에러 발생함.  
+        (원인) gym env가 __init__.py에 register 되지 않음 + korea_dqn에 담긴 env id가 수정 필요.  
+        (해결) 아래와 같이 만든 gym register 해줌  
         > register(id='KoreaEpidemicDiscrete-v0',
         >          entry_point='epidemioptim.environments.gym_envs.korea_epidemic_discrete:KoreaEpidemicDiscrete')
     
-    - 아래 에러
+    - 아래 에러  
         ```
           File "../epidemioptim/environments/gym_envs/korea_epidemic_discrete.py", line 114, in _update_env_state
             level_c=self.level_c)
