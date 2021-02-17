@@ -292,7 +292,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 2/17 Wed.
 - 간단한 warehouse 환경 완성  
     <img src="https://user-images.githubusercontent.com/59794238/108169433-0d4c1b00-713c-11eb-93f4-615c263ec098.png" width="40%"></img>  
-    - 물품의 크기를 1,1,3으로 하고 light blue 색을 칠하였다. 빈 공간은 1,1,0.03의 크기로 하고 red 색을 칠하였다.
+    - 물품의 크기를 1,1,3으로 하고 light blue 색을 칠하였다. 빈 공간은 1,1,0.03의 크기로 하고 빨간색을 칠하였다.
         - 색 변경 방법: RGB값을 255로 나눈 값을 <ambient> 형식으로 적어 넣었다. - [참고](https://answers.gazebosim.org//question/15174/where-can-i-find-list-of-available-colours-for-gazebo/)  
         - /home/jwk/catkin_ws/src/turtlebot/turtlebot_gazebo/launch의 put_robot_in_world.launch 파일에서 로봇의 초기 위치 변경함.
 
