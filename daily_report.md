@@ -923,10 +923,19 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         > register(id='KoreaEpidemicDiscrete-v0',
         >          entry_point='epidemioptim.environments.gym_envs.korea_epidemic_discrete:KoreaEpidemicDiscrete')
     
-    - 아래 에러  
+    - env의 state label 중 level_c를 사용하지 않고 distancing_level를 사용했어서 남아있던 level_c 설정을 삭제하여 아래 에러 해결함  
         ```
           File "../epidemioptim/environments/gym_envs/korea_epidemic_discrete.py", line 114, in _update_env_state
             level_c=self.level_c)
         AttributeError: 'KoreaEpidemicDiscrete' object has no attribute 'level_c'
         ```
         
+    - 아래 에러 해결중
+        ```
+          File "../epidemioptim/environments/gym_envs/korea_epidemic_discrete.py", line 185, in reset
+              return self._normalize_env_state(self.env_state)
+            File "../epidemioptim/environments/gym_envs/korea_epidemic_discrete.py", line 304, in _normalize_env_state
+              return (env_state / np.array(self.normalization_factors)).copy()
+        ValueError: operands could not be broadcast together with shapes (11,) (12,)
+        ```
+    
