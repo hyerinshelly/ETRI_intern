@@ -879,7 +879,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             output = _odepack.odeint(func, y0, t, args, Dfun, col_deriv, ml, mu,
         TypeError: Cannot cast array data from dtype('O') to dtype('float64') according to the rule 'safe'
         ```
-        (원인) 확인해보니 기존 epidemiOptim과는 달리 odeint의 parameter 값으로 들어가는 current_state의 타입이 float64가 아닌 object였음.
+        (원인) 'print(current_state.dtype)'으로 확인해보니 기존 epidemiOptim과는 달리 odeint의 parameter 값으로 들어가는 current_state의 타입이 float64가 아닌 object였음.
         그래서 타입 확인을 넘어 current_state 자체를 출력하도록 했더니 다음과 같은 에러 발생함.  
         ```
         Traceback (most recent call last):
