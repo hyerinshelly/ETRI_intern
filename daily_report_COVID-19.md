@@ -298,3 +298,38 @@
         ```
         (원인) 전에 current_state의 타입이 float64이어야 하는데 object였던 것과 동일하게 모든 state가 numeric type이 아닌 object type이 되어 문제 발생하는 것 같음.  
         (분석) 따라서 전에는 당장 문제가 되는 current_state의 타입만 강제로 바꿔주어 닥친 에러를 해결했지만, 근본적으로 state의 타입 설정을 고쳐주어야 할 것으로 판단됨.  
+        (해결) dqn.py에서 핵습을 하는 핵심 부분인 act 함수에서 기존 바디 내용 실행 전 state의 타입을 예전과 비슷하게 강제로 numeric type이 되도록 함.
+            > state = pd.to_numeric(state)
+        
+    - 학습이 돌아가는 듯 보였지만, 계속해서 값(r1인 듯?)이 illegal하다는 warning 메세지가 계속 뜨고 convergence fail 메세지도 뜨는 듯 하더니 결국 숫자 타입이 맞지 않아 cost를 계산할 수 없다는 메세지의 에러 발생함. (자동 종료됨)
+        ```
+        ...
+        
+         intdy--  t (=r1) illegal      
+              in above message,  r1 =  0.1000000000000D+01
+              t not in interval tcur - hu (= r1) to tcur (=r2)       
+              in above,  r1 =  0.0000000000000D+00   r2 =  0.0000000000000D+00
+        AttributeError: 'float' object has no attribute 'sqrt'
+
+        The above exception was the direct cause of the following exception:
+
+        Traceback (most recent call last):
+          File "train.py", line 78, in <module>
+            train(**kwargs)
+          File "train.py", line 67, in train
+            algorithm.learn(num_train_steps=params['num_train_steps'])
+          File "../epidemioptim/optimization/dqn/dqn.py", line 429, in learn
+            new_logs, eval_costs = self.evaluate(n=self.n_evals_if_stochastic if self.stochastic else 1)
+          File "../epidemioptim/optimization/dqn/dqn.py", line 464, in evaluate
+            new_logs, costs = self.compute_eval_score(eval_episodes, eval_goals)
+          File "../epidemioptim/optimization/dqn/dqn.py", line 478, in compute_eval_score
+            costs_std = np.std(costs[ind_g], axis=0)
+          File "<__array_function__ internals>", line 5, in std
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 3496, in std
+            return _methods._std(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/numpy/core/_methods.py", line 237, in _std
+            ret = um.sqrt(ret, out=ret)
+        TypeError: loop of ufunc does not support argument 0 of type float which has no callable sqrt method
+        ```
+        (원인? 분석?)
+        
