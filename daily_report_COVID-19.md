@@ -331,5 +331,6 @@
             ret = um.sqrt(ret, out=ret)
         TypeError: loop of ufunc does not support argument 0 of type float which has no callable sqrt method
         ```
-        (원인? 분석?)
+        (원인? 분석?) 검색해서 찾아보니 dtype이 object인 걸 억지로 numeric하게 바꿨을 경우 그럴 수 있댄다.. 그럼 어떻게 하지,,
+        
         
