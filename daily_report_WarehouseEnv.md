@@ -290,6 +290,35 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 <br/>
 
 2/17 Wed.
-- 간단한 warehouse 환경 완성
+- 간단한 warehouse 환경 완성  
+    <img src="https://user-images.githubusercontent.com/59794238/108169433-0d4c1b00-713c-11eb-93f4-615c263ec098.png" width="40%"></img>  
     - 물품의 크기를 1,1,3으로 하고 light blue 색을 칠하였다. 빈 공간은 1,1,0.03의 크기로 하고 red 색을 칠하였다.
-    - /home/jwk/catkin_ws/src/turtlebot/turtlebot_gazebo/launch의 put_robot_in_world.launch 파일에서 로봇의 초기 위치 변경함.
+        - 색 변경 방법: RGB값을 255로 나눈 값을 <ambient> 형식으로 적어 넣었다. - [참고](https://answers.gazebosim.org//question/15174/where-can-i-find-list-of-available-colours-for-gazebo/)  
+        - /home/jwk/catkin_ws/src/turtlebot/turtlebot_gazebo/launch의 put_robot_in_world.launch 파일에서 로봇의 초기 위치 변경함.
+
+    - 빨간색으로 칠한 부분까지 도착하는 것을 목표로 하는 task를 제작하였다.
+        - Gazebo 위에서 모델의 위치를 GetModelState service로 얻었다. 상대적인 거리만 얻을 수 있어 지면과의 상대적 거리를 사용하였다. - [참고](https://www.youtube.com/watch?v=WqK2IY5_9OQ&feature=emb_title)
+          ```
+          from gazebo_msgs.srv import GetModelState
+          
+            self.model_coordinates = rospy.ServiceProxy('/gazebo/get_model_state', GetModelState)
+            coordinates = self.model_coordinates('mobile_base', 'ground_plane')
+            x_loc=coordinates.pose.position.x
+            y_loc=coordinates.pose.position.y
+            ```
+
+        - 벽에 충돌하거나 목표 지점에 도착하면 train이 끝난다. 간단하게 distance만 사용하는 방법으로는 잘 동작하지 않아 아래와 같이 Corner에 도착할 때마다 보상을 바꾸는 방식을 활용하였다.
+            ```
+          distance_to_goal = (x_loc+3.5)**2+(y_loc+4.5)**2
+          distance_to_corner1 = (y_loc+1)**2
+          distance_to_corner2 = (x_loc+4.5)**2
+
+          if not done:
+            reward = -math.log(distance_to_goal)
+            if y_loc > 0:
+                reward = -math.log(distance_to_corner1)
+            elif y_loc <= 0 and x_loc > -3.5:
+                reward = -math.log(distance_to_corner2)
+            elif y_loc <= 0 and x_loc <= -3.5:
+                reward = -math.log(distance_to_goal)
+            ```
