@@ -930,7 +930,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         AttributeError: 'KoreaEpidemicDiscrete' object has no attribute 'level_c'
         ```
         
-    - 아래 에러 해결중
+    - 마찬가지로 level_c에 해당하는 normalizing_factor 값을 삭제해 array 길이 차이로 인한 아래의 에러 해결
         ```
           File "../epidemioptim/environments/gym_envs/korea_epidemic_discrete.py", line 185, in reset
               return self._normalize_env_state(self.env_state)
@@ -938,4 +938,22 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
               return (env_state / np.array(self.normalization_factors)).copy()
         ValueError: operands could not be broadcast together with shapes (11,) (12,)
         ```
+    
+    - 드디어 learning(알고리즘 학습) 부분이 돌아가기 시작하였으나 아래의 에러 발생
+        ```
+        Traceback (most recent call last):
+          File "train.py", line 78, in <module>
+            train(**kwargs)
+          File "train.py", line 67, in train
+            algorithm.learn(num_train_steps=params['num_train_steps'])
+          File "../epidemioptim/optimization/dqn/dqn.py", line 400, in learn
+            episodes = run_rollout(policy=self,
+          File "../epidemioptim/optimization/shared/rollout.py", line 64, in run_rollout
+            action, q_constraints = policy.act(augmented_state, deterministic=eval)
+          File "../epidemioptim/optimization/dqn/dqn.py", line 322, in act
+            state = ag.Variable(torch.FloatTensor(state).unsqueeze(0))
+        TypeError: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+        ```
+        (원인) 전에 current_state의 타입이 float64이어야 하는데 object였던 것과 동일하게 모든 state가 numeric type이 아닌 object type이 되어 문제 발생하는 것 같음.  
+        (분석) 따라서 전에는 당장 문제가 되는 current_state의 타입만 강제로 바꿔주어 닥친 에러를 해결했지만, 근본적으로 state의 타입 설정을 고쳐주어야 할 것으로 판단됨.  
     
