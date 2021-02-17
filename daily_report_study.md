@@ -5,8 +5,6 @@
 - jetbot 초기 설정 및 부팅  
 <img src="https://user-images.githubusercontent.com/47997946/103622166-a30b5c80-4f79-11eb-8190-2c74340478f2.png" width="30%"></img>
 
-- 무선랜 설치  
-<img src="https://user-images.githubusercontent.com/47997946/103621726-fd57ed80-4f78-11eb-8f4f-111bc2bfbd92.png" width="30%"></img>
 <br/>
 
 1/5 Tue.
