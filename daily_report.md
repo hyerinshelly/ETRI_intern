@@ -913,7 +913,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - /home/jwk/catkin_ws/src/turtlebot/turtlebot_gazebo/launch의 put_robot_in_world.launch 파일에서 로봇의 초기 위치 변경함.
 
 - RL for COVID-19: train.py 실행 시도 (이어서)
-    - sqeir_model.py에서 run_n_step함수 내의 미분방정식을 계산해주는 odeint 함수 실행 시 타입 에러 발생
+    - sqeir_model.py에서 run_n_step함수 내의 미분방정식을 계산해주는 odeint 함수 실행 시 타입 에러 발생  
         (어제 문제 해결) 타입 설정이 어디서 잘못되나를 파악해보려 했으나 실패. 그냥 아래와 같이 panda의 to_numeric 함수를 이용해 강제로 타입 설정해줌.
         > current_state = pd.to_numeric(current_state)
         (문제) 그런데 어제 gym env 불러오는 것을 수정해줬음에도 여전히 이전의 env에 접근하며 어제와 같은 에러 발생함.
