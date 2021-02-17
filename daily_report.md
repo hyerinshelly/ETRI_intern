@@ -901,12 +901,19 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
         ```
         (분석) 보면 불러야하는 korea_epidemic_discrete.py가 아닌 기존 것을 불러옴. gym_env가 잘못 불러지므로 current_state가 이상할 수 밖에 없음.  
         (해결 방법) get_env.py의 main 부분에서 env_id를 바꿔주지 않은 것을 발견함. 따라서 아래와 같이 바꿔주니 current_state가 7개의 숫자를 갖는 배열임을 확인함.  
-            > env = get_env(env_id='KoreaEpidemicDiscrete-v0', params=dict(cost_function=cost_function, model=model, simulation_horizon=simulation_horizon))  
+        > env = get_env(env_id='KoreaEpidemicDiscrete-v0', params=dict(cost_function=cost_function, model=model, simulation_horizon=simulation_horizon))  
+        
         (문제) 하지만 여전히 타입에러 발생함. 즉 여전히 current_state의 타입은 object. 
         
 <br/>
 
-2/17 Wen.
+2/17 Wed.
 - 간단한 warehouse 환경 완성
     - 물품의 크기를 1,1,3으로 하고 light blue 색을 칠하였다. 빈 공간은 1,1,0.03의 크기로 하고 red 색을 칠하였다.
     - /home/jwk/catkin_ws/src/turtlebot/turtlebot_gazebo/launch의 put_robot_in_world.launch 파일에서 로봇의 초기 위치 변경함.
+
+- RL for COVID-19: train.py 실행 시도 (이어서)
+    - sqeir_model.py에서 run_n_step함수 내의 미분방정식을 계산해주는 odeint 함수 실행 시 타입 에러 발생
+        (어제 문제 해결) 타입 설정이 어디서 잘못되나를 파악해보려 했으나 실패. 그냥 아래와 같이 panda의 to_numeric 함수를 이용해 강제로 타입 설정해줌.
+        > current_state = pd.to_numeric(current_state)
+        (문제) 그런데 어제 gym env 불러오는 것을 수정해줬음에도 여전히 이전의 env에 접근하며 어제와 같은 에러 발생함.
