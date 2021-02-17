@@ -331,6 +331,44 @@
             ret = um.sqrt(ret, out=ret)
         TypeError: loop of ufunc does not support argument 0 of type float which has no callable sqrt method
         ```
-        (원인? 분석?) 검색해서 찾아보니 dtype이 object인 걸 억지로 numeric하게 바꿨을 경우 그럴 수 있댄다.. 그럼 어떻게 하지,,
+        (원인? 분석?) 검색해서 찾아보니 dtype이 object인 걸 억지로 numeric하게 바꿨을 경우 그럴 수 있댄다.. 그럼 어떻게 하지,,  
+        (해결?) 알고보니 위의 문제에서 act함수 돌리기전 state의 타입이 이미 float64였다.. 잘못된 해결 방법이었다. (그런데 왜 에러 내용이 바뀐거지??) 아래와 같이 다시 원점이다..  
+        ```
+        ... # 생략
         
+         lsoda--  at t (=r1) and step size h (=r2), the    
+               corrector convergence failed repeatedly     
+               or with abs(h) = hmin   
+              in above,  r1 =  0.0000000000000D+00   r2 =  0.4713305315119-109
+         lsoda--  warning..internal t (=r1) and h (=r2) are
+               such that in the machine, t + h = t on the next step  
+               (h = step size). solver will continue anyway
+              in above,  r1 =  0.0000000000000D+00   r2 =  0.0000000000000D+00
+         intdy--  t (=r1) illegal      
+              in above message,  r1 =  0.1000000000000D+01
+              t not in interval tcur - hu (= r1) to tcur (=r2)       
+              in above,  r1 =  0.0000000000000D+00   r2 =  0.0000000000000D+00
+        Traceback (most recent call last):
+          File "train.py", line 78, in <module>
+            train(**kwargs)
+          File "train.py", line 67, in train
+            algorithm.learn(num_train_steps=params['num_train_steps'])
+          File "../epidemioptim/optimization/dqn/dqn.py", line 404, in learn
+            episodes = run_rollout(policy=self,
+          File "../epidemioptim/optimization/shared/rollout.py", line 64, in run_rollout
+            action, q_constraints = policy.act(augmented_state, deterministic=eval)
+          File "../epidemioptim/optimization/dqn/dqn.py", line 326, in act
+            state = ag.Variable(torch.FloatTensor(state).unsqueeze(0))
+        TypeError: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+        ```
         
+<br/>
+
+2/18 Thur.
+- RL for COVID-19: train.py 실행 시도 (이어서)
+    - 어제의 에러(아래) 해결 - 구글링 해보기!
+    ```
+      File "../epidemioptim/optimization/dqn/dqn.py", line 326, in act
+        state = ag.Variable(torch.FloatTensor(state).unsqueeze(0))
+    TypeError: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+    ```
