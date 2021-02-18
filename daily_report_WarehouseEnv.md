@@ -341,7 +341,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     else:
         reward = reward * self.turn_reward
     ```         
-- Lidar 정보만으로는 학습이 되지 않아 위치 정보를 추가함
+- Lidar 정보만으로는 학습이 되지 않아 observation에 위치 정보를 추가함
     ```
     discretized_observations.append(x_loc)
     discretized_observations.append(y_loc)
