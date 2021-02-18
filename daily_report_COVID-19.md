@@ -441,7 +441,7 @@
             Eval, g: [1.], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
         ```
         (문제) 수렴을 전혀 하지 않고 있다. best score이 inf라니.. 전혀 학습이 되지 않고 있다.  
-        (분석) 기존 모델의 학습(아래 참조)과 비교해보면 명확히 다르다.  
+        (분석1) 기존 모델의 학습(아래 참조)과 비교해보면 명확히 다르다.  
         ```
         Episode: 2450.00
             Best score so far: 35.26
@@ -452,4 +452,21 @@
             Train, Cost 2: 79.15
             Train, Aggregated cost: 44.31
             Eval, g: 0.5, C1: 2494.96 +/- 2725.36, C2: 84.50 +/- 6.39, Agg: 44.17 +/- 44.17
+        ```  
+        (분석2) 아래 warning이 계속 반복된다.
         ```
+         intdy--  t (=r1) illegal      
+              in above message,  r1 =  0.1000000000000D+01
+              t not in interval tcur - hu (= r1) to tcur (=r2)       
+              in above,  r1 =  0.0000000000000D+00   r2 =  0.0000000000000D+00
+         lsoda--  warning..internal t (=r1) and h (=r2) are
+               such that in the machine, t + h = t on the next step  
+               (h = step size). solver will continue anyway
+              in above,  r1 =  0.0000000000000D+00   r2 =  0.0000000000000D+00
+        ... # 중략
+         lsoda--  at t (=r1) and step size h (=r2), the    
+               corrector convergence failed repeatedly     
+               or with abs(h) = hmin   
+              in above,  r1 =  0.0000000000000D+00   r2 =  0.2918205452041-109
+        ```
+        
