@@ -315,11 +315,11 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 
           if not done:
             if y_loc > 0:
-                reward = -distance_to_corner1
+                reward = math.exp(1/distance_to_corner1)
             elif y_loc <= 0 and x_loc > -3.5:
-                reward = -distance_to_corner2
+                reward = math.exp(1/distance_to_corner2)
             elif y_loc <= 0 and x_loc <= -3.5:
-                reward = -distance_to_goal
+                reward = math.exp(1/distance_to_goal)
             ```
 
 <br/>
@@ -336,8 +336,8 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 - 앞으로 갈 경우 reward가 높아지게 함 (아래의 코드를 추가함)
 ```
 if self.last_action == "FORWARDS":
-    reward = reward / self.forwards_reward
+    reward = reward * self.forwards_reward
 else:
-    reward = reward / self.turn_reward
+    reward = reward * self.turn_reward
 ```         
    
