@@ -327,7 +327,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 
 2/18 Thu.
 - 총 step 수 늘리기
-
+    start_training.py의 n_steps 변수를 변경.
 - training result 확인 방법
-
+    <img src="https://user-images.githubusercontent.com/59794238/108286485-81ce9a80-71cc-11eb-8fe3-b3e1bc975911.png" width="40%"></img>  
 - 훈련 방법 바꿔보기 (지금은 Q-learning)
