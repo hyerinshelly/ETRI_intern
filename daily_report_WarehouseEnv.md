@@ -326,8 +326,16 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 <br/>
 
 2/18 Thu.
-- 총 step 수 늘리기
+- 총 step 수 늘리기  
     start_training.py의 n_steps 변수를 변경.
-- training result 확인 방법
-    <img src="https://user-images.githubusercontent.com/59794238/108286485-81ce9a80-71cc-11eb-8fe3-b3e1bc975911.png" width="40%"></img>  
-- 훈련 방법 바꿔보기 (지금은 Q-learning)
+- training result 확인 방법  
+    wrappers.Monitor에서 훈련 결과를 training_results에 저장한다.  
+    <img src="https://user-images.githubusercontent.com/59794238/108286485-81ce9a80-71cc-11eb-8fe3-b3e1bc975911.png" width="60%"></img>  
+- 앞으로 갈 경우 reward가 높아지게 함 (아래의 코드를 추가함)
+
+        ```
+            if self.last_action == "FORWARDS":
+                reward = reward * self.forwards_reward
+            else:
+                reward = reward * self.turn_reward
+        ```
