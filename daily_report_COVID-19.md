@@ -373,4 +373,50 @@
         TypeError: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
         ```
         (분석) 다시 'print(state.dtype)'을 넣고 끝까지 돌려보니 처음에는 float64로 잘 돌아가다가 갑자기 object로 바뀌더니 위와 같은 에러 발생. 아마도 한 스텝 한 스텝 돌릴 때는 문제가 없는데 에피소드로 모아 저장을 하고 roll out을 할 때 담긴 augmented_state의 타입이 object인 것으로 파악됨.  
-        (해결 방법) torch.from_numpy() 사용?
+        (시도) torch.from_numpy() 사용? -> 역시나 안됨  
+        (해결 방안) 만약 타입이 object이면 torch.FloatTensor(list(state).unsqueeze(0)) 하게 함.  
+        
+        (추가) 마찬가지로 tensor.FloatTensor을 쓰는 데에서 같은 에러(아래) 발생하는 곳도 마찬가지로 FloatTensor 안에 list화 시킴.  
+        ```
+        Traceback (most recent call last):
+          File "train.py", line 78, in <module>
+            train(**kwargs)
+          File "train.py", line 67, in train
+            algorithm.learn(num_train_steps=params['num_train_steps'])
+          File "../epidemioptim/optimization/dqn/dqn.py", line 432, in learn
+            update_losses.append(self.update())
+          File "../epidemioptim/optimization/dqn/dqn.py", line 354, in update
+            losses = self._update(self.batch_size)
+          File "../epidemioptim/optimization/dqn/dqn.py", line 229, in _update
+            rewards = [- ag.Variable(torch.FloatTensor(c_func.scale(c))) for c_func, c in zip(self.cost_function.costs, costs.transpose())]
+          File "../epidemioptim/optimization/dqn/dqn.py", line 229, in <listcomp>
+            rewards = [- ag.Variable(torch.FloatTensor(c_func.scale(c))) for c_func, c in zip(self.cost_function.costs, costs.transpose())]
+        TypeError: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
+        ```
+        
+    - 결국 위의 에러 전의 에러로 돌아왔다.
+        ```
+        /home/iot/anaconda3/lib/python3.8/site-packages/numpy/core/fromnumeric.py:87: RuntimeWarning: overflow encountered in reduce
+          return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+        AttributeError: 'float' object has no attribute 'sqrt'
+
+        The above exception was the direct cause of the following exception:
+
+        Traceback (most recent call last):
+          File "train.py", line 78, in <module>
+            train(**kwargs)
+          File "train.py", line 67, in train
+            algorithm.learn(num_train_steps=params['num_train_steps'])
+          File "../epidemioptim/optimization/dqn/dqn.py", line 442, in learn
+            new_logs, eval_costs = self.evaluate(n=self.n_evals_if_stochastic if self.stochastic else 1)
+          File "../epidemioptim/optimization/dqn/dqn.py", line 477, in evaluate
+            new_logs, costs = self.compute_eval_score(eval_episodes, eval_goals)
+          File "../epidemioptim/optimization/dqn/dqn.py", line 491, in compute_eval_score
+            costs_std = np.std(costs[ind_g], axis=0)
+          File "<__array_function__ internals>", line 5, in std
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 3496, in std
+            return _methods._std(a, axis=axis, dtype=dtype, out=out, ddof=ddof,
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/numpy/core/_methods.py", line 237, in _std
+            ret = um.sqrt(ret, out=ret)
+        TypeError: loop of ufunc does not support argument 0 of type float which has no callable sqrt method
+        ```
