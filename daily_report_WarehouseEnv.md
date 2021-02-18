@@ -327,6 +327,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 2/18 Thu.
 - 총 step 수 늘리기  
     start_training.py의 n_episodes 변수를 변경. n_steps는 변경하였을 때 env reset이 되지 않는 에러가 발생한다. (초기 설정: nepisodes: 500, nsteps: 10000)
+    
 - training result 확인 방법  
     - wrappers.Monitor에서 훈련 결과를 training_results에 저장한다.  
         <img src="https://user-images.githubusercontent.com/59794238/108286485-81ce9a80-71cc-11eb-8fe3-b3e1bc975911.png" width="60%"></img>  
@@ -342,6 +343,6 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     ```         
 - Lidar 정보만으로는 학습이 되지 않아 위치 정보를 추가함
     ```
-        discretized_observations.append(x_loc)
-        discretized_observations.append(y_loc)
+    discretized_observations.append(x_loc)
+    discretized_observations.append(y_loc)
     ```
