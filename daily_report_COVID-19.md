@@ -502,3 +502,32 @@
         dE_qdt = - q*beta0*c*S*I/N - E_q/De
       ```  
       (분석4) 아니면 초기 숫자가 너무 작은 탓일 수도 있을 것 같다. 사실 나의 모델링에는 격리와 관련한 파라미터가 들어있는데 가져온 초기 설정 값은 첫 국내 코로나 확진자가 발생했을 당시이다. 초기값을 첫 거리두기 시작 날짜로 가져와 봐야겠다.  
+      (시도) 아래와 같이 2020.3.23. 기준으로 초기값 설정했더니 그 아래와 같은 에러 발생함.
+      > self._all_initial_state_distribs = dict(E0=LogNormalDist(params=[2000, 2000 * self.noise], stochastic=self.stochastic),
+      >                                         I0=DiracDist(params=2850, stochastic=self.stochastic),
+      >                                         R0=DiracDist(params=3277, stochastic=self.stochastic),
+      >                                         S_q0=DiracDist(params=13261, stochastic=self.stochastic),
+      >                                         E_q0 = DiracDist(params=367, stochastic=self.stochastic),
+      >                                         I_q0 = DiracDist(params=5684, stochastic=self.stochastic),
+      >                                         )
+      
+      ```
+      ../epidemioptim/utils.py:223: RuntimeWarning: overflow encountered in exp
+        return np.exp(float(samples)) if n == 1 else np.exp(samples)
+      Traceback (most recent call last):
+        File "train.py", line 78, in <module>
+          train(**kwargs)
+        File "train.py", line 39, in train
+          model = get_model(model_id=params['model_id'],
+        File "../epidemioptim/environments/models/get_model.py", line 22, in get_model
+          return SqeirModel(**params)
+        File "../epidemioptim/environments/models/sqeir_model.py", line 134, in __init__
+          super().__init__(internal_states_labels=['S', 'S_q', 'E', 'E_q', 'I', 'I_q', 'R'],
+        File "../epidemioptim/environments/models/base_model.py", line 46, in __init__
+          self.reset()  # reset model to initial states and parameters
+        File "../epidemioptim/environments/models/base_model.py", line 59, in reset
+          self._sample_initial_state()
+        File "../epidemioptim/environments/models/sqeir_model.py", line 184, in _sample_initial_state
+          self.initial_state[k] = int(self.initial_state[k])
+      OverflowError: cannot convert float infinity to integer
+      ```
