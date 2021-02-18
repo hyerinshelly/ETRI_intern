@@ -333,7 +333,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - wrappers.Monitor에 video_callable=lambda episode_id: True를 추가하여 episode 녹화를 하려고 하였는데, 'NameError: name 'open' is not defined'가 발생한다. 해결 방법을 모르겠어서 포기하였다.
     - 그 대신, episode를 무한으로 하고 녹화하는 방식을 사용하기로 하였다.
 
-- 앞으로 갈 경우 reward가 높아지게 함 (아래의 코드를 추가함)
+- 회전하는 시간을 최소화하기 위해 앞으로 갈 경우 reward가 높아지게 함 (아래의 코드를 추가함)
 ```
 if self.last_action == "FORWARDS":
     reward = reward * self.forwards_reward
