@@ -372,5 +372,5 @@
             state = ag.Variable(torch.FloatTensor(state).unsqueeze(0))
         TypeError: can't convert np.ndarray of type numpy.object_. The only supported types are: float64, float32, float16, complex64, complex128, int64, int32, int16, int8, uint8, and bool.
         ```
-        (분석) 다시 'print(state.dtype)'을 넣고 끝까지 돌려보니 처음에는 float64로 잘 돌아가다가 갑자기 object로 바뀌더니 위와 같은 에러 발생. 아마도 한 스텝 한 스텝 돌릴 때는 문제가 없는데 에피소드로 모아 저장을 하고 roll out을 할 때 담긴 augmented_state의 타입이 object인 것으로 파악됨.
+        (분석) 다시 'print(state.dtype)'을 넣고 끝까지 돌려보니 처음에는 float64로 잘 돌아가다가 갑자기 object로 바뀌더니 위와 같은 에러 발생. 아마도 한 스텝 한 스텝 돌릴 때는 문제가 없는데 에피소드로 모아 저장을 하고 roll out을 할 때 담긴 augmented_state의 타입이 object인 것으로 파악됨.  
         (해결 방법) torch.from_numpy() 사용?
