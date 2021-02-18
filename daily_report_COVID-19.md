@@ -500,4 +500,5 @@
         dEdt = - (1-q)*beta0*c*S*I/N - E/De
       ../epidemioptim/environments/models/sqeir_model.py:69: RuntimeWarning: overflow encountered in double_scalars
         dE_qdt = - q*beta0*c*S*I/N - E_q/De
-      ```
+      ```  
+      (분석4) 아니면 초기 숫자가 너무 작은 탓일 수도 있을 것 같다. 사실 나의 모델링에는 격리와 관련한 파라미터가 들어있는데 가져온 초기 설정 값은 첫 국내 코로나 확진자가 발생했을 당시이다. 초기값을 첫 거리두기 시작 날짜로 가져와 봐야겠다.  
