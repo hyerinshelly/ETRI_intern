@@ -420,9 +420,11 @@
             ret = um.sqrt(ret, out=ret)
         TypeError: loop of ufunc does not support argument 0 of type float which has no callable sqrt method
         ```
-        (해결) 
+        (해결) np.mean, np.std를 적용시키는 costs(numpy array)의 타입을 float을 담은 object가 아닌 자체가 float64가 되도록 아래와 같이 costs를 만들 때 지정해줌.  
+            > # costs = np.array([np.sum(e['costs'], axis=0) for e in eval_episodes]) # before
+            > costs = np.array([np.sum(e['costs'], axis=0) for e in eval_episodes], dtype=np.float64)
         
-    - 드디어 아래와 같이 잘 돌아가는 중
+    - 드디어 아래와 같이 잘 돌아가는 중... 그러나
         ```
         Episode: 2650.00
             Best score so far: inf
@@ -437,4 +439,17 @@
             Eval, g: [0.75], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
             Eval, g: [0.], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
             Eval, g: [1.], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
+        ```
+        (문제) 수렴을 전혀 하지 않고 있다. best score이 inf라니.. 전혀 학습이 되지 않고 있다.  
+        (분석) 기존 모델의 학습(아래 참조)과 비교해보면 명확히 다르다.  
+        ```
+        Episode: 2450.00
+            Best score so far: 35.26
+            Eval score: 44.17
+            Loss 1: 13.03
+            Loss 2: 2.20
+            Train, Cost 1: 6155.39
+            Train, Cost 2: 79.15
+            Train, Aggregated cost: 44.31
+            Eval, g: 0.5, C1: 2494.96 +/- 2725.36, C2: 84.50 +/- 6.39, Agg: 44.17 +/- 44.17
         ```
