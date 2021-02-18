@@ -530,4 +530,44 @@
         File "../epidemioptim/environments/models/sqeir_model.py", line 184, in _sample_initial_state
           self.initial_state[k] = int(self.initial_state[k])
       OverflowError: cannot convert float infinity to integer
+      ```  
+      (해결) E0의 초기 분포 설정을 LogNormal이 아닌 DiracDist로 바꿔주니 (아래 참고) warning 없이 학습된다!
+      > self._all_initial_state_distribs = dict(E0=DiracDist(params=2000, stochastic=self.stochastic),
+      >                                         I0=DiracDist(params=2850, stochastic=self.stochastic),
+      >                                         R0=DiracDist(params=3277, stochastic=self.stochastic),
+      >                                         S_q0=DiracDist(params=13261, stochastic=self.stochastic),
+      >                                         E_q0 = DiracDist(params=367, stochastic=self.stochastic),
+      >                                         I_q0 = DiracDist(params=5684, stochastic=self.stochastic),
+      >                                         )
+      
+      ```
+      ---------------
+      Episode: 50.00
+            Best score so far: 293271.51
+            Eval score: 293271.51
+            Loss 1: 20793.33
+            Loss 2: 776657024.00
+            Train, Cost 1: 2188284.95
+            Train, Cost 2: 503275715.94
+            Train, Aggregated cost: 374186.80
+            Eval, g: [0.25], C1: 2035818.49 +/- 549932.18, C2: 371467349.05 +/- 80806900.04, Agg: 145221.08 +/- 31645.99
+            Eval, g: [0.5], C1: 2017006.52 +/- 496145.50, C2: 365690016.85 +/- 66374820.67, Agg: 282851.56 +/- 51407.27
+            Eval, g: [0.75], C1: 2154528.71 +/- 444872.78, C2: 387925961.95 +/- 70776912.35, Agg: 448435.54 +/- 81815.00
+            Eval, g: [0.], C1: 2062840.69 +/- 496083.70, C2: 390059974.69 +/- 62042188.92, Agg: 3173.60 +/- 763.21
+            Eval, g: [1.], C1: 2117429.87 +/- 598995.93, C2: 381339247.97 +/- 97691072.32, Agg: 586675.77 +/- 150293.96
+
+        ---------------
+        Episode: 100.00
+            Best score so far: 293271.51
+            Eval score: 295775.05
+            Loss 1: 9315.25
+            Loss 2: 692999296.00
+            Train, Cost 1: 2215952.72
+            Train, Cost 2: 494826865.92
+            Train, Aggregated cost: 411094.45
+            Eval, g: [0.25], C1: 2151501.91 +/- 537339.90, C2: 381175938.12 +/- 88404445.23, Agg: 149088.63 +/- 34584.23
+            Eval, g: [0.5], C1: 2078171.17 +/- 540452.68, C2: 368601745.08 +/- 85370647.86, Agg: 285138.40 +/- 66046.07
+            Eval, g: [0.75], C1: 2099890.09 +/- 502277.52, C2: 376647052.57 +/- 84146273.41, Agg: 435400.40 +/- 97257.61
+            Eval, g: [0.], C1: 2049168.68 +/- 474079.14, C2: 380721072.24 +/- 73204552.75, Agg: 3152.57 +/- 729.35
+            Eval, g: [1.], C1: 2267234.22 +/- 533961.83, C2: 393961901.37 +/- 80761509.54, Agg: 606095.23 +/- 124248.48
       ```
