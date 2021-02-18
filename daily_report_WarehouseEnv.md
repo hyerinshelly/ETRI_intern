@@ -332,7 +332,7 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - wrappers.Monitor에서 훈련 결과를 training_results에 저장한다.  
         <img src="https://user-images.githubusercontent.com/59794238/108286485-81ce9a80-71cc-11eb-8fe3-b3e1bc975911.png" width="60%"></img>  
     - wrappers.Monitor에 video_callable=lambda episode_id: True를 추가하여 episode 녹화를 하려고 하였는데, 'NameError: name 'open' is not defined'가 발생한다. 해결 방법을 모르겠어서 포기하였다.
-    - 그 대신, episode를 무한으로 하고 녹화하는 방식을 사용하기로 하였다.
+    - 그 대신, episode를 매우 크게(10000000000000) 하고 녹화하는 방식을 사용하기로 하였다.
 
 - 회전하는 시간을 최소화하기 위해 앞으로 갈 경우 reward가 높아지게 함 (아래의 코드를 추가함)
     ```
