@@ -468,5 +468,36 @@
                corrector convergence failed repeatedly     
                or with abs(h) = hmin   
               in above,  r1 =  0.0000000000000D+00   r2 =  0.2918205452041-109
+        ```  
+        (분석3) train을 실행하고 초반에 이런 RuntimeWarning이 발생함을 확인하였다. cost가 인구수에 비례하게 해놨는데 인구수(S, S_q, E, E_q)에서 overflow가 발생했으니 당연히 cost 값이 올바르지 않고 이로 인해 best score 값도 inf였던 것이다. overflow의 원인을 찾는 것이 급한 일이 되었다. overflow가 일어 나는 4개의 compartment에만 공통으로 들어가 있는 값은 beta0, q, c, S이다.   
         ```
-        
+        Logging to:  /home/iot/바탕화면/RL_COVID-19_Korea/data/results/KoreaEpidemicDiscrete-v0/DQN/korea_dqn_study_1500/
+        ../epidemioptim/environments/models/sqeir_model.py:63: RuntimeWarning: overflow encountered in double_scalars
+          dSdt = - beta*c*S*I/N - (1-beta)*c*q*S*I + S_q/14
+        ../epidemioptim/environments/models/sqeir_model.py:63: RuntimeWarning: invalid value encountered in double_scalars
+          dSdt = - beta*c*S*I/N - (1-beta)*c*q*S*I + S_q/14
+        ../epidemioptim/environments/models/sqeir_model.py:65: RuntimeWarning: overflow encountered in double_scalars
+          dS_qdt = - S_q/14 + (1-beta)*c*q*S*I
+        ../epidemioptim/environments/models/sqeir_model.py:67: RuntimeWarning: overflow encountered in double_scalars
+          dEdt = - (1-q)*beta*c*S*I/N - E/De
+        ../epidemioptim/environments/models/sqeir_model.py:69: RuntimeWarning: overflow encountered in double_scalars
+          dE_qdt = - q*beta*c*S*I/N - E_q/De
+         lsoda--  warning..internal t (=r1) and h (=r2) are
+               such that in the machine, t + h = t on the next step  
+               (h = step size). solver will continue anyway
+              in above,  r1 =  0.0000000000000D+00   r2 =  0.0000000000000D+00
+      ```  
+      (시도) dSdt와 dS_qdt 수식에 치명적인 실수를 발견하였다. 전제 인구수 비례로 나누지 않은 항이 있었다. 하지만 이를 고쳤는데도 아래처럼 RuntimeWarning은 그대로다. 역시 beta0, q, c, S가 용의자인 것인가.  
+      ```
+      Logging to:  /home/iot/바탕화면/RL_COVID-19_Korea/data/results/KoreaEpidemicDiscrete-v0/DQN/korea_dqn_study_1700/
+      ../epidemioptim/environments/models/sqeir_model.py:63: RuntimeWarning: overflow encountered in double_scalars
+        dSdt = - beta0*c*S*I/N - (1-beta0)*c*q*S*I/N + S_q/14
+      ../epidemioptim/environments/models/sqeir_model.py:63: RuntimeWarning: invalid value encountered in double_scalars
+        dSdt = - beta0*c*S*I/N - (1-beta0)*c*q*S*I/N + S_q/14
+      ../epidemioptim/environments/models/sqeir_model.py:65: RuntimeWarning: overflow encountered in double_scalars
+        dS_qdt = - S_q/14 + (1-beta0)*c*q*S*I/N
+      ../epidemioptim/environments/models/sqeir_model.py:67: RuntimeWarning: overflow encountered in double_scalars
+        dEdt = - (1-q)*beta0*c*S*I/N - E/De
+      ../epidemioptim/environments/models/sqeir_model.py:69: RuntimeWarning: overflow encountered in double_scalars
+        dE_qdt = - q*beta0*c*S*I/N - E_q/De
+      ```
