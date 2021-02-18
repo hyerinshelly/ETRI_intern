@@ -420,3 +420,21 @@
             ret = um.sqrt(ret, out=ret)
         TypeError: loop of ufunc does not support argument 0 of type float which has no callable sqrt method
         ```
+        (해결) 
+        
+    - 드디어 아래와 같이 잘 돌아가는 중
+        ```
+        Episode: 2650.00
+            Best score so far: inf
+            Eval score: nan
+            Loss 1: nan
+            Loss 2: nan
+            Train, Cost 1: nan
+            Train, Cost 2: nan
+            Train, Aggregated cost: nan
+            Eval, g: [0.25], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
+            Eval, g: [0.5], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
+            Eval, g: [0.75], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
+            Eval, g: [0.], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
+            Eval, g: [1.], C1: nan +/- nan, C2: nan +/- nan, Agg: nan +/- nan
+        ```
