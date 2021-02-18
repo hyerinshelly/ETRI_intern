@@ -334,10 +334,14 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     - 그 대신, episode를 무한으로 하고 녹화하는 방식을 사용하기로 하였다.
 
 - 회전하는 시간을 최소화하기 위해 앞으로 갈 경우 reward가 높아지게 함 (아래의 코드를 추가함)
-```
-if self.last_action == "FORWARDS":
-    reward = reward * self.forwards_reward
-else:
-    reward = reward * self.turn_reward
-```         
-   
+    ```
+    if self.last_action == "FORWARDS":
+        reward = reward * self.forwards_reward
+    else:
+        reward = reward * self.turn_reward
+    ```         
+- Lidar 정보만으로는 학습이 되지 않아 위치 정보를 추가함
+    ```
+        discretized_observations.append(x_loc)
+        discretized_observations.append(y_loc)
+    ```
