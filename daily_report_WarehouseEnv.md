@@ -307,20 +307,19 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
             y_loc=coordinates.pose.position.y
             ```
 
-        - 벽에 충돌하거나 목표 지점에 도착하면 train이 끝난다. 간단하게 distance만 사용하는 방법으로는 잘 동작하지 않아 아래와 같이 Corner에 도착할 때마다 보상을 바꾸는 방식을 활용하였다.
+        - 벽에 충돌하거나 목표 지점에 도착하면 train이 끝난다. 간단하게 goal과의 distance만 사용하는 방법으로는 잘 동작하지 않아 아래와 같이 Corner에 도착할 때마다 보상을 바꾸는 방식을 활용하였다.
             ```
           distance_to_goal = (x_loc+3.5)**2+(y_loc+4.5)**2
           distance_to_corner1 = (y_loc+1)**2
           distance_to_corner2 = (x_loc+4.5)**2
 
           if not done:
-            reward = -math.log(distance_to_goal)
             if y_loc > 0:
-                reward = -math.log(distance_to_corner1)
+                reward = 1/distance_to_corner1
             elif y_loc <= 0 and x_loc > -3.5:
-                reward = -math.log(distance_to_corner2)
+                reward = 1/distance_to_corner2
             elif y_loc <= 0 and x_loc <= -3.5:
-                reward = -math.log(distance_to_goal)
+                reward = 1/distance_to_goal
             ```
 
 <br/>
