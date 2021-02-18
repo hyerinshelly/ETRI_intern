@@ -502,14 +502,14 @@
         dE_qdt = - q*beta0*c*S*I/N - E_q/De
       ```  
       (분석4) 아니면 초기 숫자가 너무 작은 탓일 수도 있을 것 같다. 사실 나의 모델링에는 격리와 관련한 파라미터가 들어있는데 가져온 초기 설정 값은 첫 국내 코로나 확진자가 발생했을 당시이다. 초기값을 첫 거리두기 시작 날짜로 가져와 봐야겠다.  
-      (시도) 아래와 같이 2020.3.23. 기준으로 초기값 설정했더니 그 아래와 같은 에러 발생함.
-      > self._all_initial_state_distribs = dict(E0=LogNormalDist(params=[2000, 2000 * self.noise], stochastic=self.stochastic),
-      >                                         I0=DiracDist(params=2850, stochastic=self.stochastic),
-      >                                         R0=DiracDist(params=3277, stochastic=self.stochastic),
-      >                                         S_q0=DiracDist(params=13261, stochastic=self.stochastic),
-      >                                         E_q0 = DiracDist(params=367, stochastic=self.stochastic),
-      >                                         I_q0 = DiracDist(params=5684, stochastic=self.stochastic),
-      >                                         )
+      (시도) 아래와 같이 2020.3.23. 기준으로 초기값 설정했더니 그 아래와 같은 에러 발생함.  
+      > self._all_initial_state_distribs = dict(E0=LogNormalDist(params=[2000, 2000 * self.noise], stochastic=self.stochastic),  
+      >                                         I0=DiracDist(params=2850, stochastic=self.stochastic),  
+      >                                         R0=DiracDist(params=3277, stochastic=self.stochastic),  
+      >                                         S_q0=DiracDist(params=13261, stochastic=self.stochastic),  
+      >                                         E_q0 = DiracDist(params=367, stochastic=self.stochastic),  
+      >                                         I_q0 = DiracDist(params=5684, stochastic=self.stochastic),  
+      >                                         )  
       
       ```
       ../epidemioptim/utils.py:223: RuntimeWarning: overflow encountered in exp
@@ -531,14 +531,14 @@
           self.initial_state[k] = int(self.initial_state[k])
       OverflowError: cannot convert float infinity to integer
       ```  
-      (해결) E0의 초기 분포 설정을 LogNormal이 아닌 DiracDist로 바꿔주니 (아래 참고) warning 없이 학습된다!
-      > self._all_initial_state_distribs = dict(E0=DiracDist(params=2000, stochastic=self.stochastic),
-      >                                         I0=DiracDist(params=2850, stochastic=self.stochastic),
-      >                                         R0=DiracDist(params=3277, stochastic=self.stochastic),
-      >                                         S_q0=DiracDist(params=13261, stochastic=self.stochastic),
-      >                                         E_q0 = DiracDist(params=367, stochastic=self.stochastic),
-      >                                         I_q0 = DiracDist(params=5684, stochastic=self.stochastic),
-      >                                         )
+      (해결) E0의 초기 분포 설정을 LogNormal이 아닌 DiracDist로 바꿔주니 (아래 참고) warning 없이 학습된다!  
+      > self._all_initial_state_distribs = dict(E0=DiracDist(params=2000, stochastic=self.stochastic),  
+      >                                         I0=DiracDist(params=2850, stochastic=self.stochastic),  
+      >                                         R0=DiracDist(params=3277, stochastic=self.stochastic),  
+      >                                         S_q0=DiracDist(params=13261, stochastic=self.stochastic),  
+      >                                         E_q0 = DiracDist(params=367, stochastic=self.stochastic),  
+      >                                         I_q0 = DiracDist(params=5684, stochastic=self.stochastic),  
+      >                                         )  
       
       ```
       ---------------
