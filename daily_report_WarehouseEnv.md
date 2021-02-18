@@ -333,9 +333,9 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     <img src="https://user-images.githubusercontent.com/59794238/108286485-81ce9a80-71cc-11eb-8fe3-b3e1bc975911.png" width="60%"></img>  
 - 앞으로 갈 경우 reward가 높아지게 함 (아래의 코드를 추가함)
 
-        ```
             if self.last_action == "FORWARDS":
                 reward = reward * self.forwards_reward
             else:
                 reward = reward * self.turn_reward
-        ```
+                
+   
