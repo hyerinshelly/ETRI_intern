@@ -329,3 +329,5 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 - 총 step 수 늘리기
 
 - training result 확인 방법
+
+- 훈련 방법 바꿔보기 (지금은 Q-learning)
