@@ -579,4 +579,24 @@
     - train 완료 터미널 화면:  
     <img src="https://user-images.githubusercontent.com/47997946/108446538-a2b4ef80-72a1-11eb-91c8-b78bd0f6d331.png" width="80%"></img>  
     
-    - 결과 plotting:
+    - plotting 방법 모색 중: analysis/plots.py를 이용해보고자 함
+        > $ python plots.py
+        
+        (문제1 & 해결) train.py와 달리 'from epidemioptim.~'로 모듈 불러오기가 안됨. 그래서 필요한 두 함수만 직접 복붙함.  
+        (문제2) 아래와 같이 np.swapaxes 함수 사용 부분에서 dimension이 안맞는 에러가 나는 듯함.
+        ```
+        Traceback (most recent call last):
+          File "plots.py", line 509, in <module>
+            plot_multi_algo(RES_FOLDER)
+          File "plots.py", line 406, in plot_multi_algo
+            data = np.swapaxes(np.array(data), 0, 1)
+          File "<__array_function__ internals>", line 5, in swapaxes
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 594, in swapaxes
+            return _wrapfunc(a, 'swapaxes', axis1, axis2)
+          File "/home/iot/anaconda3/lib/python3.8/site-packages/numpy/core/fromnumeric.py", line 58, in _wrapfunc
+            return bound(*args, **kwds)
+        numpy.AxisError: axis2: axis 1 is out of bounds for array of dimension 1
+        ```
+        (분석) 아 찾아보니 이 함수는 알고리즘간 비교이다.. 내가 원하는 게 아니다..
+    
+    - 그럼 다른 방법??
