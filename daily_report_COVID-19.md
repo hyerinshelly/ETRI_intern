@@ -608,7 +608,7 @@
             <img src="https://user-images.githubusercontent.com/47997946/108475397-fb9d7b80-72d3-11eb-8f1b-d7c18789f274.png" width="70%"></img>
             * 고쳐야할 점: quarantine 수 범위, 베타 값에 따른 결과, 파일 path 정리  
             
-    - beta 0~0.6까지 0.05 단위로 돌려놓음. (*나중에 0.0->0 폴더 이름 수정 필요)
+    - beta 0~0.8까지 0.05 단위로 돌려놓음. (*나중에 0.0->0 폴더 이름 수정 필요)
     - 그리고 그래프가 다 넘어가서 최대치를 아래와 같이 바꿈 (순서대로 new deaths, total deaths, new quarantines, total quarantines) in notebook_utils.py
         > high = [10000, 100000, 25000000, 50000000]
     
