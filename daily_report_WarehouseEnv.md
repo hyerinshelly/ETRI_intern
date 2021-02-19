@@ -354,3 +354,15 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
 - 하루 동안 학습시켰는데, 초기와 거의 변화가 없다. Q-learning 대신 다른 알고리즘을 사용해야 하는 것으로 보인다.
 - 목표지점을 좀 더 가까운 곳으로 설정하였고 완수한 시간이 빠를수록 보상을 높게 주는 조건을 추가하였다.
      <img src="https://user-images.githubusercontent.com/59794238/108437589-fff47500-7290-11eb-81e1-2d3791583911.png" width="40%"></img>  
+    ```
+            timepast = time.time()-self.start_time+1
+
+        if not done:
+            reward = math.exp(1/distance_to_goal)/timepast
+
+        else:
+            if distance_to_goal < 1:
+                reward = self.end_episode_points/timepast
+            else:
+                reward = -1*self.end_episode_points*timepast
+    ```
