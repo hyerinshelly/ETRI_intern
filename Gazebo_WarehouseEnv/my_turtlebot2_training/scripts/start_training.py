@@ -36,7 +36,7 @@ if __name__ == '__main__':
     Epsilon = rospy.get_param("/turtlebot2/epsilon")
     Gamma = rospy.get_param("/turtlebot2/gamma")
     epsilon_discount = rospy.get_param("/turtlebot2/epsilon_discount")
-    nepisodes = rospy.get_param("/turtlebot2/nepisodes")
+    nepisodes = 10000000000000 # rospy.get_param("/turtlebot2/nepisodes")
     nsteps = rospy.get_param("/turtlebot2/nsteps")
 
     running_step = rospy.get_param("/turtlebot2/running_step")

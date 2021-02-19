@@ -118,8 +118,8 @@ class TurtleBot2MazeEnv(turtlebot2_env.TurtleBot2Env):
                        str(self.observation_space))
 
         # Rewards
-        # self.forwards_reward = rospy.get_param("/turtlebot2/forwards_reward")
-        # self.turn_reward = rospy.get_param("/turtlebot2/turn_reward")
+        self.forwards_reward = rospy.get_param("/turtlebot2/forwards_reward")
+        self.turn_reward = rospy.get_param("/turtlebot2/turn_reward")
         self.end_episode_points = rospy.get_param(
              "/turtlebot2/end_episode_points")
 
@@ -155,6 +155,8 @@ class TurtleBot2MazeEnv(turtlebot2_env.TurtleBot2Env):
         # We wait a small ammount of time to start everything because in very fast resets, laser scan values are sluggish
         # and sometimes still have values from the prior position that triguered the done.
         time.sleep(1.0)
+
+        self.start_time = time.time()
 
         # TODO: Add reset of published filtered laser readings
         laser_scan = self.get_laser_scan()
@@ -215,11 +217,14 @@ class TurtleBot2MazeEnv(turtlebot2_env.TurtleBot2Env):
         coordinates = self.model_coordinates('mobile_base', 'ground_plane')
         x_loc = coordinates.pose.position.x
         y_loc = coordinates.pose.position.y
-        distance_to_goal = (x_loc + 3.5) ** 2 + (y_loc + 4.5) ** 2
-        if distance_to_goal >= 0 and distance_to_goal < 1:
+        discretized_observations.append(x_loc)
+        discretized_observations.append(y_loc)
+        
+        distance_to_goal = (x_loc + 2) ** 2 + (y_loc - 3) ** 2
+        if distance_to_goal < 1:
             self._episode_done=True
-
-        rospy.logdebug("Observations==>"+str(discretized_observations)+", "+str(distance_to_goal))
+        
+        rospy.logdebug("Observations==>"+str(discretized_observations))
         rospy.logdebug("AFTER DISCRET_episode_done==>"+str(self._episode_done))
         rospy.logdebug("END Get Observation ==>")
         return discretized_observations
@@ -239,18 +244,12 @@ class TurtleBot2MazeEnv(turtlebot2_env.TurtleBot2Env):
         coordinates = self.model_coordinates('mobile_base', 'ground_plane')
         x_loc=coordinates.pose.position.x
         y_loc=coordinates.pose.position.y
-        distance_to_goal = (x_loc+3.5)**2+(y_loc+4.5)**2
-        distance_to_corner1 = (y_loc+1)**2
-        distance_to_corner2 = (x_loc+4.5)**2
+        distance_to_goal = (x_loc+2)**2+(y_loc-3)**2
+
+        timepast = (time.time()-self.start_time)/5+1
 
         if not done:
-            reward = -math.log(distance_to_goal)
-            if y_loc > 0:
-                reward = -math.log(distance_to_corner1)
-            elif y_loc <= 0 and x_loc > -3.5:
-                reward = -math.log(distance_to_corner2)
-            elif y_loc <= 0 and x_loc <= -3.5:
-                reward = -math.log(distance_to_goal)
+            reward = math.exp(1/distance_to_goal)/timepast
 
             # if distance_to_goal >=160:
             #     reward = 1
@@ -264,12 +263,12 @@ class TurtleBot2MazeEnv(turtlebot2_env.TurtleBot2Env):
             #     reward = 5
             # elif distance_to_goal >= 1 and distance_to_goal < 20:
             #     reward = 10
-            # if self.last_action == "FORWARDS":
-            #     reward = self.forwards_reward
-            # else:
-            #     reward = self.turn_reward
+
         else:
-            reward = -1*self.end_episode_points
+            if distance_to_goal < 1:
+                reward = self.end_episode_points/timepast
+            else:
+                reward = -1*self.end_episode_points*timepast
 
         rospy.logdebug("reward=" + str(reward))
         self.cumulated_reward += reward

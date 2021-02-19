@@ -450,24 +450,24 @@
     </model>
 
     <model name='grid2_6'>
-      <pose frame=''>-3.5 -4.5 0.03 0 0 0</pose>
+      <pose frame=''>-3.5 -4.5 0.2 0 0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
             <box>
-              <size>1 1 0.03</size>
+              <size>1 1 2</size>
             </box>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <box>
-              <size>1 1 0.03</size>
+              <size>1 1 2</size>
             </box>
           </geometry>
           <material>
+  	    <ambient>0.678 0.878 1 1</ambient>
             <script>
-              <name>Gazebo/Red</name>
               <uri>file://media/materials/scripts/gazebo.material</uri>
             </script>
           </material>
@@ -840,24 +840,24 @@
     </model>
 
     <model name='grid4_5'>
-      <pose frame=''>-2 3 0.2 0 0 0</pose>
+      <pose frame=''>-2 3 0.03 0 0 0</pose>
       <link name='link'>
         <collision name='collision'>
           <geometry>
             <box>
-              <size>1 1 2</size>
+              <size>1 1 0.03</size>
             </box>
           </geometry>
         </collision>
         <visual name='visual'>
           <geometry>
             <box>
-              <size>1 1 2</size>
+              <size>1 1 0.03</size>
             </box>
           </geometry>
           <material>
-  	    <ambient>0.678 0.878 1 1</ambient>
             <script>
+	      <name>Gazebo/Red</name>
               <uri>file://media/materials/scripts/gazebo.material</uri>
             </script>
           </material>
