@@ -368,5 +368,5 @@ RMFS 환경과 유사하게, Jetbot을 활용해 로봇 주차 환경을 만들 
     ```
     
 ### 최종 결과
-    학습 결과, 아래와 같이 목표 지점으로 이동하는 것을 확인하였다.  
-    <img src="https://raw.githubusercontent.com/hyerinshelly/ETRI_intern/main/Gazebo_WarehouseEnv/video/result-crop.gif" width="60%"></img>  
+학습 결과, 아래와 같이 목표 지점으로 이동하는 것을 확인하였다.  
+<img src="https://raw.githubusercontent.com/hyerinshelly/ETRI_intern/main/Gazebo_WarehouseEnv/video/result-crop.gif" width="60%"></img>  
