@@ -601,6 +601,11 @@
     
     - plotting 방법 찾음: epidemioptim/analysis/Visualization EpidemiOptim.ipynb를 jupyter notebook을 통해 확인 가능
         - 우선 이전에 epidemioptim/analysis/notebook_utils.py을 바뀐 모델링에 맞게 수정함 (파일 path 등)
+        - 실행 방법:  
+            > (base) iot@Blade15:~/바탕화면/RL_COVID-19_Korea$ jupyter notebook
+            이후 연결된 주피터 노트북의 epidemioptim/analysis/Visualization EpidemiOptim.ipynb 실행
         - 결과: 일단 beta = 0.5로 고정된 값(default)으로 무조건 결과 나타내게 해봄  
             <img src="https://user-images.githubusercontent.com/47997946/108475397-fb9d7b80-72d3-11eb-8f1b-d7c18789f274.png" width="70%"></img>
-            * 고쳐야할 점: quarantine 수 범위, 베타 값에 따른 결과  
+            * 고쳐야할 점: quarantine 수 범위, 베타 값에 따른 결과, 파일 path 정리  
+            
+    - beta 0~0.6까지 0.05 단위로 돌려놓음. (*나중에 0.0->0 폴더 이름 수정 필요)
