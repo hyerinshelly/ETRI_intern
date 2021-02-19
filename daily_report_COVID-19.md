@@ -599,4 +599,8 @@
         ```
         (분석) 아 찾아보니 이 함수는 알고리즘간 비교이다.. 내가 원하는 게 아니다..
     
-    - 그럼 다른 방법??
+    - plotting 방법 찾음: epidemioptim/analysis/Visualization EpidemiOptim.ipynb를 jupyter notebook을 통해 확인 가능
+        - 우선 이전에 epidemioptim/analysis/notebook_utils.py을 바뀐 모델링에 맞게 수정함 (파일 path 등)
+        - 결과: 일단 beta = 0.5로 고정된 값(default)으로 무조건 결과 나타내게 해봄  
+            <img src="https://user-images.githubusercontent.com/47997946/108475397-fb9d7b80-72d3-11eb-8f1b-d7c18789f274.png" width="70%"></img>
+            * 고쳐야할 점: quarantine 수 범위, 베타 값에 따른 결과  
