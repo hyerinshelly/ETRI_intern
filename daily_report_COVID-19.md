@@ -577,6 +577,6 @@
 2/19 Fri.
 - RL for COVID-19: train.py 실행 결과 확인 - 어제 하루 동안 돌린 결과를 plotting으로 통해 확인해보았다.
     - train 완료 터미널 화면:  
-    <img src="https://user-images.githubusercontent.com/47997946/108442766-fa9c2800-729a-11eb-856e-13b31dbdaac8.png" width="60%"></img>  
+    <img src="https://user-images.githubusercontent.com/47997946/108446538-a2b4ef80-72a1-11eb-91c8-b78bd0f6d331.png" width="80%"></img>  
     
     - 결과 plotting:
