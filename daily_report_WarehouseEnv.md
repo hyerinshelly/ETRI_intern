@@ -93,7 +93,7 @@
         <img src="https://user-images.githubusercontent.com/59794238/106545047-fb6b5500-654b-11eb-874b-f0ffeb67c360.png" width="30%"></img>  
         - jetracer_train.py : 주어진 선에서 벗어나지 않고 트랙을 돌도록 강화 학습  
         <img src="https://user-images.githubusercontent.com/59794238/106545400-b267d080-654c-11eb-9d6d-bda5629ac81b.png" width="30%"></img>  
-    - Simple Navigation RL: RFMS 환경을 만들기에 앞서, 예제에 있는 Simple Navigation을 강화학습 형태로 구현해보려고 한다.
+    - Simple Navigation RL: RFS 환경을 만들기에 앞서, 예제에 있는 Simple Navigation을 강화학습 형태로 구현해보려고 한다.
         - 예제 코드 주소 : isaac-sim-2020.2.2007-linux-x86_64-release/_build/linux-x86_64/release/exts/omni.isaac.samples/omni/isaac/samples
     - warehouse.py, jetbot_train.py, jetracer_train.py의 코드를 보고 각각 함수 내용을 정리하였다.  
         <img src="https://user-images.githubusercontent.com/59794238/106567805-bcea9000-6575-11eb-8a44-23bccf9de932.jpg" width="30%"></img>
