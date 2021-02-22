@@ -571,6 +571,9 @@
             Eval, g: [0.], C1: 2049168.68 +/- 474079.14, C2: 380721072.24 +/- 73204552.75, Agg: 3152.57 +/- 729.35
             Eval, g: [1.], C1: 2267234.22 +/- 533961.83, C2: 393961901.37 +/- 80761509.54, Agg: 606095.23 +/- 124248.48
       ```
+      
+    * 최종 모델링 & 파라미터 값:
+        <img src="https://user-images.githubusercontent.com/47997946/108667513-b7e98280-751c-11eb-859f-cb47cfb41ead.png" width="45%"></img> <img src="https://user-images.githubusercontent.com/47997946/108667646-0139d200-751d-11eb-9be5-78495f636284.png" width="45%"></img>
 
 <br/>
 
