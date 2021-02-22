@@ -632,3 +632,7 @@
         
         iii. beta == 1.0  
             <img src="https://user-images.githubusercontent.com/47997946/108665724-efeec680-7518-11eb-9e12-568eb010fd11.png" width="70%"></img>
+            
+        -> 그래프로는 큰 차이가 없음. 아마도 cost function의 조율 필요해보임. 그래도 베타값에 따른 두 cost 값의 변화는 알맞게 학습됨을 확인함. 이 부분은 언제든지 수정가능하다고 보임.
+        
+    - 최종 발표 자료 제작
