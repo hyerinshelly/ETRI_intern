@@ -620,8 +620,12 @@
     - beta 값 별 결과 plotting 확인  
         * 그래프 최대치 다시 수정: 
             > high = [100000, 1000000, 25000000, 50000000]  
+        
         i. beta == 0.0  
+            <img src="https://user-images.githubusercontent.com/47997946/108665648-bc13a100-7518-11eb-93a4-fd908ee16175.png" width="70%"></img>
         
         ii. beta == 0.5  
+            <img src="https://user-images.githubusercontent.com/47997946/108665179-a9e53300-7517-11eb-9698-f678f29047f9.png" width="70%"></img>
         
         iii. beta == 1.0  
+            <img src="https://user-images.githubusercontent.com/47997946/108665724-efeec680-7518-11eb-9e12-568eb010fd11.png" width="70%"></img>
