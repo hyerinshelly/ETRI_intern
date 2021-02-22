@@ -612,3 +612,9 @@
     - 그리고 그래프가 다 넘어가서 최대치를 아래와 같이 바꿈 (순서대로 new deaths, total deaths, new quarantines, total quarantines) in notebook_utils.py
         > high = [10000, 100000, 25000000, 50000000]
     
+<br/>
+
+2/22 Mon.
+- RL for COVID-19: beta 값 별 train.py 실행 결과 확인 및 분석 & 최종 발표 준비
+    - 나머지 beta 0.85~1.0까지 학습 돌림
+    - beta 값 별 결과 plotting 확인
